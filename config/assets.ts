@@ -34,7 +34,7 @@ export const ASSETS = {
         dhaka: "assets/images/home/market_dhaka.jpeg",
         parallax: "assets/images/home/market_parallax.jpg"
       },
-      ethical: "/assets/images/home/ethical_bg.jpg",
+      ethical: "assets/images/home/ethical_bg.jpg",
       sustainability: {
         forest: "assets/images/home/sus_forest.jpg",
         stones: "assets/images/home/sus_stones.jpg",
