@@ -27,26 +27,26 @@ export const ASSETS = {
       ],
       about: {
         showroom: "assets/images/home/showroom.jpeg",
-        process: "/assets/images/home/process.jpeg",
+        process: "assets/images/home/process.jpeg",
       },
       marketIntel: {
-        studio: "/assets/images/home/market_studio.jpg",
-        dhaka: "/assets/images/home/market_dhaka.jpg",
-        parallax: "/assets/images/home/market_parallax.jpg"
+        studio: "assets/images/home/market_studio.jpeg",
+        dhaka: "assets/images/home/market_dhaka.jpeg",
+        parallax: "assets/images/home/market_parallax.jpg"
       },
       ethical: "/assets/images/home/ethical_bg.jpg",
       sustainability: {
-        forest: "/assets/images/home/sus_forest.jpg",
-        stones: "/assets/images/home/sus_stones.jpg",
-        tree: "/assets/images/home/sus_tree.jpg"
+        forest: "assets/images/home/sus_forest.jpg",
+        stones: "assets/images/home/sus_stones.jpg",
+        tree: "assets/images/home/sus_tree.jpg"
       },
       manufacturing: {
-        fitting: "/assets/images/home/mfg_fitting.jpg",
-        production: "/assets/images/home/mfg_production.jpg",
-        capacity: "/assets/images/home/mfg_capacity.jpg",
-        qa: "/assets/images/home/mfg_qa.jpg",
-        traceability: "/assets/images/home/mfg_traceability.jpg",
-        logistics: "/assets/images/home/mfg_logistics.jpg"
+        fitting: "assets/images/home/mfg_fitting.jpeg",
+        production: "assets/images/home/mfg_production.jpeg",
+        capacity: "assets/images/home/mfg_capacity.png",
+        qa: "assets/images/home/mfg_qa.png",
+        traceability: "assets/images/home/mfg_traceability.jpeg",
+        logistics: "assets/images/home/mfg_logistics.png"
       },
       inquiry: "/assets/images/home/inquiry_bg.jpg",
       aboutSlider: [
