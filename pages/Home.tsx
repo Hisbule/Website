@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import HeroVideo from '../components/HeroVideo';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Globe, Users, Award, Leaf, CheckCircle, Scissors, Package, Ship, Truck, ClipboardCheck, Layers, Settings, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowRight, Globe, Users, Award, Leaf, CheckCircle, Scissors, Package, Ship, Truck, ClipboardCheck, Layers, Settings, Sparkles, ChevronLeft, ChevronRight, Eye } from 'lucide-react';
 import { ASSETS } from '../config/assets';
 
 interface Product {
@@ -120,15 +120,14 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
       <div className="absolute inset-0 w-full h-full">
         {product.images.map((img, index) => {
           // Logic for slide positioning
-          // Active image is at 0. Previous image slides to -100%. Next/Others wait at 100%.
-          let positionClass = 'translate-x-full'; // Default: waiting on the right
+          let positionClass = 'translate-x-full'; 
           
           if (index === currentImageIndex) {
-            positionClass = 'translate-x-0 z-10'; // Active: center
+            positionClass = 'translate-x-0 z-10'; 
           } else if (
             index === (currentImageIndex - 1 + product.images.length) % product.images.length
           ) {
-            positionClass = '-translate-x-full z-0'; // Previous: moved to left
+            positionClass = '-translate-x-full z-0'; 
           }
 
           return (
@@ -162,163 +161,98 @@ const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentAboutSlide, setCurrentAboutSlide] = useState(0);
   
-  const sliderImages = [
-    "https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=2000&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=2000&auto=format&fit=crop", 
-    "https://images.unsplash.com/photo-1529139574466-a302d27460ae?q=80&w=2000&auto=format&fit=crop"
-  ];
+  // Use images from ASSETS config
+  const sliderImages = ASSETS.images.home.slider;
 
   const productCategories = [
     { 
       id: 'knit',
       name: 'Knit', 
-      images: [
-        'https://images.unsplash.com/photo-1620799140408-ed5341cd2431?q=80&w=2000&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=2000&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1434389677669-e08b4cac3105?q=80&w=2000&auto=format&fit=crop'
-      ]
+      images: ASSETS.images.products.knit
     },
     { 
       id: 'woven',
       name: 'Woven', 
-      images: [
-        'https://images.unsplash.com/photo-1520218508822-998633d997a6?q=80&w=2000&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=2000&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1598033129183-c4f50c736f10?q=80&w=2000&auto=format&fit=crop'
-      ]
+      images: ASSETS.images.products.woven
     },
     { 
       id: 'nightwear',
       name: 'Nightwear', 
-      images: [
-        'https://images.unsplash.com/photo-1571513722275-4b41940954b3?q=80&w=2000&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1512413316925-fd4b93f31521?q=80&w=2000&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1596356453261-0d265ae2520a?q=80&w=2000&auto=format&fit=crop'
-      ]
+      images: ASSETS.images.products.nightwear
     },
     { 
       id: 'denim',
       name: 'Denim', 
-      images: [
-        'https://images.unsplash.com/photo-1542272617-08f08630329f?q=80&w=2000&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1582552938357-32b906df40cb?q=80&w=2000&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?q=80&w=2000&auto=format&fit=crop'
-      ]
+      images: ASSETS.images.products.denim
     },
     { 
       id: 'outerwear',
       name: 'Outer Wear', 
-      images: [
-        'https://images.unsplash.com/photo-1544022613-e87ca75a784a?q=80&w=2000&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=2000&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1551028919-ac66c9a3d683?q=80&w=2000&auto=format&fit=crop'
-      ]
+      images: ASSETS.images.products.outerwear
     },
     { 
       id: 'lingerie',
       name: 'Lingerie', 
-      images: [
-        'https://images.unsplash.com/photo-1596482103565-d603a1163152?q=80&w=2000&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1616149562385-1d84e79478bb?q=80&w=2000&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1546200231-c0353c829e24?q=80&w=2000&auto=format&fit=crop'
-      ]
+      images: ASSETS.images.products.lingerie
     },
     { 
       id: 'activewear',
       name: 'Activewear', 
-      images: [
-        'https://images.unsplash.com/photo-1518459031867-a89b944bffe4?q=80&w=2000&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2000&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1483721310020-03333e577078?q=80&w=2000&auto=format&fit=crop'
-      ]
+      images: ASSETS.images.products.activewear
     },
     { 
       id: 'hometextile',
       name: 'Home Textile', 
-      images: [
-        'https://images.unsplash.com/photo-1522771753035-4a503f3a6352?q=80&w=2000&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=2000&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1505693416388-b03467220886?q=80&w=2000&auto=format&fit=crop'
-      ]
+      images: ASSETS.images.products.hometextile
     },
     { 
       id: 'uniform',
       name: 'Uniform', 
-      images: [
-        'https://images.unsplash.com/photo-1584467541268-b040f83be3dd?q=80&w=2000&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2000&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2000&auto=format&fit=crop'
-      ]
+      images: ASSETS.images.products.uniform
     },
     { 
       id: 'sweater',
       name: 'Sweater', 
-      images: [
-        'https://images.unsplash.com/photo-1611090159492-3866d936e788?q=80&w=2000&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1572495532056-8583af1cbae0?q=80&w=2000&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1453486030486-0a5ffcd82cd9?q=80&w=2000&auto=format&fit=crop'
-      ]
+      images: ASSETS.images.products.sweater
     },
     { 
       id: 'disney',
       name: 'License Products', 
-      images: [
-        'https://images.unsplash.com/photo-1535572290543-523a3d6e1b0c?q=80&w=2000&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1618336753974-aae8e04506aa?q=80&w=2000&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1515488042361-25f468213b6e?q=80&w=2000&auto=format&fit=crop'
-      ]
+      images: ASSETS.images.products.license
     },
     { 
       id: 'jute',
       name: 'Jute & Crafts', 
-      images: [
-        'https://images.unsplash.com/photo-1550974797-0dc2a420952d?q=80&w=2000&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1617325247661-675ab4b64ae4?q=80&w=2000&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1544367563-12123d832e34?q=80&w=2000&auto=format&fit=crop'
-      ]
+      images: ASSETS.images.products.jute
     },
   ];
 
-  const aboutSliderImages = [
-    "https://images.unsplash.com/photo-1596700874052-b8833917d05c?q=80&w=2070&auto=format&fit=crop", // Traceability Diagram style
-    "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop", // Factory
-    "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=2070&auto=format&fit=crop", // Fabric
-    "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=2274&auto=format&fit=crop", // Showroom
-    "https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=2000&auto=format&fit=crop", // Knit
-    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop", // Data
-    "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=2070&auto=format&fit=crop", // Office
-    "https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=2340&auto=format&fit=crop", // Planning
-    "https://images.unsplash.com/photo-1529139574466-a302d27460ae?q=80&w=2000&auto=format&fit=crop", // Fashion
-    "https://images.unsplash.com/photo-1605256585681-455837661b18?q=80&w=2070&auto=format&fit=crop", // Sewing
-    "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2000&auto=format&fit=crop", // Active
-    "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=2000&auto=format&fit=crop"  // Texture
-  ];
+  const aboutSliderImages = ASSETS.images.home.aboutSlider;
 
   const logos = [
-    { name: 'RSC', url: 'https://seeklogo.com/images/R/rsc-logo-7B8B1A2A6C-seeklogo.com.png' },
-    { name: 'BetterWork', url: 'https://betterwork.org/wp-content/uploads/2016/04/BW-Logo-300x100.png' },
-    { name: 'SMETA', url: 'https://www.sedex.com/wp-content/uploads/2021/03/SMETA-Logo-1.png' },
-    { name: 'amfori', url: 'https://www.amfori.org/sites/default/files/amfori_logo_blue_rgb.png' },
-    { name: 'GOTS', url: 'https://global-standard.org/images/GOTS_Logo_Global_Organic_Textile_Standard.png' },
-    { name: 'BCI', url: 'https://bettercotton.org/wp-content/themes/bettercotton/assets/img/bci-logo.png' },
-    { name: 'CTPAT', url: 'https://www.cbp.gov/sites/default/files/ctpat-logo.png' },
-    { name: 'NIRAPON', url: 'https://nirapon.org/wp-content/uploads/2019/04/Nirapon-Logo-Final-01-300x127.png' }
+    { name: 'RSC', url: ASSETS.images.logos.rsc },
+    { name: 'BetterWork', url: ASSETS.images.logos.betterwork },
+    { name: 'SMETA', url: ASSETS.images.logos.smeta },
+    { name: 'amfori', url: ASSETS.images.logos.amfori },
+    { name: 'GOTS', url: ASSETS.images.logos.gots },
+    { name: 'BCI', url: ASSETS.images.logos.bci },
+    { name: 'CTPAT', url: ASSETS.images.logos.ctpat },
+    { name: 'NIRAPON', url: ASSETS.images.logos.nirapon }
   ];
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % sliderImages.length);
-    }, 4000); // Change slide every 4 seconds
+    }, 4000); 
     return () => clearInterval(timer);
-  }, []);
+  }, [sliderImages.length]);
 
-  // Auto slide for About Section
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentAboutSlide((prev) => (prev + 1) % aboutSliderImages.length);
     }, 3000);
     return () => clearInterval(timer);
-  }, []);
+  }, [aboutSliderImages.length]);
 
   const nextAboutSlide = () => {
     setCurrentAboutSlide((prev) => (prev + 1) % aboutSliderImages.length);
@@ -390,7 +324,7 @@ const Home = () => {
 
             <FadeInSection>
               <div className="w-full h-[50vh] md:h-[70vh] overflow-hidden rounded-2xl shadow-2xl relative group">
-                   <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=2274&auto=format&fit=crop" alt="CoutureTex Showroom" className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-[2s]" />
+                   <img src={ASSETS.images.home.about.showroom} alt="CoutureTex Showroom" className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-[2s]" />
                    <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
               </div>
             </FadeInSection>
@@ -407,7 +341,7 @@ const Home = () => {
 
             <FadeInSection>
               <div className="w-full h-[50vh] md:h-[70vh] overflow-hidden rounded-2xl shadow-2xl">
-                   <img src="https://images.unsplash.com/photo-1550614000-4b9519e00315?q=80&w=2340&auto=format&fit=crop" alt="Design Process" className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-[2s]" />
+                   <img src={ASSETS.images.home.about.process} alt="Design Process" className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-[2s]" />
               </div>
             </FadeInSection>
 
@@ -523,7 +457,7 @@ const Home = () => {
                     <div className="grid lg:grid-cols-12 gap-8 items-center mb-16">
                         <div className="lg:col-span-8">
                             <div className="w-full h-[300px] md:h-[500px] rounded-sm overflow-hidden shadow-sm">
-                                <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=2274&auto=format&fit=crop" alt="Design Studio Showroom" className="w-full h-full object-cover" />
+                                <img src={ASSETS.images.home.marketIntel.studio} alt="Design Studio Showroom" className="w-full h-full object-cover" />
                             </div>
                         </div>
                         <div className="lg:col-span-4">
@@ -555,7 +489,7 @@ const Home = () => {
                         </div>
                         <div className="lg:col-span-7">
                             <div className="w-full h-[300px] md:h-[500px] rounded-sm overflow-hidden shadow-sm">
-                                <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=2340&auto=format&fit=crop" alt="Dhaka Design Studio" className="w-full h-full object-cover" />
+                                <img src={ASSETS.images.home.marketIntel.dhaka} alt="Dhaka Design Studio" className="w-full h-full object-cover" />
                             </div>
                         </div>
                     </div>
@@ -575,7 +509,7 @@ const Home = () => {
       {/* New Parallax Quote Section */}
       <section 
         className="relative h-[70vh] bg-fixed bg-center bg-cover flex items-center justify-center"
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1544551763-47a0159f9234?q=80&w=2070&auto=format&fit=crop')" }} 
+        style={{ backgroundImage: `url('${ASSETS.images.home.marketIntel.parallax}')` }} 
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
@@ -603,11 +537,11 @@ const Home = () => {
                     </div>
                     <div className="relative pt-6">
                         <div className="relative w-full aspect-[16/9] overflow-hidden rounded-sm border-4 border-white shadow-sm">
-                            <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=2070&auto=format&fit=crop" alt="Nature" className="w-full h-full object-cover opacity-80" />
+                            <img src={ASSETS.images.home.ethical} alt="Nature" className="w-full h-full object-cover opacity-80" />
                             <div className="absolute inset-0 grid grid-cols-4 grid-rows-2 gap-2 p-4 md:p-8">
                                 {logos.map((logo, i) => (
                                     <div key={i} className="bg-white/90 p-1 flex items-center justify-center shadow-sm">
-                                        <span className="text-[10px] font-bold text-gray-500 uppercase">{logo.name}</span>
+                                        <img src={logo.url} alt={logo.name} className="max-w-[80%] max-h-[80%] object-contain mix-blend-multiply" />
                                     </div>
                                 ))}
                             </div>
@@ -643,18 +577,17 @@ const Home = () => {
                 </div>
                 <div className="flex justify-end">
                   <div className="w-full max-w-[550px] aspect-square rounded-sm overflow-hidden shadow-2xl border-4 border-white transform translate-x-8">
-                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2071&auto=format&fit=crop" alt="Forest" className="w-full h-full object-cover" />
+                    <img src={ASSETS.images.home.sustainability.forest} alt="Forest" className="w-full h-full object-cover" />
                   </div>
                 </div>
               </div>
             </FadeInSection>
 
             {/* Middle Image - Stones */}
-            {/* Reduced width from max-w-5xl to max-w-4xl */}
             <FadeInSection>
               <div className="relative z-20 -mt-48 md:-mt-80 mb-24 flex justify-center">
                 <div className="relative w-full max-w-4xl aspect-[21/9] rounded-sm overflow-hidden shadow-2xl border-4 border-white">
-                  <img src="https://images.unsplash.com/photo-1505118380757-91f5f45d8de4?q=80&w=2000&auto=format&fit=crop" alt="Stones" className="w-full h-full object-cover" />
+                  <img src={ASSETS.images.home.sustainability.stones} alt="Stones" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-6 text-center">
                     <p className="text-white font-bold text-lg md:text-3xl leading-tight drop-shadow-lg">
                       Sustainability is not only a Tagline, it's a life style<br/>and at the core of our business operation.
@@ -665,12 +598,11 @@ const Home = () => {
             </FadeInSection>
 
             {/* Bottom Row */}
-            {/* Increased negative margin (-mt-48) and moved image right (translate-x-32) */}
             <FadeInSection>
               <div className="grid lg:grid-cols-2 gap-8 items-end relative z-0 -mt-20 md:-mt-48">
                 <div className="transform translate-x-8 md:translate-x-32">
                   <div className="w-full max-w-[550px] aspect-[4/3] rounded-sm overflow-hidden shadow-2xl border-4 border-white">
-                    <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?q=80&w=1976&auto=format&fit=crop" alt="Tree" className="w-full h-full object-cover" />
+                    <img src={ASSETS.images.home.sustainability.tree} alt="Tree" className="w-full h-full object-cover" />
                   </div>
                 </div>
                 <div className="pb-8 pl-10">
@@ -735,7 +667,7 @@ const Home = () => {
                 {/* Right: Single Image Area */}
                 <div className="lg:col-span-7 relative h-[500px] bg-[#f8f8f8] shadow-2xl rounded-sm overflow-hidden border-4 border-white group">
                     <img 
-                        src="https://plus.unsplash.com/premium_photo-1664202526559-e21e9c0fb46a?q=80&w=2070&auto=format&fit=crop" 
+                        src={ASSETS.images.home.manufacturing.fitting} 
                         className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
                         alt="Manufacturing Excellence"
                     />
@@ -749,7 +681,7 @@ const Home = () => {
                  {/* Diagram Side (Left) - Now just an image without overlays */}
                  <div className="relative w-full aspect-[4/3] md:aspect-video bg-gray-100 rounded-sm overflow-hidden shadow-2xl border-4 border-white group">
                     <img 
-                      src="https://images.unsplash.com/photo-1596700874052-b8833917d05c?q=80&w=2070&auto=format&fit=crop" 
+                      src={ASSETS.images.home.manufacturing.production} 
                       className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105" 
                       alt="Production Control" 
                     />
@@ -786,13 +718,13 @@ const Home = () => {
                      </p>
                      <Link to="/manufacturing" className="inline-block border border-gray-500 px-6 py-2 text-[10px] font-bold text-black uppercase tracking-widest hover:bg-[#1e3a8a] hover:text-white hover:border-[#1e3a8a] transition-all bg-[#e6e6e6]">
                           EXPLORE MORE
-                     </Link>
+                      </Link>
                  </div>
                  
                  {/* Right: Image */}
                  <div className="w-full h-[400px] rounded-sm overflow-hidden shadow-xl border-4 border-white">
                      <img 
-                          src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop" 
+                          src={ASSETS.images.home.manufacturing.capacity} 
                           alt="Garment Factory Production" 
                           className="w-full h-full object-cover"
                      />
@@ -815,7 +747,7 @@ const Home = () => {
                  {/* Left: Image */}
                  <div className="w-full h-[500px] bg-gray-100 rounded-sm overflow-hidden shadow-2xl border-4 border-white relative group">
                      <img 
-                          src="https://images.unsplash.com/photo-1576158189852-181dd0663458?q=80&w=2670&auto=format&fit=crop" 
+                          src={ASSETS.images.home.manufacturing.qa} 
                           alt="Quality Assurance Team" 
                           className="w-full h-full object-cover"
                      />
@@ -856,7 +788,7 @@ const Home = () => {
                {/* Right: Picture Only */}
                <div className="relative w-full aspect-[4/3] bg-white border-4 border-white rounded-sm overflow-hidden shadow-2xl">
                    <img 
-                      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" 
+                      src={ASSETS.images.home.manufacturing.traceability} 
                       alt="Traceability Diagram"
                       className="w-full h-full object-cover" 
                    />
@@ -870,7 +802,7 @@ const Home = () => {
                   {/* Left: Image */}
                   <div className="w-full h-[400px] md:h-[500px] rounded-sm overflow-hidden shadow-2xl border-4 border-white relative group">
                       <img 
-                          src="https://images.unsplash.com/photo-1494412574643-35d324688b08?q=80&w=2070&auto=format&fit=crop" 
+                          src={ASSETS.images.home.manufacturing.logistics} 
                           alt="Shipping and Logistics" 
                           className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
                       />
@@ -927,7 +859,7 @@ const Home = () => {
       {/* 12. Inquiry Parallax Section */}
       <section 
         className="relative h-[60vh] bg-fixed bg-center bg-cover flex items-center"
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1605256585681-455837661b18?q=80&w=2070&auto=format&fit=crop')" }} 
+        style={{ backgroundImage: `url('${ASSETS.images.home.inquiry}')` }} 
       >
         <div className="absolute inset-0 bg-gray-900/40"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-12 w-full text-left">
