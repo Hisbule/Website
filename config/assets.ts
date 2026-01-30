@@ -35,7 +35,7 @@ export const ASSETS = {
       },
       marketIntel: {
         studio: "assets/images/home/market_studio.jpeg",
-        dhaka: "assets/images/home/market_dhaka.jpeg",
+        dhaka: "assets/images/home/market_dhaka.png",
         parallax: "assets/images/home/market_parallax.jpg"
       },
       ethical: "assets/images/home/ethical_bg.jpg",
@@ -70,13 +70,13 @@ export const ASSETS = {
       mission1: "assets/images/manufacturing/mission_1.jpg",
       mission2: "assets/images/manufacturing/mission_2.jpg",
       fabric: "assets/images/manufacturing/fabric.jpg",
-      fitting: "assets/images/home/mfg_fitting.jpeg",
+      fitting: "assets/images/home/mfg_fitting.png",
       production: "assets/images/home/mfg_production.jpeg",
       capacity: "assets/images/home/mfg_capacity.png",
       qa: "assets/images/home/mfg_qa.png",
       inspection: "assets/images/manufacturing/inspection.jpg",
       philosophy: "assets/images/manufacturing/philosophy.jpg",
-      traceability: "assets/images/home/mfg_traceability.jpeg",
+      traceability: "assets/images/home/mfg_traceability.png",
       logistics: "assets/images/home/mfg_logistics.png",
       cta: "assets/images/manufacturing/cta.jpg"
     },
