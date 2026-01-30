@@ -229,6 +229,58 @@ const Home = () => {
 
   const aboutSliderImages = ASSETS.images.home.aboutSlider;
 
+  // Slide content for About Us slider
+  const aboutSlidesData = [
+    {
+      title: "Fashion Evolution",
+      description: "From Tradition to Trend, A Journey Through Fashion Evolution"
+    },
+    {
+      title: "R&D and Innovation",
+      description: "Shaping Tomorrow, the Future-Focused R&D Initiatives in fabric Innovation Transforming Fashion Advancement.."
+    },
+    {
+      title: "Ethical Sourcing",
+      description: "Putting People and Society first, Our Ethical Sourcing Practices move on."
+    },
+    {
+      title: "Sustainability",
+      description: "Our Planet, Our Responsibility, turning Greener Planet!! Nurturing Environmental Sustainability...."
+    },
+    {
+      title: "Manufacturing Excellence",
+      description: "Unleashing Potential, Innovate, Optimize, Excel, Driving Manufacturing Excellence..."
+    },
+    {
+      title: "Quality Assurance",
+      description: "Precision in Practice, The Evolution of Laboratory Testing in Quality Assurance."
+    },
+    {
+      title: "Fair Traceability",
+      description: "Innovating Transparency, Fair Traceability in Action.."
+    },
+    {
+      title: "Shipping",
+      description: "Efficiency in Motion: Streamlining Your Supply Chain"
+    },
+    {
+      title: "Sustainability",
+      description: "Purifying Our Planet, The Quest for Clean Water...."
+    },
+    {
+      title: "Retail Store and Happy Customer",
+      description: "Fashion for Every Body: Embrace Your Unique Style, Latest Trends Inside!!!"
+    },
+    {
+      title: "Disney and License Character Products",
+      description: "Wear Your Imagination: Disney and else Dream Characters,the signature Icons Come to Life!!"
+    },
+    {
+      title: "Happy Customer",
+      description: "Customer Spotlight, Customer Experiences That Shine"
+    }
+  ];
+
   const logos = [
     { name: 'RSC', url: ASSETS.images.logos.rsc },
     { name: 'BetterWork', url: ASSETS.images.logos.betterwork },
@@ -409,10 +461,11 @@ const Home = () => {
                       </div>
                   </div>
 
-                  <div className="lg:col-span-7 w-full h-[500px] md:h-[650px] relative overflow-hidden shadow-2xl rounded-sm">
+                  {/* Fashion Evolution Slide Images - Updated to fit full image */}
+                  <div className="lg:col-span-7 w-full h-[500px] md:h-[650px] relative overflow-hidden shadow-2xl rounded-sm bg-white">
                        {sliderImages.map((src, index) => (
-                          <div key={index} className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${currentSlide === index ? 'opacity-100' : 'opacity-0'}`}>
-                              <img src={src} className="w-full h-full object-cover" alt={`Fashion Slide ${index + 1}`} />
+                          <div key={index} className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${currentSlide === index ? 'opacity-100' : 'opacity-0'} flex items-center justify-center`}>
+                              <img src={src} className="w-full h-full object-contain" alt={`Fashion Slide ${index + 1}`} />
                           </div>
                        ))}
                         <div className="absolute top-6 left-6 flex items-center gap-3 z-10 bg-white/80 p-2 rounded-sm shadow-sm">
@@ -918,6 +971,9 @@ const Home = () => {
                               } else {
                                   textClass = 'opacity-0 scale-50 translate-y-10 transition-all duration-300';
                               }
+                              
+                              // Safe access to slide data, fallback if data missing
+                              const slideInfo = aboutSlidesData[index % aboutSlidesData.length] || { title: "", description: "" };
 
                               return (
                                   <div 
@@ -930,9 +986,9 @@ const Home = () => {
                                           className="w-full h-full object-cover"
                                       />
                                       {/* Overlay Text with Animation */}
-                                      <div className={`absolute bottom-10 left-10 text-white drop-shadow-md z-20 ${textClass}`}>
-                                          <h3 className="text-3xl font-bold mb-2">Fair Traceability</h3>
-                                          <p className="text-sm font-medium">Innovating Transparency, Fair Traceability in Action....</p>
+                                      <div className={`absolute bottom-10 left-10 text-white drop-shadow-md z-20 max-w-[90%] md:max-w-[70%] ${textClass}`}>
+                                          <h3 className="text-2xl md:text-3xl font-bold mb-2 leading-tight">{slideInfo.title}</h3>
+                                          <p className="text-sm md:text-base font-medium leading-relaxed">{slideInfo.description}</p>
                                       </div>
                                   </div>
                               );
