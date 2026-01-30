@@ -1,3 +1,4 @@
+
 // PROFESSIONAL ASSET MANAGEMENT
 // -----------------------------
 // For deployment, place your files in the "public" folder of your project root.
@@ -97,13 +98,20 @@ export const ASSETS = {
       license: ["assets/images/products/License_1.png", "assets/images/products/License_2.png", "assets/images/products/License_3.png"],
       jute: ["assets/images/products/Jute_1.png", "assets/images/products/Jute_2.png", "assets/images/products/Jute_3.png"]
     },
+    // ========================================================================
+    // ETHICAL SOURCING PAGE IMAGES (LOCAL)
+    // ========================================================================
     ethical: {
-      environmental: [
-        "https://images.unsplash.com/photo-1542601906990-b4d3fb7d5c73?q=80&w=1974&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1605218427368-35b85a3dd6b7?q=80&w=2000&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?q=80&w=1964&auto=format&fit=crop"
-      ],
-      csr: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2000&auto=format&fit=crop" // Education/Kids
+      img1: "assets/images/ethical/Ethical_1.jpg",
+      img2: "assets/images/ethical/Ethical_2.jpg",
+      img3: "assets/images/ethical/Ethical_3.jpg",
+      img4: "assets/images/ethical/Ethical_4.jpg",
+      img5: "assets/images/ethical/Ethical_5.jpg",
+      img6: "assets/images/ethical/Ethical_6.jpg",
+      img7: "assets/images/ethical/Ethical_7.jpg",
+      img8: "assets/images/ethical/Ethical_8.jpg",
+      img9: "assets/images/ethical/Ethical_9.jpg",
+      img10: "assets/images/ethical/Ethical_10.jpg"
     },
     logos: {
       rsc: "assets/images/logos/rsc.jpg",

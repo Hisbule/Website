@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ASSETS } from '../config/assets';
 import { TrendingUp, Clock, Users, Handshake, PenTool, Leaf, Scissors, Layers, CheckCircle } from 'lucide-react';
+import HeroVideo from '../components/HeroVideo';
 
 // FadeInSection Component
 const FadeInSection: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className = '' }) => {
@@ -58,25 +59,12 @@ const MarketIntel = () => {
 
   return (
     <div className="bg-white font-sans overflow-x-hidden">
-      {/* Hero Section - Static Image */}
-      <div className="relative h-screen w-full overflow-hidden bg-brand-navy">
-        <img
-          src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=2076&auto=format&fit=crop"
-          alt="Market Intel Design Hero"
-          className="absolute top-0 left-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-black/40 to-black/20 flex flex-col items-center justify-center text-center px-4">
-            <div className="max-w-5xl mx-auto transform translate-y-0 transition-all duration-1000 ease-out">
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 animate-fade-in-up drop-shadow-lg tracking-wide leading-tight">
-                    Market Intel Design
-                </h1>
-                <div className="h-1 w-24 bg-[#6abf4b] mx-auto mb-8 rounded-full"></div>
-                <p className="text-lg md:text-2xl text-gray-100 font-light max-w-4xl mx-auto leading-relaxed drop-shadow-md tracking-wider">
-                    Design Expedition
-                </p>
-            </div>
-        </div>
-      </div>
+      {/* Hero Section - VIDEO */}
+      <HeroVideo 
+        title="Market Intel Design" 
+        subtitle="Design Expedition"
+        videoUrl={ASSETS.videos.marketIntel}
+      />
 
       {/* Section 1: FASHION EVOLUTION */}
       <section className="py-20 bg-white">

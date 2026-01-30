@@ -42,7 +42,13 @@ const FadeInSection: React.FC<{ children: React.ReactNode; className?: string }>
 
 const EthicalSourcing = () => {
   const [currentEnvIndex, setCurrentEnvIndex] = useState(0);
-  const envImages = ASSETS.images.ethical.environmental;
+  
+  // Using the new local assets Ethical_5, Ethical_6, Ethical_7
+  const envImages = [
+    ASSETS.images.ethical.img5,
+    ASSETS.images.ethical.img6,
+    ASSETS.images.ethical.img7
+  ];
 
   // Defined Logo Rows - Matching Home Page
   const logosRow1 = [
@@ -132,8 +138,9 @@ const EthicalSourcing = () => {
         <div className="max-w-[95%] mx-auto px-4 lg:px-8">
            <FadeInSection>
                <div className="w-full h-[500px] md:h-[700px] rounded-sm overflow-hidden mb-12 shadow-md">
+                   {/* Ethical_1 */}
                    <img 
-                      src="https://images.unsplash.com/photo-1606041008023-472dfb5e530f?q=80&w=1976&auto=format&fit=crop" 
+                      src={ASSETS.images.ethical.img1} 
                       alt="Girl holding flowers in nature" 
                       className="w-full h-full object-cover object-center"
                    />
@@ -165,10 +172,10 @@ const EthicalSourcing = () => {
           <div className="max-w-[95%] mx-auto px-4 lg:px-8">
               <div className="grid md:grid-cols-2 gap-12 items-center">
                   <FadeInSection>
-                      {/* Business Ethics Diagram Representation */}
+                      {/* Business Ethics Diagram Representation (Ethical_2) */}
                       <div className="bg-white p-4 rounded-sm flex items-center justify-center">
                           <img 
-                            src="https://cdn.pixabay.com/photo/2019/06/19/07/13/email-4284157_1280.png" 
+                            src={ASSETS.images.ethical.img2} 
                             alt="Business Ethics Diagram" 
                             className="w-full h-auto object-contain max-h-[400px]"
                           />
@@ -176,8 +183,9 @@ const EthicalSourcing = () => {
                   </FadeInSection>
                   <FadeInSection>
                       <div className="h-[400px] overflow-hidden rounded-sm shadow-md">
+                          {/* Ethical_3 */}
                           <img 
-                            src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=2070&auto=format&fit=crop" 
+                            src={ASSETS.images.ethical.img3} 
                             alt="Hands Checking Clothes" 
                             className="w-full h-full object-cover" 
                           />
@@ -212,8 +220,9 @@ const EthicalSourcing = () => {
                   </FadeInSection>
                   <FadeInSection>
                       <div className="h-[400px] overflow-hidden rounded-sm shadow-xl border-4 border-white">
+                          {/* Ethical_4 */}
                           <img 
-                            src="https://images.unsplash.com/photo-1565532525700-111162657e28?q=80&w=1974&auto=format&fit=crop" 
+                            src={ASSETS.images.ethical.img4} 
                             alt="Factory Workers" 
                             className="w-full h-full object-cover"
                           />
@@ -232,7 +241,7 @@ const EthicalSourcing = () => {
                   </p>
               </FadeInSection>
               
-              {/* Full Width Single Image Slider */}
+              {/* Full Width Single Image Slider (Ethical_5, Ethical_6, Ethical_7) */}
               <FadeInSection>
                   <div className="relative w-full h-[500px] md:h-[700px] rounded-sm overflow-hidden shadow-2xl group">
                        {envImages.map((img, index) => (
@@ -244,7 +253,7 @@ const EthicalSourcing = () => {
                            >
                               <img 
                                 src={img} 
-                                alt={`Environmental Initiative ${index + 1}`} 
+                                alt={`Sustainable Initiative ${index + 1}`} 
                                 className="w-full h-full object-cover" 
                               />
                               {/* Overlay Gradient */}
@@ -279,8 +288,9 @@ const EthicalSourcing = () => {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                   <FadeInSection>
                       <div className="h-[400px] md:h-[500px] rounded-sm overflow-hidden shadow-xl border-4 border-white">
+                          {/* Ethical_8 */}
                           <img
-                            src={ASSETS.images.ethical.csr}
+                            src={ASSETS.images.ethical.img8}
                             alt="Social Engagement and CSR"
                             className="w-full h-full object-cover"
                           />
@@ -311,10 +321,10 @@ const EthicalSourcing = () => {
                   </div>
               </FadeInSection>
 
-              {/* Logos on Forest Background with Dual Marquee */}
+              {/* Logos on Forest Background with Dual Marquee (Ethical_9) */}
               <FadeInSection className="relative w-full h-[500px] rounded-sm overflow-hidden shadow-xl mb-16 group">
                   <img 
-                      src="https://images.unsplash.com/photo-1448375240586-dfd8d395ea6c?q=80&w=2070&auto=format&fit=crop" 
+                      src={ASSETS.images.ethical.img9} 
                       alt="Forest Background" 
                       className="w-full h-full object-cover" 
                   />
@@ -373,8 +383,8 @@ const EthicalSourcing = () => {
           </div>
       </section>
 
-      {/* 9. Enquiry Call to Action */}
-      <section className="relative h-[600px] w-full bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1537832816519-689ad163238b?q=80&w=2059&auto=format&fit=crop')" }}>
+      {/* 9. Enquiry Call to Action (Ethical_10) */}
+      <section className="relative h-[600px] w-full bg-cover bg-center bg-fixed" style={{ backgroundImage: `url('${ASSETS.images.ethical.img10}')` }}>
           <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center p-6 text-center">
               <FadeInSection>
                   <h2 className="text-white text-3xl md:text-5xl font-serif font-bold mb-6 max-w-4xl leading-tight">

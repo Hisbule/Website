@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Shield, Zap, Users, CheckCircle, Truck } from 'lucide-react';
 import { ASSETS } from '../config/assets';
+import HeroVideo from '../components/HeroVideo';
 
 // FadeInSection Component
 const FadeInSection: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className = '' }) => {
@@ -44,27 +45,18 @@ const Manufacturing = () => {
   return (
     <div className="bg-white font-sans overflow-x-hidden">
       
-      {/* 1. Hero Section - IMAGE (Local) */}
-      <div className="relative h-[60vh] md:h-[80vh] w-full overflow-hidden bg-black">
-        <img 
-            src={ASSETS.images.manufacturing.hero} 
-            alt="Manufacturing Excellence Hero"
-            className="w-full h-full object-cover opacity-90"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/20"></div>
-        <div className="absolute bottom-0 left-0 w-full p-8 md:p-16 lg:px-24 lg:py-20">
-             <h1 className="text-4xl md:text-6xl font-serif font-bold text-white mb-2 tracking-wide animate-fade-in-up">
-                Manufacturing Excellence
-             </h1>
-        </div>
-      </div>
+      {/* 1. Hero Section - VIDEO */}
+      <HeroVideo 
+        title="Manufacturing Excellence" 
+        videoUrl={ASSETS.videos.manufacturing}
+      />
       
       {/* 2. Intro Section */}
       <section className="py-16 bg-white">
         <div className="max-w-[95%] mx-auto px-4 lg:px-8">
             <FadeInSection className="mb-12">
                 <h2 className="text-2xl md:text-4xl font-bold text-[#1e3a8a] mb-6 font-serif">
-                    Welcome to APPARELBD Sourcing Ltd, Where Excellence is Crafted into Every Stitch!!
+                    Welcome to APPARELBD, Where Excellence is Crafted into Every Stitch!!
                 </h2>
                 <div className="space-y-6 text-gray-700 leading-relaxed text-lg md:text-xl font-light text-justify">
                     <p>
@@ -292,7 +284,7 @@ const Manufacturing = () => {
               <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
                   <FadeInSection>
                       <h3 className="text-3xl font-bold text-black mb-4">Quality Assurance:</h3>
-                      <p className="text-gray-800 italic font-bold mb-6">Redefining Excellence in Craftsmanship - Enduring Durability!!</p>
+                      <p className="text-gray-800 italic font-bold mb-6">Redefining Excellence in Craftsmanship and Enduring Durability!!</p>
                       <div className="space-y-6 text-gray-700 text-lg md:text-xl font-light text-justify">
                           <p>
                               The highest standards of quality are upheld through strict control measures, implemented in close collaboration with our trusted partners.

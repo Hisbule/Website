@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ASSETS } from '../config/assets';
 import { Link } from 'react-router-dom';
+import HeroVideo from '../components/HeroVideo';
 
 const FadeInSection: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className = '' }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -43,21 +44,11 @@ const Sustainability = () => {
   return (
     <div className="bg-white font-sans overflow-x-hidden">
       
-      {/* 1. Hero Section - IMAGE (Not Video) with Title Bottom Left */}
-      <div className="relative h-[60vh] md:h-[80vh] w-full overflow-hidden bg-brand-navy">
-        <img 
-            src="https://images.unsplash.com/photo-1524125877861-55c58102377c?q=80&w=2070&auto=format&fit=crop" 
-            alt="Sustainability Ferns"
-            className="w-full h-full object-cover object-center"
-        />
-        {/* Dark Overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/30"></div>
-        
-        {/* Title Positioned Bottom Left */}
-        <div className="absolute bottom-0 left-0 w-full p-8 md:p-16 lg:px-24 lg:py-20">
-             <h1 className="text-5xl md:text-7xl font-serif font-bold text-white mb-2 tracking-wide animate-fade-in-up">Sustainability</h1>
-        </div>
-      </div>
+      {/* 1. Hero Section - VIDEO */}
+      <HeroVideo 
+        title="Sustainability" 
+        videoUrl={ASSETS.videos.sustainability}
+      />
 
       {/* Intro Text */}
       <section className="py-16 bg-white">

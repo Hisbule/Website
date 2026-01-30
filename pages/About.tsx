@@ -305,7 +305,7 @@ const About = () => {
         <div className="max-w-[95%] mx-auto px-4 sm:px-6 lg:px-8">
           <FadeInSection className="mb-12">
             <h2 className="text-2xl md:text-4xl font-serif font-bold text-brand-navy mb-4">
-              Welcome to ApparelBD Sourcing Ltd, Where Fashion Meets Integrity!!
+              Welcome to ApparelBD, Where Fashion Meets Integrity!!
             </h2>
             <h3 className="text-xl md:text-2xl font-bold text-black mb-8">
               Reliable Strategic, Sustainable and Ethical Global Sourcing Partner!!
