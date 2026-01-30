@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ASSETS } from '../config/assets';
 import HeroVideo from '../components/HeroVideo';
+import { ShieldCheck, Recycle, Leaf } from 'lucide-react';
 
 // FadeInSection Component
 const FadeInSection: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className = '' }) => {
@@ -126,7 +127,7 @@ const EthicalSourcing = () => {
                         <span className="font-bold text-black">Ethical sourcing</span> is our corner stone of responsible business practices. As consumers increasingly demand transparency and accountability, fashion brands are recognizing the importance of ensuring that every thread in their supply chain is merged with integrity.
                     </p>
                     <p>
-                        At APPARELBD Sourcing, we are dedicated to ethical and responsive sourcing practices that protect both individuals and the environment.
+                        At APPARELBD, we are dedicated to ethical and responsive sourcing practices that protect both individuals and the environment.
                     </p>
                 </div>
              </FadeInSection>
@@ -137,7 +138,8 @@ const EthicalSourcing = () => {
       <section className="pb-16 bg-white">
         <div className="max-w-[95%] mx-auto px-4 lg:px-8">
            <FadeInSection>
-               <div className="w-full h-[500px] md:h-[700px] rounded-sm overflow-hidden mb-12 shadow-md">
+               {/* Updated: h-auto for mobile to prevent cropping, fixed height for desktop */}
+               <div className="w-full h-auto md:h-[700px] rounded-sm overflow-hidden mb-12 shadow-md">
                    {/* Ethical_1 */}
                    <img 
                       src={ASSETS.images.ethical.img1} 
@@ -158,11 +160,20 @@ const EthicalSourcing = () => {
                 </div>
            </FadeInSection>
            
-           {/* Protection Icons (Placeholder for the icons in PDF page 1 bottom) */}
-           <FadeInSection className="mt-12 flex justify-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all">
-                <img src="https://cdn-icons-png.flaticon.com/512/2910/2910795.png" alt="Protection" className="h-16 md:h-20 w-auto" />
-                <img src="https://cdn-icons-png.flaticon.com/512/1165/1165674.png" alt="Recycle" className="h-16 md:h-20 w-auto" />
-                <img src="https://cdn-icons-png.flaticon.com/512/3176/3176366.png" alt="Eco" className="h-16 md:h-20 w-auto" />
+           {/* Protection Icons (Replaced external images with Lucide Icons) */}
+           <FadeInSection className="mt-16 flex justify-center gap-12 md:gap-24 text-[#88c057] opacity-80 hover:opacity-100 transition-all">
+                <div className="flex flex-col items-center gap-2">
+                    <ShieldCheck className="h-16 md:h-20 w-16 md:w-20" strokeWidth={1} />
+                    <span className="text-xs uppercase font-bold tracking-widest text-gray-500">Protection</span>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                    <Recycle className="h-16 md:h-20 w-16 md:w-20" strokeWidth={1} />
+                    <span className="text-xs uppercase font-bold tracking-widest text-gray-500">Recycle</span>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                    <Leaf className="h-16 md:h-20 w-16 md:w-20" strokeWidth={1} />
+                    <span className="text-xs uppercase font-bold tracking-widest text-gray-500">Eco</span>
+                </div>
            </FadeInSection>
         </div>
       </section>
@@ -182,12 +193,13 @@ const EthicalSourcing = () => {
                       </div>
                   </FadeInSection>
                   <FadeInSection>
-                      <div className="h-[400px] overflow-hidden rounded-sm shadow-md">
+                      {/* Updated: h-auto for mobile to allow full image visibility */}
+                      <div className="h-auto md:h-[400px] overflow-hidden rounded-sm shadow-md">
                           {/* Ethical_3 */}
                           <img 
                             src={ASSETS.images.ethical.img3} 
                             alt="Hands Checking Clothes" 
-                            className="w-full h-full object-cover" 
+                            className="w-full h-auto md:h-full object-cover" 
                           />
                       </div>
                   </FadeInSection>
@@ -199,7 +211,7 @@ const EthicalSourcing = () => {
       <section className="py-12 bg-[#88c057] text-center px-4">
           <FadeInSection>
               <h2 className="text-xl md:text-3xl font-serif font-bold text-white uppercase leading-snug">
-                  APPARELBD Sourcing, Where Fashion Meets Integrity!!<br/>
+                  APPARELBD, Where Fashion Meets Integrity!!<br/>
                   Elevate Your Wardrobe, Elevate Your Values!!
               </h2>
           </FadeInSection>
@@ -219,12 +231,13 @@ const EthicalSourcing = () => {
                       </p>
                   </FadeInSection>
                   <FadeInSection>
-                      <div className="h-[400px] overflow-hidden rounded-sm shadow-xl border-4 border-white">
+                      {/* Updated: h-auto for mobile */}
+                      <div className="h-auto md:h-[400px] overflow-hidden rounded-sm shadow-xl border-4 border-white">
                           {/* Ethical_4 */}
                           <img 
                             src={ASSETS.images.ethical.img4} 
                             alt="Factory Workers" 
-                            className="w-full h-full object-cover"
+                            className="w-full h-auto md:h-full object-cover"
                           />
                       </div>
                   </FadeInSection>
@@ -237,13 +250,14 @@ const EthicalSourcing = () => {
           <div className="max-w-[95%] mx-auto px-4 lg:px-8">
               <FadeInSection className="mb-12">
                   <p className="text-gray-700 leading-relaxed text-lg md:text-xl font-light text-justify">
-                      <span className="font-bold text-black">Environmental Concern</span> at ApparelBD Sourcing, we're committed to minimizing our environmental impact by partnering with like-minded collaborators. We prioritize sustainable materials like organic cotton, recycled polyester, and ecofriendly fibers, aiming to reduce energy use, waste, and pollution across our supply chain. With a focus on environmental stewardship, we strive to lead the way toward a more sustainable, eco-conscious fashion industry. Join us in creating a greener tomorrow, one stitch at a time.
+                      <span className="font-bold text-black">Environmental Concern</span> at ApparelBD, we're committed to minimizing our environmental impact by partnering with like-minded collaborators. We prioritize sustainable materials like organic cotton, recycled polyester, and ecofriendly fibers, aiming to reduce energy use, waste, and pollution across our supply chain. With a focus on environmental stewardship, we strive to lead the way toward a more sustainable, eco-conscious fashion industry. Join us in creating a greener tomorrow, one stitch at a time.
                   </p>
               </FadeInSection>
               
               {/* Full Width Single Image Slider (Ethical_5, Ethical_6, Ethical_7) */}
               <FadeInSection>
-                  <div className="relative w-full h-[500px] md:h-[700px] rounded-sm overflow-hidden shadow-2xl group">
+                  {/* Updated height for mobile to avoid cropping */}
+                  <div className="relative w-full h-[300px] sm:h-[400px] md:h-[700px] rounded-sm overflow-hidden shadow-2xl group">
                        {envImages.map((img, index) => (
                            <div
                               key={index}
@@ -287,12 +301,13 @@ const EthicalSourcing = () => {
           <div className="max-w-[95%] mx-auto px-4 lg:px-8">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                   <FadeInSection>
-                      <div className="h-[400px] md:h-[500px] rounded-sm overflow-hidden shadow-xl border-4 border-white">
+                      {/* Updated: h-auto for mobile */}
+                      <div className="h-auto md:h-[500px] rounded-sm overflow-hidden shadow-xl border-4 border-white">
                           {/* Ethical_8 */}
                           <img
                             src={ASSETS.images.ethical.img8}
                             alt="Social Engagement and CSR"
-                            className="w-full h-full object-cover"
+                            className="w-full h-auto md:h-full object-cover"
                           />
                       </div>
                   </FadeInSection>
@@ -322,19 +337,19 @@ const EthicalSourcing = () => {
               </FadeInSection>
 
               {/* Logos on Forest Background with Dual Marquee (Ethical_9) */}
-              <FadeInSection className="relative w-full h-[500px] rounded-sm overflow-hidden shadow-xl mb-16 group">
+              <FadeInSection className="relative w-full h-[300px] md:h-[500px] rounded-sm overflow-hidden shadow-xl mb-16 group">
                   <img 
                       src={ASSETS.images.ethical.img9} 
                       alt="Forest Background" 
                       className="w-full h-full object-cover" 
                   />
-                  <div className="absolute inset-0 bg-black/40 flex flex-col justify-center gap-12 py-10">
+                  <div className="absolute inset-0 bg-black/40 flex flex-col justify-center gap-6 md:gap-12 py-10">
                       
                       {/* Row 1: Right to Left Animation (Matches Home) */}
                       <div className="w-full overflow-hidden relative">
-                           <div className="flex gap-6 w-max animate-scroll-right pause-hover">
+                           <div className="flex gap-4 md:gap-6 w-max animate-scroll-right pause-hover">
                                {marqueeLogos1.map((logo, index) => (
-                                   <div key={`row1-${index}`} className="w-[180px] md:w-[220px] h-28 bg-white/95 p-4 rounded-sm flex items-center justify-center shadow-lg hover:scale-105 transition-transform duration-300">
+                                   <div key={`row1-${index}`} className="w-[120px] md:w-[220px] h-20 md:h-28 bg-white/95 p-4 rounded-sm flex items-center justify-center shadow-lg hover:scale-105 transition-transform duration-300">
                                        <img 
                                           src={logo.url} 
                                           alt={logo.name} 
@@ -352,9 +367,9 @@ const EthicalSourcing = () => {
 
                       {/* Row 2: Left to Right Animation (Matches Home) */}
                       <div className="w-full overflow-hidden relative">
-                           <div className="flex gap-6 w-max animate-scroll-left pause-hover">
+                           <div className="flex gap-4 md:gap-6 w-max animate-scroll-left pause-hover">
                                {marqueeLogos2.map((logo, index) => (
-                                   <div key={`row2-${index}`} className="w-[180px] md:w-[220px] h-28 bg-white/95 p-4 rounded-sm flex items-center justify-center shadow-lg hover:scale-105 transition-transform duration-300">
+                                   <div key={`row2-${index}`} className="w-[120px] md:w-[220px] h-20 md:h-28 bg-white/95 p-4 rounded-sm flex items-center justify-center shadow-lg hover:scale-105 transition-transform duration-300">
                                        <img 
                                           src={logo.url} 
                                           alt={logo.name} 
@@ -405,7 +420,7 @@ const EthicalSourcing = () => {
           <div className="max-w-[95%] mx-auto px-4">
               <FadeInSection>
                   <p className="text-gray-600 text-sm md:text-base font-light">
-                      <span className="font-bold text-black">Ethical and responsive sourcing</span> is at the core of ApparelBD Sourcing's mission. With our dedication to transparency, fair practices, sustainability, and adherence to international standards, we surpass ethical expectations. Choosing us means opting for responsible sourcing that values both people and the planet. Together, we pave the way for a future of ethical business practices.
+                      <span className="font-bold text-black">Ethical and responsive sourcing</span> is at the core of ApparelBD's mission. With our dedication to transparency, fair practices, sustainability, and adherence to international standards, we surpass ethical expectations. Choosing us means opting for responsible sourcing that values both people and the planet. Together, we pave the way for a future of ethical business practices.
                   </p>
               </FadeInSection>
           </div>
