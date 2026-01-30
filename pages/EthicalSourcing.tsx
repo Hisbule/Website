@@ -185,7 +185,7 @@ const EthicalSourcing = () => {
                       <div className="h-[400px] overflow-hidden rounded-sm shadow-md">
                           {/* Ethical_3 */}
                           <img 
-                            src={ASSETS.images.ethical.img4} 
+                            src={ASSETS.images.ethical.img3} 
                             alt="Hands Checking Clothes" 
                             className="w-full h-full object-cover" 
                           />
