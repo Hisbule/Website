@@ -461,10 +461,10 @@ const Home = () => {
                       </div>
                   </div>
 
-                  {/* Fashion Evolution Slide Images - Updated to fit full image */}
-                  <div className="lg:col-span-7 w-full h-[500px] md:h-[650px] relative overflow-hidden shadow-2xl rounded-sm bg-white">
+                  {/* Fashion Evolution Slide Images - Updated to use responsive aspect ratio and fit full image */}
+                  <div className="lg:col-span-7 w-full aspect-[3/4] md:aspect-[1/1] lg:aspect-[5/4] relative overflow-hidden shadow-2xl rounded-sm bg-white border border-gray-100">
                        {sliderImages.map((src, index) => (
-                          <div key={index} className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${currentSlide === index ? 'opacity-100' : 'opacity-0'} flex items-center justify-center`}>
+                          <div key={index} className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${currentSlide === index ? 'opacity-100' : 'opacity-0'} flex items-center justify-center bg-gray-50`}>
                               <img src={src} className="w-full h-full object-contain" alt={`Fashion Slide ${index + 1}`} />
                           </div>
                        ))}
