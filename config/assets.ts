@@ -4,7 +4,7 @@
 
 export const ASSETS = {
   // Brand Assets
-  logo: "assets/images/apparelbd_logo.png",
+  logo: "/assets/images/apparelbd_logo.png",
 
   // Page Header Videos
   videos: {
@@ -19,36 +19,31 @@ export const ASSETS = {
 
   // Local Images
   images: {
+    
+    // ========================================================================
+    // HOME PAGE IMAGES (LOCAL)
+    // ========================================================================
     home: {
       slider: [
-        "assets/images/home/slide1.jpeg",
-        "assets/images/home/slide2.jpeg",
-        "assets/images/home/slide_3.jpg",
+        "/assets/images/home/slide1.jpeg",
+        "/assets/images/home/slide2.jpeg",
+        "/assets/images/home/slide_3.jpg",
       ],
       about: {
-        showroom: "assets/images/home/showroom.jpeg",
-        process: "assets/images/home/process.jpeg",
+        showroom: "/assets/images/home/showroom.jpeg",
+        process: "/assets/images/home/process.jpeg",
       },
       marketIntel: {
-        studio: "assets/images/home/market_studio.jpeg",
-        dhaka: "assets/images/home/market_dhaka.jpeg",
-        parallax: "assets/images/home/market_parallax.jpg"
+        studio: "/assets/images/home/market_studio.jpeg",
+        dhaka: "/assets/images/home/market_dhaka.jpeg",
+        parallax: "/assets/images/home/market_parallax.jpg"
       },
-      ethical: "assets/images/home/ethical_bg.jpg",
+      ethical: "/assets/images/home/ethical_bg.jpg",
       sustainability: {
-        forest: "assets/images/home/sus_forest.jpg",
-        stones: "assets/images/home/sus_stones.jpg",
-        tree: "assets/images/home/sus_tree.jpg"
+        forest: "/assets/images/home/sus_forest.jpg",
+        stones: "/assets/images/home/sus_stones.jpg",
+        tree: "/assets/images/home/sus_tree.jpg"
       },
-      manufacturing: {
-        fitting: "assets/images/home/mfg_fitting.jpeg",
-        production: "assets/images/home/mfg_production.jpeg",
-        capacity: "assets/images/home/mfg_capacity.png",
-        qa: "assets/images/home/mfg_qa.png",
-        traceability: "assets/images/home/mfg_traceability.jpeg",
-        logistics: "assets/images/home/mfg_logistics.png"
-      },
-      // Explicit local image for the Fashion Quote Parallax section
       fashionQuoteParallax: "/assets/images/home/fashion_quote_bg.jpg",
       inquiry: "/assets/images/home/inquiry_bg.jpg",
       aboutSlider: [
@@ -66,6 +61,29 @@ export const ASSETS = {
         "/assets/images/home/about_slide_12.jpg"
       ]
     },
+
+    // ========================================================================
+    // MANUFACTURING PAGE IMAGES (LOCAL)
+    // ========================================================================
+    manufacturing: {
+      hero: "/assets/images/manufacturing/hero.jpg",
+      mission1: "/assets/images/manufacturing/mission_1.jpg",
+      mission2: "/assets/images/manufacturing/mission_2.jpg",
+      fabric: "/assets/images/manufacturing/fabric.jpg",
+      fitting: "/assets/images/home/mfg_fitting.jpeg",
+      production: "/assets/images/home/mfg_production.jpeg",
+      capacity: "/assets/images/home/mfg_capacity.png",
+      qa: "/assets/images/home/mfg_qa.png",
+      inspection: "/assets/images/manufacturing/inspection.jpg",
+      philosophy: "/assets/images/manufacturing/philosophy.jpg",
+      traceability: "/assets/images/home/mfg_traceability.jpeg",
+      logistics: "/assets/images/home/mfg_logistics.png",
+      cta: "/assets/images/manufacturing/cta.jpg"
+    },
+
+    // ========================================================================
+    // PRODUCTS & OTHERS
+    // ========================================================================
     products: {
       knit: ["/assets/images/products/knit_1.jpg", "/assets/images/products/knit_2.jpg", "/assets/images/products/knit_3.jpg"],
       woven: ["/assets/images/products/woven_1.jpg", "/assets/images/products/woven_2.jpg", "/assets/images/products/woven_3.jpg"],
