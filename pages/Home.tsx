@@ -461,20 +461,20 @@ const Home = () => {
                       </div>
                   </div>
 
-                  {/* Fashion Evolution Slide Images - Updated to use responsive aspect ratio and fit full image */}
-                  <div className="lg:col-span-7 w-full aspect-[3/4] md:aspect-[1/1] lg:aspect-[5/4] relative overflow-hidden shadow-2xl rounded-sm bg-white border border-gray-100">
+                  {/* Fashion Evolution Slide Images - Updated: No frame, auto height, no logo */}
+                  <div className="lg:col-span-7 w-full relative">
                        {sliderImages.map((src, index) => (
-                          <div key={index} className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${currentSlide === index ? 'opacity-100' : 'opacity-0'} flex items-center justify-center bg-gray-50`}>
-                              <img src={src} className="w-full h-full object-contain" alt={`Fashion Slide ${index + 1}`} />
-                          </div>
+                          <img 
+                            key={index}
+                            src={src} 
+                            className={`w-full h-auto object-contain transition-opacity duration-1000 ease-in-out block rounded-sm shadow-2xl ${
+                                currentSlide === index 
+                                    ? 'relative opacity-100 z-10' 
+                                    : 'absolute top-0 left-0 opacity-0 z-0'
+                            }`}
+                            alt={`Fashion Slide ${index + 1}`} 
+                          />
                        ))}
-                        <div className="absolute top-6 left-6 flex items-center gap-3 z-10 bg-white/80 p-2 rounded-sm shadow-sm">
-                            <img 
-                                src={ASSETS.logo} 
-                                alt="CoutureTex" 
-                                className="h-10 w-auto object-contain"
-                            />
-                        </div>
                   </div>
               </div>
             </FadeInSection>
