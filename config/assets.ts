@@ -80,6 +80,14 @@ export const ASSETS = {
       license: ["/assets/images/products/license_1.jpg", "/assets/images/products/license_2.jpg", "/assets/images/products/license_3.jpg"],
       jute: ["/assets/images/products/jute_1.jpg", "/assets/images/products/jute_2.jpg", "/assets/images/products/jute_3.jpg"]
     },
+    ethical: {
+      environmental: [
+        "https://images.unsplash.com/photo-1542601906990-b4d3fb7d5c73?q=80&w=1974&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1605218427368-35b85a3dd6b7?q=80&w=2000&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?q=80&w=1964&auto=format&fit=crop"
+      ],
+      csr: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2000&auto=format&fit=crop" // Education/Kids
+    },
     logos: {
       rsc: "/assets/images/logos/rsc.png",
       betterwork: "/assets/images/logos/betterwork.png",
