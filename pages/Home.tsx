@@ -292,6 +292,29 @@ const Home = () => {
     { name: 'NIRAPON', url: ASSETS.images.logos.nirapon }
   ];
 
+  // Double the logos for marquee effect
+  const marqueeLogos = [...logos, ...logos];
+
+  const marqueeStyles = `
+    @keyframes scrollLeft {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    @keyframes scrollRight {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0); }
+    }
+    .animate-scroll-left {
+      animation: scrollLeft 30s linear infinite;
+    }
+    .animate-scroll-right {
+      animation: scrollRight 30s linear infinite;
+    }
+    .pause-hover:hover {
+      animation-play-state: paused;
+    }
+  `;
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % sliderImages.length);
@@ -316,6 +339,8 @@ const Home = () => {
 
   return (
     <div className="overflow-x-hidden">
+      <style>{marqueeStyles}</style>
+
       {/* 
         1. Hero Video Section 
       */}
@@ -592,15 +617,33 @@ const Home = () => {
                           EXPLORE MORE
                         </Link>
                     </div>
+                    
+                    {/* Updated Right Side: Background Image + 2 Rows of Scrolling Logos */}
                     <div className="relative pt-6">
                         <div className="relative w-full aspect-[16/9] overflow-hidden rounded-sm border-4 border-white shadow-sm">
                             <img src={ASSETS.images.home.ethical} alt="Nature" className="w-full h-full object-cover opacity-80" />
-                            <div className="absolute inset-0 grid grid-cols-4 grid-rows-2 gap-2 p-4 md:p-8">
-                                {logos.map((logo, i) => (
-                                    <div key={i} className="bg-white/90 p-1 flex items-center justify-center shadow-sm">
-                                        <img src={logo.url} alt={logo.name} className="max-w-[80%] max-h-[80%] object-contain mix-blend-multiply" />
-                                    </div>
-                                ))}
+                            {/* Logo Overlay with Scrolling Rows */}
+                            <div className="absolute inset-0 flex flex-col justify-center gap-6 py-4 bg-black/10">
+                                {/* Row 1: Right to Left */}
+                                <div className="w-full overflow-hidden">
+                                     <div className="flex gap-4 w-max animate-scroll-left pause-hover px-4">
+                                         {marqueeLogos.map((logo, i) => (
+                                             <div key={`r1-${i}`} className="w-24 h-16 md:w-32 md:h-20 bg-white/90 p-2 rounded-sm flex items-center justify-center shadow-sm shrink-0">
+                                                 <img src={logo.url} alt={logo.name} className="max-w-full max-h-full object-contain mix-blend-multiply" />
+                                             </div>
+                                         ))}
+                                     </div>
+                                </div>
+                                {/* Row 2: Left to Right (Opposite) */}
+                                <div className="w-full overflow-hidden">
+                                     <div className="flex gap-4 w-max animate-scroll-right pause-hover px-4">
+                                         {marqueeLogos.map((logo, i) => (
+                                             <div key={`r2-${i}`} className="w-24 h-16 md:w-32 md:h-20 bg-white/90 p-2 rounded-sm flex items-center justify-center shadow-sm shrink-0">
+                                                 <img src={logo.url} alt={logo.name} className="max-w-full max-h-full object-contain mix-blend-multiply" />
+                                             </div>
+                                         ))}
+                                     </div>
+                                </div>
                             </div>
                         </div>
                         <div className="mt-6 bg-[#88c057] py-4 px-6 text-center">
