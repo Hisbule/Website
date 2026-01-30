@@ -767,7 +767,7 @@ const Home = () => {
                 {/* Right: Single Image Area */}
                 <div className="lg:col-span-7 relative h-[500px] bg-[#f8f8f8] shadow-2xl rounded-sm overflow-hidden border-4 border-white group">
                     <img 
-                        src={ASSETS.images.home.manufacturing.fitting} 
+                        src={ASSETS.images.manufacturing.fitting} 
                         className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
                         alt="Manufacturing Excellence"
                     />
@@ -781,7 +781,7 @@ const Home = () => {
                  {/* Diagram Side (Left) - Now just an image without overlays */}
                  <div className="relative w-full aspect-[4/3] md:aspect-video bg-gray-100 rounded-sm overflow-hidden shadow-2xl border-4 border-white group">
                     <img 
-                      src={ASSETS.images.home.manufacturing.production} 
+                      src={ASSETS.images.manufacturing.production} 
                       className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105" 
                       alt="Production Control" 
                     />
@@ -824,7 +824,7 @@ const Home = () => {
                  {/* Right: Image */}
                  <div className="w-full h-[400px] rounded-sm overflow-hidden shadow-xl border-4 border-white">
                      <img 
-                          src={ASSETS.images.home.manufacturing.capacity} 
+                          src={ASSETS.images.manufacturing.capacity} 
                           alt="Garment Factory Production" 
                           className="w-full h-full object-cover"
                      />
@@ -847,7 +847,7 @@ const Home = () => {
                  {/* Left: Image */}
                  <div className="w-full h-[500px] bg-gray-100 rounded-sm overflow-hidden shadow-2xl border-4 border-white relative group">
                      <img 
-                          src={ASSETS.images.home.manufacturing.qa} 
+                          src={ASSETS.images.manufacturing.qa} 
                           alt="Quality Assurance Team" 
                           className="w-full h-full object-cover"
                      />
@@ -888,7 +888,7 @@ const Home = () => {
                {/* Right: Picture Only */}
                <div className="relative w-full aspect-[4/3] bg-white border-4 border-white rounded-sm overflow-hidden shadow-2xl">
                    <img 
-                      src={ASSETS.images.home.manufacturing.traceability} 
+                      src={ASSETS.images.manufacturing.traceability} 
                       alt="Traceability Diagram"
                       className="w-full h-full object-cover" 
                    />
@@ -902,7 +902,7 @@ const Home = () => {
                   {/* Left: Image */}
                   <div className="w-full h-[400px] md:h-[500px] rounded-sm overflow-hidden shadow-2xl border-4 border-white relative group">
                       <img 
-                          src={ASSETS.images.home.manufacturing.logistics} 
+                          src={ASSETS.images.manufacturing.logistics} 
                           alt="Shipping and Logistics" 
                           className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
                       />

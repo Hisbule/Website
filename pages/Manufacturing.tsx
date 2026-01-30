@@ -44,11 +44,11 @@ const Manufacturing = () => {
   return (
     <div className="bg-white font-sans overflow-x-hidden">
       
-      {/* 1. Hero Section - Vintage Sewing Machine */}
+      {/* 1. Hero Section - IMAGE (Local) */}
       <div className="relative h-[60vh] md:h-[80vh] w-full overflow-hidden bg-black">
         <img 
-            src="https://images.unsplash.com/photo-1605518216938-7f31b757d5ee?q=80&w=2070&auto=format&fit=crop" 
-            alt="Vintage Sewing Machine Detail"
+            src={ASSETS.images.manufacturing.hero} 
+            alt="Manufacturing Excellence Hero"
             className="w-full h-full object-cover opacity-90"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/20"></div>
@@ -105,14 +105,14 @@ const Manufacturing = () => {
                 <FadeInSection>
                      <div className="grid grid-cols-2 gap-4">
                         <img 
-                            src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=2070&auto=format&fit=crop" 
-                            className="w-full h-[300px] object-cover rounded-sm shadow-md" 
-                            alt="Worker with clothes" 
+                            src={ASSETS.images.manufacturing.mission1} 
+                            className="w-full h-auto object-cover rounded-sm" 
+                            alt="Mission Image 1" 
                         />
                          <img 
-                            src="https://images.unsplash.com/photo-1574634534894-89d7576f8259?q=80&w=1964&auto=format&fit=crop" 
-                            className="w-full h-[300px] object-cover rounded-sm shadow-md" 
-                            alt="Tailoring details" 
+                            src={ASSETS.images.manufacturing.mission2} 
+                            className="w-full h-auto object-cover rounded-sm" 
+                            alt="Mission Image 2" 
                         />
                      </div>
                 </FadeInSection>
@@ -155,9 +155,12 @@ const Manufacturing = () => {
             {/* Fabric R&D */}
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-24">
                 <FadeInSection>
-                    <div className="h-[500px] rounded-sm overflow-hidden shadow-xl border-4 border-white">
-                        {/* Shelves of fabric */}
-                        <img src="https://images.unsplash.com/photo-1620799140408-ed5341cd2431?q=80&w=2000&auto=format&fit=crop" alt="Fabric Shelves" className="w-full h-full object-cover" />
+                    <div className="w-full">
+                        <img 
+                            src={ASSETS.images.manufacturing.fabric} 
+                            alt="Fabric R&D" 
+                            className="w-full h-auto rounded-sm" 
+                        />
                     </div>
                 </FadeInSection>
                 <FadeInSection>
@@ -176,9 +179,12 @@ const Manufacturing = () => {
             {/* Fitting / Technical Support */}
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-24">
                  <FadeInSection className="lg:order-2">
-                    <div className="h-[500px] rounded-sm overflow-hidden shadow-xl border-4 border-white">
-                        {/* Mannequin fitting */}
-                         <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=2080&auto=format&fit=crop" alt="Garment Fitting" className="w-full h-full object-cover" />
+                    <div className="w-full">
+                         <img 
+                            src={ASSETS.images.manufacturing.fitting} 
+                            alt="Garment Fitting" 
+                            className="w-full h-auto rounded-sm" 
+                        />
                     </div>
                 </FadeInSection>
                 <FadeInSection className="lg:order-1">
@@ -214,9 +220,12 @@ const Manufacturing = () => {
                     </div>
                  </FadeInSection>
                  <FadeInSection>
-                    <div className="h-[400px] rounded-sm overflow-hidden shadow-xl border-4 border-white">
-                        {/* Busy Factory Floor */}
-                         <img src="https://images.unsplash.com/photo-1565532525700-111162657e28?q=80&w=1974&auto=format&fit=crop" alt="Production Control" className="w-full h-full object-cover" />
+                    <div className="w-full">
+                         <img 
+                            src={ASSETS.images.manufacturing.production} 
+                            alt="Production Control" 
+                            className="w-full h-auto rounded-sm" 
+                        />
                     </div>
                 </FadeInSection>
              </div>
@@ -297,8 +306,12 @@ const Manufacturing = () => {
                       </div>
                   </FadeInSection>
                   <FadeInSection>
-                      <div className="h-[400px] rounded-sm overflow-hidden shadow-xl border-4 border-white">
-                           <img src="https://images.unsplash.com/photo-1596482103565-d603a1163152?q=80&w=2000&auto=format&fit=crop" alt="Quality Assurance Team" className="w-full h-full object-cover" />
+                      <div className="w-full">
+                           <img 
+                              src={ASSETS.images.manufacturing.qa} 
+                              alt="Quality Assurance Team" 
+                              className="w-full h-auto rounded-sm" 
+                           />
                       </div>
                   </FadeInSection>
               </div>
@@ -306,8 +319,12 @@ const Manufacturing = () => {
                {/* Real Time Inspection */}
               <div className="grid lg:grid-cols-2 gap-16 items-center">
                   <FadeInSection>
-                      <div className="h-[400px] rounded-sm overflow-hidden shadow-xl border-4 border-white">
-                           <img src="https://images.unsplash.com/photo-1550974797-0dc2a420952d?q=80&w=2000&auto=format&fit=crop" alt="Real Time Inspection" className="w-full h-full object-cover" />
+                      <div className="w-full">
+                           <img 
+                              src={ASSETS.images.manufacturing.inspection} 
+                              alt="Real Time Inspection" 
+                              className="w-full h-auto rounded-sm" 
+                           />
                       </div>
                   </FadeInSection>
                   <FadeInSection>
@@ -352,8 +369,12 @@ const Manufacturing = () => {
               
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                    <FadeInSection>
-                       <div className="h-[400px] rounded-sm overflow-hidden shadow-xl border-4 border-white">
-                           <img src="https://images.unsplash.com/photo-1620799140188-3b2a02fd917c?q=80&w=2000&auto=format&fit=crop" alt="Woman Inspecting" className="w-full h-full object-cover" />
+                       <div className="w-full">
+                           <img 
+                              src={ASSETS.images.manufacturing.philosophy} 
+                              alt="Quality Philosophy" 
+                              className="w-full h-auto rounded-sm" 
+                           />
                        </div>
                    </FadeInSection>
                    <FadeInSection>
@@ -373,9 +394,13 @@ const Manufacturing = () => {
 
               <div className="grid lg:grid-cols-2 gap-16 items-center">
                   <FadeInSection>
-                      <div className="relative aspect-square bg-[#bce3c6] rounded-full p-8 flex items-center justify-center shadow-inner">
-                          {/* Conceptual Traceability Circle */}
-                          <img src={ASSETS.images.home.manufacturing.traceability} alt="Traceability Diagram" className="w-full h-full object-contain mix-blend-multiply" />
+                      {/* Using object-contain to avoid cutting off diagram info */}
+                      <div className="w-full flex justify-center">
+                          <img 
+                              src={ASSETS.images.manufacturing.traceability} 
+                              alt="Traceability Diagram" 
+                              className="w-full max-w-[500px] h-auto rounded-full object-contain mix-blend-multiply" 
+                          />
                       </div>
                   </FadeInSection>
                   <FadeInSection>
@@ -416,9 +441,14 @@ const Manufacturing = () => {
               </FadeInSection>
           </div>
 
-          <div className="relative w-full h-[500px]">
-              <img src="https://images.unsplash.com/photo-1494412574643-35d324698420?q=80&w=2072&auto=format&fit=crop" alt="Cargo Ship" className="w-full h-full object-cover" />
-              <div className="absolute top-10 left-10 bg-white/90 p-8 max-w-2xl rounded-sm shadow-xl">
+          {/* Frameless full width image */}
+          <div className="relative w-full">
+              <img 
+                  src={ASSETS.images.manufacturing.logistics} 
+                  alt="Shipping Logistics" 
+                  className="w-full h-auto object-cover" 
+              />
+              <div className="absolute top-10 left-10 bg-white/90 p-8 max-w-2xl rounded-sm shadow-xl hidden md:block">
                    <FadeInSection>
                        <h3 className="text-2xl font-bold text-black leading-tight">
                            “Seamless Shipping, Global Reach-Precision in Fashion Supply Chain, Streamlining Solutions for Your Needs.”
@@ -428,8 +458,11 @@ const Manufacturing = () => {
           </div>
       </section>
       
-      {/* 10. Call to Action Banner (From PDF Page 5 Bottom) */}
-      <section className="relative h-[400px] w-full bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1605518216938-7f31b757d5ee?q=80&w=2070&auto=format&fit=crop')" }}>
+      {/* 10. Call to Action Banner */}
+      <section 
+          className="relative h-[400px] w-full bg-cover bg-center" 
+          style={{ backgroundImage: `url('${ASSETS.images.manufacturing.cta}')` }}
+      >
           <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center p-6 text-center">
               <FadeInSection>
                   <p className="text-white text-xl md:text-2xl font-serif italic font-bold mb-4">
