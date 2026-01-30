@@ -183,7 +183,7 @@ const Sustainability = () => {
                    </FadeInSection>
                    <FadeInSection>
                        <div className="text-right md:text-left">
-                           <h3 className="text-3xl md:text-4xl font-serif font-bold text-[#1e3a8a] mb-4">Conscious COUTURETEX</h3>
+                           <h3 className="text-3xl md:text-4xl font-serif font-bold text-[#1e3a8a] mb-4">Conscious APPARELBD</h3>
                            <h4 className="text-2xl md:text-3xl font-bold text-[#88c057] mb-6">Wear the Change for a Sustainable and Green Tomorrow!</h4>
                        </div>
                    </FadeInSection>
@@ -250,27 +250,26 @@ const Sustainability = () => {
       </section>
 
       {/* Call to Action Enquire */}
-      <section className="relative h-[600px] w-full bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?q=80&w=1974&auto=format&fit=crop')" }}>
-          <div className="absolute inset-0 bg-[#e0f2f1]/90 flex flex-col items-center justify-center p-6 text-center">
-              <div className="bg-[#b3e5fc] w-full py-8 mb-0 absolute top-0 left-0 shadow-sm">
-                  <p className="text-[#1e3a8a] italic font-serif font-bold text-lg md:text-xl">"We dedicated to offer sustainable sourcing solutions aligned with your values, transforming the fashion industry one eco-friendly garment at a time."</p>
-              </div>
-
-              <div className="relative w-full h-full flex items-center justify-center pt-24 pb-8 max-w-[95%] mx-auto">
-                   {/* Background Image inside the section */}
-                   <div className="relative w-full h-full overflow-hidden rounded-sm shadow-2xl">
-                       <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb7d5c73?q=80&w=1974&auto=format&fit=crop" className="absolute inset-0 w-full h-full object-cover opacity-100" />
-                       <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent flex flex-col justify-center px-8 md:px-20 text-left">
-                           <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6 leading-tight max-w-3xl">Discover our services and partner with us on the journey towards responsible fashion and a more sustainable world.</h2>
-                           <h3 className="text-2xl font-bold text-[#88c057] mb-8 uppercase tracking-wide">To Enquire with Us</h3>
-                           <div>
-                                <button onClick={() => window.location.href = 'mailto:info@couturetex.com'} className="border-2 border-white text-white px-10 py-3 text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300">
-                                    CLICK HERE
-                                </button>
-                           </div>
-                       </div>
-                   </div>
-              </div>
+      <section 
+        className="relative h-[60vh] w-full flex items-center justify-center bg-fixed bg-center bg-cover"
+        style={{ 
+          backgroundImage: "url('https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?q=80&w=1974&auto=format&fit=crop')",
+          backgroundAttachment: 'fixed'
+        }} 
+      >
+          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-12 w-full text-left">
+              <FadeInSection>
+                  <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg leading-tight max-w-4xl">
+                      Discover our services and partner with us on the journey towards responsible fashion and a more sustainable world.
+                  </h2>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-10 drop-shadow-lg">
+                      To Enquire with Us
+                  </h3>
+                  <a href="mailto:info@apparelbd.com" className="inline-block border border-[#88c057] text-white px-8 py-3 text-sm font-bold uppercase tracking-widest hover:bg-[#88c057] transition-all bg-[#88c057]/20 backdrop-blur-sm rounded-sm">
+                      CLICK HERE
+                  </a>
+              </FadeInSection>
           </div>
       </section>
 

@@ -120,7 +120,7 @@ const MarketIntel = () => {
                  A living reflection of shifting identities, a tapestry woven with values, where ancient threads intertwine with future forms.
                </p>
                <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light mb-6">
-                 At COUTURETEX, evolution is in our DNA. Our designers blend ethics with elegance, tradition with technology, crafting timeless, future-forward pieces. Using next-gen materials and zero-waste design, we create a new era where style meets sustainability.
+                 At APPARELBD, evolution is in our DNA. Our designers blend ethics with elegance, tradition with technology, crafting timeless, future-forward pieces. Using next-gen materials and zero-waste design, we create a new era where style meets sustainability.
                </p>
                <p className="text-[#1e3a8a] font-bold text-xl italic">Meaningful, Mesmerizing, Mindfully Made!!</p>
             </FadeInSection>
@@ -174,7 +174,7 @@ const MarketIntel = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-black mb-2">Design Innovation, Elevating Creative Elegance-</h2>
               <p className="text-gray-600 font-bold mb-6">Welcome to Our Design Expedition-</p>
               <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light mb-6">
-                 This is more than fashion—it’s a movement. A bold commitment to pushing creative boundaries, embracing responsible design, and igniting global change. Whether you’re launching a new label, redefining your brand, or seeking a design partner to bring your vision to life, COUTURETEX is your creative ally.
+                 This is more than fashion—it’s a movement. A bold commitment to pushing creative boundaries, embracing responsible design, and igniting global change. Whether you’re launching a new label, redefining your brand, or seeking a design partner to bring your vision to life, APPARELBD is your creative ally.
               </p>
               <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light">
                  Co-creation is core to our process. By collaborating with diverse design talent, we merge creativity with market insight—amplifying our clients’ capabilities while preserving brand authenticity.
@@ -252,14 +252,14 @@ const MarketIntel = () => {
                <h2 className="text-4xl md:text-5xl font-bold text-[#1e3a8a] mb-2 uppercase">DESIGN STUDIO:</h2>
                <p className="text-gray-600 italic font-bold mb-6">Where Global Ideas Become Iconic Fashion</p>
                <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light">
-                  At COUTURETEX, design is more than a process — it’s a cross-continental collaboration. Our London and Dhaka studios work in harmony to transform insights, craftsmanship, and creativity into future-ready, ethically made fashion collections. Together, they form a design ecosystem where ideas evolve, aesthetics are refined, and sustainability leads every step
+                  At APPARELBD, design is more than a process — it’s a cross-continental collaboration. Our London and Dhaka studios work in harmony to transform insights, craftsmanship, and creativity into future-ready, ethically made fashion collections. Together, they form a design ecosystem where ideas evolve, aesthetics are refined, and sustainability leads every step
                </p>
             </FadeInSection>
 
             {/* London Studio */}
             <div className="mb-24">
                <FadeInSection>
-                  <h3 className="text-3xl font-bold text-black mb-2">COUTURETEX London, UK Design Studio:</h3>
+                  <h3 className="text-3xl font-bold text-black mb-2">APPARELBD London, UK Design Studio:</h3>
                   <p className="text-gray-600 italic font-bold mb-6">Leading with Insight, Elegance. Creativity...!!</p>
                   <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light mb-6">
                      Located in the heart of the UK, our London studio leads with a unique blend of market intelligence, design innovation, cultural fluency, and timeless aesthetics. We craft collections that inspire, reflect your brand’s essence, and set new trends.
@@ -327,7 +327,7 @@ const MarketIntel = () => {
             {/* Dhaka Studio */}
             <div className="mb-24">
                <FadeInSection className="mb-8">
-                  <h3 className="text-3xl font-bold text-black mb-2">COUTURETEX Dhaka, Bangladesh Design Studio:</h3>
+                  <h3 className="text-3xl font-bold text-black mb-2">APPARELBD Dhaka, Bangladesh Design Studio:</h3>
                   <p className="text-gray-600 italic font-bold mb-6">Crafting the Future: Heritage, Vision, and Scalable Design!!</p>
                   <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light">
                      In Dhaka, Bangladesh — a city known for its rich textile heritage — our studio brings together traditional craftsmanship with cutting-edge global design. Here, creativity is grounded in cultural depth and enhanced by close integration with our London team.
@@ -401,7 +401,7 @@ const MarketIntel = () => {
             {/* Approaches */}
             <div className="mb-24">
                 <FadeInSection>
-                    <h2 className="text-3xl font-bold text-black mb-8">COUTURETEX Approaches-</h2>
+                    <h2 className="text-3xl font-bold text-black mb-8">APPARELBD Approaches-</h2>
                 </FadeInSection>
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <FadeInSection>
@@ -449,7 +449,7 @@ const MarketIntel = () => {
                 
                 <FadeInSection className="text-center mt-12">
                      <h3 className="text-xl md:text-2xl font-bold text-black uppercase">
-                         COUTURETEX — driven by purpose, defined by collaboration, designed to resonate
+                         APPARELBD — driven by purpose, defined by collaboration, designed to resonate
                      </h3>
                 </FadeInSection>
             </div>
@@ -460,7 +460,7 @@ const MarketIntel = () => {
                     <h2 className="text-3xl font-bold text-black mb-2">Design Support and Co-Creation:</h2>
                     <p className="text-gray-600 italic font-bold mb-6">End-to-End Creative Partnership</p>
                     <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light">
-                        At COUTURETEX, co-creation is a shared journey of innovation. We partner with brands to merge their identity with our design expertise, crafting authentic, market-ready collections. By uniting diverse perspectives and strategic insight, we help clients lead fashion with purpose and originality.
+                        At APPARELBD, co-creation is a shared journey of innovation. We partner with brands to merge their identity with our design expertise, crafting authentic, market-ready collections. By uniting diverse perspectives and strategic insight, we help clients lead fashion with purpose and originality.
                     </p>
                 </FadeInSection>
 
@@ -496,7 +496,7 @@ const MarketIntel = () => {
                         <h2 className="text-2xl font-bold text-black mb-4">Our Design Philosophy</h2>
                         <p className="text-gray-600 italic font-bold mb-4">Creative Intelligence with Purpose</p>
                         <p className="text-gray-700 leading-relaxed text-lg font-light text-justify mb-10">
-                            At COUTURETEX, design is a fusion of imagination, strategy, and responsibility. We believe every collection should be visually striking, ethically sound, and commercially smart — built not just for now, but for the future.
+                            At APPARELBD, design is a fusion of imagination, strategy, and responsibility. We believe every collection should be visually striking, ethically sound, and commercially smart — built not just for now, but for the future.
                         </p>
 
                         <h2 className="text-2xl font-bold text-black mb-6">Our Approach Is Built On-</h2>
@@ -519,14 +519,20 @@ const MarketIntel = () => {
       </section>
 
       {/* Final Banner */}
-      <section className="relative h-[500px] w-full bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=2070&auto=format&fit=crop')" }}>
+      <section 
+        className="relative h-[500px] w-full bg-cover bg-center bg-fixed" 
+        style={{ 
+          backgroundImage: "url('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=2070&auto=format&fit=crop')",
+          backgroundAttachment: 'fixed'
+        }}
+      >
           <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center p-6 text-center">
               <FadeInSection>
                   <h2 className="text-white text-2xl md:text-4xl font-serif font-bold italic leading-relaxed max-w-5xl">
-                      Timeless Design, Future-Ready Fashion — Crafted by COUTURETEX, Partnered in Creativity. Let’s build the future of fashion together!
+                      Timeless Design, Future-Ready Fashion — Crafted by APPARELBD, Partnered in Creativity. Let’s build the future of fashion together!
                   </h2>
                   <div className="mt-8">
-                       <a href="mailto:info@couturetex.com" className="inline-block border-2 border-[#88c057] text-[#88c057] px-8 py-3 text-sm font-bold uppercase tracking-widest hover:bg-[#88c057] hover:text-white transition-all duration-300">
+                       <a href="mailto:info@apparelbd.com" className="inline-block border-2 border-[#88c057] text-[#88c057] px-8 py-3 text-sm font-bold uppercase tracking-widest hover:bg-[#88c057] hover:text-white transition-all duration-300">
                            Start to Collaborate
                        </a>
                   </div>

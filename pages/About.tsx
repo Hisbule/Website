@@ -305,7 +305,7 @@ const About = () => {
         <div className="max-w-[95%] mx-auto px-4 sm:px-6 lg:px-8">
           <FadeInSection className="mb-12">
             <h2 className="text-2xl md:text-4xl font-serif font-bold text-brand-navy mb-4">
-              Welcome to Couture Tex Sourcing Ltd, Where Fashion Meets Integrity!!
+              Welcome to ApparelBD Sourcing Ltd, Where Fashion Meets Integrity!!
             </h2>
             <h3 className="text-xl md:text-2xl font-bold text-black mb-8">
               Reliable Strategic, Sustainable and Ethical Global Sourcing Partner!!
@@ -324,7 +324,7 @@ const About = () => {
           <FadeInSection className="w-full h-[300px] md:h-[500px] overflow-hidden rounded-sm shadow-xl mb-12">
             <img 
               src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=2340&auto=format&fit=crop" 
-              alt="CoutureTex Showroom" 
+              alt="ApparelBD Showroom" 
               className="w-full h-full object-cover"
             />
           </FadeInSection>
@@ -398,7 +398,7 @@ const About = () => {
               <div className="mb-8">
                 <h3 className="text-xl font-bold text-black mb-2">Design Studio in London, UK</h3>
                 <p className="text-gray-700 text-lg leading-relaxed font-light">
-                  COUTURETEX London Studio creates elegant, trend-driven collections guided by in-house expert British designers.
+                  APPARELBD London Studio creates elegant, trend-driven collections guided by in-house expert British designers.
                 </p>
               </div>
 
@@ -442,7 +442,7 @@ const About = () => {
                
                <div className="mb-12 text-justify">
                  <p className="text-gray-700 text-lg md:text-xl leading-relaxed font-light mb-4">
-                    At COUTURETEX, purposeful fashion is driven by passionate people. Our greatest strength is our diverse, globally connected team—innovators who power every stage of the fashion lifecycle. From trend-forward design and ethical sourcing to precision product development, rigorous quality assurance, and seamless logistics, our experts lead with creativity, integrity, and a commitment to sustainability.
+                    At APPARELBD, purposeful fashion is driven by passionate people. Our greatest strength is our diverse, globally connected team—innovators who power every stage of the fashion lifecycle. From trend-forward design and ethical sourcing to precision product development, rigorous quality assurance, and seamless logistics, our experts lead with creativity, integrity, and a commitment to sustainability.
                  </p>
                  <p className="text-gray-700 text-lg md:text-xl leading-relaxed font-light">
                     Collaboration is our foundation. Together, we deliver solutions that blend artistry, ethics, and excellence—ensuring every piece we create carries purpose.
@@ -523,7 +523,7 @@ const About = () => {
                 <div>
                     <h3 className="text-2xl font-bold text-brand-navy mb-2">Vision:</h3>
                     <p className="text-gray-700 leading-relaxed text-base md:text-lg font-light">
-                        COUTURETEX aims to be a global leader in apparel sourcing, setting new standards in design innovation, customer support, and ethical sourcing, while promoting creativity, sustainability, and traceability to deliver lasting value.
+                        APPARELBD aims to be a global leader in apparel sourcing, setting new standards in design innovation, customer support, and ethical sourcing, while promoting creativity, sustainability, and traceability to deliver lasting value.
                     </p>
                 </div>
             </FadeInSection>
@@ -627,32 +627,32 @@ const About = () => {
                     <div className="bg-brand-light p-8 rounded-sm hover:shadow-md transition-shadow">
                         <h4 className="font-bold text-brand-navy mb-2 text-lg">Head Quarter and Primary Office</h4>
                         <p className="text-base text-gray-600 mb-2 font-light">House-38, Level-5, Road-38, Block-F, Sector-13, Uttara, Dhaka, Bangladesh.</p>
-                        <p className="text-base text-brand-blue">info@couturetex.com</p>
+                        <p className="text-base text-brand-blue">info@apparelbd.com</p>
                     </div>
                     <div className="bg-brand-light p-8 rounded-sm hover:shadow-md transition-shadow">
                         <h4 className="font-bold text-brand-navy mb-2 text-lg">UK Sourcing Office</h4>
                         <p className="text-base text-gray-600 mb-2 font-light">129 Mile End Road, E1 4BG, London, United Kingdom.</p>
-                        <p className="text-base text-brand-blue">info.uk@couturetex.com</p>
+                        <p className="text-base text-brand-blue">info.uk@apparelbd.com</p>
                     </div>
                     <div className="bg-brand-light p-8 rounded-sm hover:shadow-md transition-shadow">
                         <h4 className="font-bold text-brand-navy mb-2 text-lg">Sweden Sourcing Office Sourcing Office</h4>
                         <p className="text-base text-gray-600 mb-2 font-light">Nebulusgatan 8, 418 63 Gothenburg, Sweden</p>
-                        <p className="text-base text-brand-blue">info@couturetex.com</p>
+                        <p className="text-base text-brand-blue">info@apparelbd.com</p>
                     </div>
                     <div className="bg-brand-light p-8 rounded-sm hover:shadow-md transition-shadow">
                         <h4 className="font-bold text-brand-navy mb-2 text-lg">Canada Sourcing Office</h4>
                         <p className="text-base text-gray-600 mb-2 font-light">205-181 Hollywood Road North, Kelowna, British Columbia, V1X 3R1, Canada.</p>
-                        <p className="text-base text-brand-blue">info.canada@couturetex.com</p>
+                        <p className="text-base text-brand-blue">info.canada@apparelbd.com</p>
                     </div>
                     <div className="bg-brand-light p-8 rounded-sm hover:shadow-md transition-shadow">
                         <h4 className="font-bold text-brand-navy mb-2 text-lg">New Zealand Sourcing Office</h4>
                         <p className="text-base text-gray-600 mb-2 font-light">422 Memorial Avenue, Burnside, Christchurch 8053, New Zealand.</p>
-                        <p className="text-base text-brand-blue">info.nz@couturetex.com</p>
+                        <p className="text-base text-brand-blue">info.nz@apparelbd.com</p>
                     </div>
                     <div className="bg-brand-light p-8 rounded-sm hover:shadow-md transition-shadow">
                         <h4 className="font-bold text-brand-navy mb-2 text-lg">China Fabric and Accessories Sourcing Office</h4>
                         <p className="text-base text-gray-600 mb-2 font-light">Flat-E, 15/F, Alpha House, 27-33 Nathan Road, Tsim Sha Tsui Kowloon, Hong Kong.</p>
-                        <p className="text-base text-brand-blue">info@couturetex.com</p>
+                        <p className="text-base text-brand-blue">info@apparelbd.com</p>
                     </div>
                 </div>
             </FadeInSection>

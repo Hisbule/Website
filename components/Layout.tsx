@@ -226,7 +226,7 @@ const Footer = () => {
                <div>
                  <p className="font-bold text-brand-navy text-lg mb-1">Head Quarter and Primary Office</p>
                  <p className="leading-snug">House-38, Level-5, Road-38, Sector-13, Uttara, Dhaka, Bangladesh.</p>
-                 <p className="mt-2 text-brand-blue font-medium">Email: info@couturetex.com</p>
+                 <p className="mt-2 text-brand-blue font-medium">Email: info@apparelbd.com</p>
                </div>
                <div>
                  <p className="font-bold text-brand-navy text-lg mb-1">UK Design Studio</p>
@@ -277,7 +277,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-20 pt-8 border-t border-gray-300/50 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 font-medium">
-           <p className="mb-2 md:mb-0">Copyright © 2024 COUTURETEX Sourcing Limited | Powered By COUTURETEX Sourcing Limited</p>
+           <p className="mb-2 md:mb-0">Copyright © 2024 APPARELBD Sourcing Limited | Powered By APPARELBD Sourcing Limited</p>
            <p>Concept & Content djk</p>
         </div>
       </div>

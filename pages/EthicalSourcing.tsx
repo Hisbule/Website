@@ -109,7 +109,7 @@ const EthicalSourcing = () => {
                         <span className="font-bold text-black">Ethical sourcing</span> is our corner stone of responsible business practices. As consumers increasingly demand transparency and accountability, fashion brands are recognizing the importance of ensuring that every thread in their supply chain is merged with integrity.
                     </p>
                     <p>
-                        At COUTURETEX Sourcing, we are dedicated to ethical and responsive sourcing practices that protect both individuals and the environment.
+                        At APPARELBD Sourcing, we are dedicated to ethical and responsive sourcing practices that protect both individuals and the environment.
                     </p>
                 </div>
              </FadeInSection>
@@ -180,7 +180,7 @@ const EthicalSourcing = () => {
       <section className="py-12 bg-[#88c057] text-center px-4">
           <FadeInSection>
               <h2 className="text-xl md:text-3xl font-serif font-bold text-white uppercase leading-snug">
-                  COUTURETEX Sourcing, Where Fashion Meets Integrity!!<br/>
+                  APPARELBD Sourcing, Where Fashion Meets Integrity!!<br/>
                   Elevate Your Wardrobe, Elevate Your Values!!
               </h2>
           </FadeInSection>
@@ -217,7 +217,7 @@ const EthicalSourcing = () => {
           <div className="max-w-[95%] mx-auto px-4 lg:px-8">
               <FadeInSection className="mb-12">
                   <p className="text-gray-700 leading-relaxed text-lg md:text-xl font-light text-justify">
-                      <span className="font-bold text-black">Environmental Concern</span> at Couture Tex Sourcing, we're committed to minimizing our environmental impact by partnering with like-minded collaborators. We prioritize sustainable materials like organic cotton, recycled polyester, and ecofriendly fibers, aiming to reduce energy use, waste, and pollution across our supply chain. With a focus on environmental stewardship, we strive to lead the way toward a more sustainable, eco-conscious fashion industry. Join us in creating a greener tomorrow, one stitch at a time.
+                      <span className="font-bold text-black">Environmental Concern</span> at ApparelBD Sourcing, we're committed to minimizing our environmental impact by partnering with like-minded collaborators. We prioritize sustainable materials like organic cotton, recycled polyester, and ecofriendly fibers, aiming to reduce energy use, waste, and pollution across our supply chain. With a focus on environmental stewardship, we strive to lead the way toward a more sustainable, eco-conscious fashion industry. Join us in creating a greener tomorrow, one stitch at a time.
                   </p>
               </FadeInSection>
               
@@ -367,12 +367,12 @@ const EthicalSourcing = () => {
           <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center p-6 text-center">
               <FadeInSection>
                   <h2 className="text-white text-3xl md:text-5xl font-serif font-bold mb-6 max-w-4xl leading-tight">
-                      Couture Tex Sourcing, Where Fashion Meets Integrity!! Elevate Your Wardrobe, Elevate Your Values!!
+                      ApparelBD Sourcing, Where Fashion Meets Integrity!! Elevate Your Wardrobe, Elevate Your Values!!
                   </h2>
                   <h3 className="text-[#88c057] text-2xl md:text-4xl font-bold mb-10 uppercase tracking-widest">
                       To Enquire with Us
                   </h3>
-                  <button onClick={() => window.location.href = 'mailto:info@couturetex.com'} className="border-2 border-white text-white px-10 py-3 text-sm font-bold uppercase tracking-widest hover:bg-[#88c057] hover:border-[#88c057] transition-all duration-300">
+                  <button onClick={() => window.location.href = 'mailto:info@apparelbd.com'} className="border-2 border-white text-white px-10 py-3 text-sm font-bold uppercase tracking-widest hover:bg-[#88c057] hover:border-[#88c057] transition-all duration-300">
                       CLICK HERE
                   </button>
               </FadeInSection>
@@ -384,7 +384,7 @@ const EthicalSourcing = () => {
           <div className="max-w-[95%] mx-auto px-4">
               <FadeInSection>
                   <p className="text-gray-600 text-sm md:text-base font-light">
-                      <span className="font-bold text-black">Ethical and responsive sourcing</span> is at the core of Couture Tex Sourcing's mission. With our dedication to transparency, fair practices, sustainability, and adherence to international standards, we surpass ethical expectations. Choosing us means opting for responsible sourcing that values both people and the planet. Together, we pave the way for a future of ethical business practices.
+                      <span className="font-bold text-black">Ethical and responsive sourcing</span> is at the core of ApparelBD Sourcing's mission. With our dedication to transparency, fair practices, sustainability, and adherence to international standards, we surpass ethical expectations. Choosing us means opting for responsible sourcing that values both people and the planet. Together, we pave the way for a future of ethical business practices.
                   </p>
               </FadeInSection>
           </div>
