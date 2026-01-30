@@ -25,9 +25,9 @@ export const ASSETS = {
     // ========================================================================
     home: {
       slider: [
-        "assets/images/home/slide1.jpeg",
-        "assets/images/home/slide2.jpeg",
-        "assets/images/home/slide_3.jpg",
+        "assets/images/home/slide1.png",
+        "assets/images/home/slide2.png",
+        "assets/images/home/slide_3.png",
       ],
       about: {
         showroom: "assets/images/home/showroom.jpeg",
@@ -106,14 +106,14 @@ export const ASSETS = {
       csr: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2000&auto=format&fit=crop" // Education/Kids
     },
     logos: {
-      rsc: "assets/images/logos/rsc.png",
-      betterwork: "assets/images/logos/betterwork.png",
-      smeta: "assets/images/logos/smeta.png",
-      amfori: "assets/images/logos/amfori.png",
-      gots: "assets/images/logos/gots.png",
-      bci: "assets/images/logos/bci.png",
-      ctpat: "assets/images/logos/ctpat.png",
-      nirapon: "assets/images/logos/nirapon.png",
+      rsc: "assets/images/logos/rsc.jpg",
+      betterwork: "assets/images/logos/betterwork.jpg",
+      smeta: "assets/images/logos/smeta.jpg",
+      amfori: "assets/images/logos/amfori.jpg",
+      gots: "assets/images/logos/gots.jpg",
+      bci: "assets/images/logos/bci.jpg",
+      ctpat: "assets/images/logos/ctpat.jpg",
+      nirapon: "assets/images/logos/nirapon.jpg",
       
       disney: "assets/images/logos/disney.jpg",
       zdhc: "assets/images/logos/zdhc.jpg",
