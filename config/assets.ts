@@ -25,7 +25,7 @@ export const ASSETS = {
     // ========================================================================
     home: {
       slider: [
-        "assets/images/home/slide1.jpeg",
+        "assets/images/home/slide1.png",
         "assets/images/home/slide2.jpeg",
         "assets/images/home/slide_3.png",
       ],
