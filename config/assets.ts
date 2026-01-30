@@ -102,13 +102,13 @@ export const ASSETS = {
     // ETHICAL SOURCING PAGE IMAGES (LOCAL)
     // ========================================================================
     ethical: {
-      img1: "assets/images/ethical/Ethical_1.jpg",
+      img1: "assets/images/ethical/Ethical_1.avif",
       img2: "assets/images/ethical/Ethical_2.jpg",
       img3: "assets/images/ethical/Ethical_3.avif",
       img4: "assets/images/ethical/Ethical_4.jpg",
-      img5: "assets/images/ethical/Ethical_5.png",
+      img5: "assets/images/ethical/Ethical_5.avif",
       img6: "assets/images/ethical/Ethical_6.jpg",
-      img7: "assets/images/ethical/Ethical_7.png",
+      img7: "assets/images/ethical/Ethical_7.avif",
       img8: "assets/images/ethical/Ethical_8.jpg",
       img9: "assets/images/ethical/Ethical_9.jpg",
       img10: "assets/images/ethical/Ethical_10.jpg"
