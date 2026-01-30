@@ -317,7 +317,7 @@ const Home = () => {
                   </div>
                   <h3 className="text-2xl md:text-3xl text-gray-400 italic mb-8 font-light">Who We Are... !!</h3>
                   <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light border-l-4 border-brand-green pl-6">
-                      At Couture Tex Sourcing Ltd, we believe fashion is not just about Clothing, it's an ever evolving statement, an expression of Identity. Culture context of time and place, perception, aspiration, creativity and innovation, value and belief of individual and community. We drive fashion forward through market intelligence, trend analysis, innovative design, ethical sourcing, diverse products, sustainability, and responsible manufacturing. Backed by strong quality assurance, reliable logistics, and exceptional service, we aim to deliver outstanding value to our customers.
+                      At Couture Tex Sourcing Ltd, we believe fashion is not just about Clothing, it's an ever evolving statement, an expression of Identity. Culture context of time and place, perception, aspiration, creativity and innovation, value and belief of individual and community. We drive fashion forward through market intelligence, trend analysis, innovative design, and ethical sourcing. Backed by strong quality assurance, reliable logistics, and exceptional service, we aim to deliver outstanding value to our customers.
                   </p>
               </div>
             </FadeInSection>
@@ -508,8 +508,12 @@ const Home = () => {
 
       {/* New Parallax Quote Section */}
       <section 
-        className="relative h-[70vh] bg-fixed bg-center bg-cover flex items-center justify-center"
-        style={{ backgroundImage: `url('${ASSETS.images.home.marketIntel.parallax}')` }} 
+        className="relative h-[70vh] flex items-center justify-center bg-center bg-cover"
+        style={{ 
+          // This is where the local image is applied
+          backgroundImage: `url('${ASSETS.images.home.fashionQuoteParallax}')`,
+          backgroundAttachment: 'fixed'
+        }} 
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
@@ -695,7 +699,7 @@ const Home = () => {
                       </p>
                       <div className="space-y-6 text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light">
                           <p>
-                              At the core of our production control framework are four key components: Material Requirement Planning (MRP), Capacity Planning, Production Scheduling, and Quality Control. These elements work together to ensure a seamless, efficient manufacturing process, managing everything from material sourcing to final product inspection.
+                              At the core of our production control framework are four key components: Material Requirement Planning (MRP), Capacity Planning, Production Scheduling, and Rigorous Quality Control. These elements work together to ensure a seamless, efficient manufacturing process, managing everything from material sourcing to final product inspection.
                           </p>
                           <p>
                               Material Requirement Planning (MRP) manages material needs to maintain optimal inventory and avoid shortages or excess.
@@ -858,16 +862,19 @@ const Home = () => {
       
       {/* 12. Inquiry Parallax Section */}
       <section 
-        className="relative h-[60vh] bg-fixed bg-center bg-cover flex items-center"
-        style={{ backgroundImage: `url('${ASSETS.images.home.inquiry}')` }} 
+        className="relative h-[60vh] w-full flex items-center justify-center bg-fixed bg-center bg-cover"
+        style={{ 
+          backgroundImage: `url('${ASSETS.images.home.inquiry}')`,
+          backgroundAttachment: 'fixed'
+        }} 
       >
-        <div className="absolute inset-0 bg-gray-900/40"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-12 w-full text-left">
              <FadeInSection>
-               <h2 className="text-3xl md:text-5xl font-bold text-white mb-2 shadow-black/50 drop-shadow-lg">
+               <h2 className="text-3xl md:text-5xl font-bold text-white mb-2 drop-shadow-lg">
                   We are eager to deliver you Superior Value
                </h2>
-               <h3 className="text-2xl md:text-3xl font-bold text-white mb-10 shadow-black/50 drop-shadow-lg">
+               <h3 className="text-2xl md:text-3xl font-bold text-white mb-10 drop-shadow-lg">
                   To Enquire with Us
                </h3>
                <a href="mailto:info@couturetex.com" className="inline-block border border-[#88c057] text-white px-8 py-3 text-sm font-bold uppercase tracking-widest hover:bg-[#88c057] transition-all bg-[#88c057]/20 backdrop-blur-sm rounded-sm">

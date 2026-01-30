@@ -48,6 +48,8 @@ export const ASSETS = {
         traceability: "assets/images/home/mfg_traceability.jpeg",
         logistics: "assets/images/home/mfg_logistics.png"
       },
+      // Explicit local image for the Fashion Quote Parallax section
+      fashionQuoteParallax: "/assets/images/home/fashion_quote_bg.jpg",
       inquiry: "/assets/images/home/inquiry_bg.jpg",
       aboutSlider: [
         "/assets/images/home/about_slide_1.jpg",
