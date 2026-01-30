@@ -25,9 +25,9 @@ export const ASSETS = {
     // ========================================================================
     home: {
       slider: [
-        "assets/images/home/slide1.png",
-        "assets/images/home/slide2.png",
-        "assets/images/home/slide_3.png",
+        "assets/images/home/slide1.jpeg",
+        "assets/images/home/slide2.jpeg",
+        "assets/images/home/slide_3.jpg",
       ],
       about: {
         showroom: "assets/images/home/showroom.jpeg",
@@ -35,7 +35,7 @@ export const ASSETS = {
       },
       marketIntel: {
         studio: "assets/images/home/market_studio.jpeg",
-        dhaka: "assets/images/home/market_dhaka.png",
+        dhaka: "assets/images/home/market_dhaka.jpeg",
         parallax: "assets/images/home/market_parallax.jpg"
       },
       ethical: "assets/images/home/ethical_bg.jpg",
@@ -80,24 +80,22 @@ export const ASSETS = {
       logistics: "assets/images/home/mfg_logistics.png",
       cta: "assets/images/manufacturing/cta.jpg"
     },
-
     // ========================================================================
     // PRODUCTS & OTHERS
     // ========================================================================
     products: {
-      knit: ["assets/images/products/Knit_1.png", "assets/images/products/Knit_2.png", "assets/images/products/Knit_3.png"],
-      woven: ["assets/images/products/Woven_1.png", "assets/images/products/Woven_2.png", "assets/images/products/Woven_3.png"],
-      nightwear: ["assets/images/products/Nightwear_1.png", "assets/images/products/Nightwear_2.png", "assets/images/products/Nightwear_3.png"],
-      denim: ["assets/images/products/Denim_1.png", "assets/images/products/Denim_2.png", "assets/images/products/Denim_3.png"],
-      outerwear: ["assets/images/products/Outerwear_1.png", "assets/images/products/Outerwear_2.png", "assets/images/products/Outerwear_3.png"],
-      lingerie: ["assets/images/products/Lingerie_1.png", "assets/images/products/Lingerie_2.png", "assets/images/products/Lingerie_3.png"],
-      activewear: ["assets/images/products/Activewear_1.png", "assets/images/products/Activewear_2.png", "assets/images/products/Activewear_3.png"],
-      hometextile: ["assets/images/products/Hometextile_1.png", "assets/images/products/Hometextile_2.png", "assets/images/products/Hometextile_3.png"],
-      uniform: ["assets/images/products/Uniform_1.png", "assets/images/products/Uniform_2.png", "assets/images/products/Uniform_3.png"],
-      sweater: ["assets/images/products/Sweater_1.png", "assets/images/products/Sweater_2.png", "assets/images/products/Sweater_3.png"],
-      license: ["assets/images/products/License_1.png", "assets/images/products/License_2.png", "assets/images/products/License_3.png"],
-      jute: ["assets/images/products/Jute_1.png", "assets/images/products/Jute_2.png", "assets/images/products/Jute_3.png"]
-
+      knit: ["assets/images/products/knit_1.jpg", "assets/images/products/knit_2.jpg", "assets/images/products/knit_3.jpg"],
+      woven: ["assets/images/products/woven_1.jpg", "assets/images/products/woven_2.jpg", "assets/images/products/woven_3.jpg"],
+      nightwear: ["assets/images/products/nightwear_1.jpg", "assets/images/products/nightwear_2.jpg", "assets/images/products/nightwear_3.jpg"],
+      denim: ["assets/images/products/denim_1.jpg", "assets/images/products/denim_2.jpg", "assets/images/products/denim_3.jpg"],
+      outerwear: ["assets/images/products/outerwear_1.jpg", "assets/images/products/outerwear_2.jpg", "assets/images/products/outerwear_3.jpg"],
+      lingerie: ["assets/images/products/lingerie_1.jpg", "assets/images/products/lingerie_2.jpg", "assets/images/products/lingerie_3.jpg"],
+      activewear: ["assets/images/products/activewear_1.jpg", "assets/images/products/activewear_2.jpg", "assets/images/products/activewear_3.jpg"],
+      hometextile: ["assets/images/products/hometextile_1.jpg", "assets/images/products/hometextile_2.jpg", "assets/images/products/hometextile_3.jpg"],
+      uniform: ["assets/images/products/uniform_1.jpg", "assets/images/products/uniform_2.jpg", "assets/images/products/uniform_3.jpg"],
+      sweater: ["assets/images/products/sweater_1.jpg", "assets/images/products/sweater_2.jpg", "assets/images/products/sweater_3.jpg"],
+      license: ["assets/images/products/license_1.jpg", "assets/images/products/license_2.jpg", "assets/images/products/license_3.jpg"],
+      jute: ["assets/images/products/jute_1.jpg", "assets/images/products/jute_2.jpg", "assets/images/products/jute_3.jpg"]
     },
     ethical: {
       environmental: [
@@ -108,14 +106,23 @@ export const ASSETS = {
       csr: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2000&auto=format&fit=crop" // Education/Kids
     },
     logos: {
-      rsc: "assets/images/logos/rsc.jpg",
-      betterwork: "assets/images/logos/betterwork.jpg",
-      smeta: "assets/images/logos/smeta.jpg",
-      amfori: "assets/images/logos/amfori.jpg",
-      gots: "assets/images/logos/gots.jpg",
-      bci: "assets/images/logos/bci.jpg",
-      ctpat: "assets/images/logos/ctpat.jpg",
-      nirapon: "assets/images/logos/nirapon.jpg"
+      rsc: "assets/images/logos/rsc.png",
+      betterwork: "assets/images/logos/betterwork.png",
+      smeta: "assets/images/logos/smeta.png",
+      amfori: "assets/images/logos/amfori.png",
+      gots: "assets/images/logos/gots.png",
+      bci: "assets/images/logos/bci.png",
+      ctpat: "assets/images/logos/ctpat.png",
+      nirapon: "assets/images/logos/nirapon.png",
+      
+      disney: "assets/images/logos/disney.png",
+      zdhc: "assets/images/logos/zdhc.png",
+      oekotex: "assets/images/logos/oekotex.png",
+      wrap: "assets/images/logos/wrap.png",
+      grs: "assets/images/logos/grs.png",
+      higg: "assets/images/logos/higg.png",
+      iso: "assets/images/logos/iso.png",
+      sa8000: "assets/images/logos/sa8000.png"
     }
   },
 

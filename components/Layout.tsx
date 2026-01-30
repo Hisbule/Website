@@ -225,29 +225,13 @@ const Footer = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-10 text-base text-gray-700">
                <div>
                  <p className="font-bold text-brand-navy text-lg mb-1">Head Quarter and Primary Office</p>
-                 <p className="leading-snug">House-38, Level-5, Road-38, Sector-13, Uttara, Dhaka, Bangladesh.</p>
+                 <p className="leading-snug">36, Gareeb-E-Newaz Avenue, Level-3 (C2), Sector-13, Uttara, Dhaka-1230, Bangladesh.</p>
                  <p className="mt-2 text-brand-blue font-medium">Email: info@apparelbd.com</p>
                </div>
-               <div>
-                 <p className="font-bold text-brand-navy text-lg mb-1">UK Design Studio</p>
-                 <p className="leading-snug">129 Mile End Road, E1 4BG, London, UK.</p>
-               </div>
-               <div>
-                 <p className="font-bold text-brand-navy text-lg mb-1">Canada Sourcing Office</p>
-                 <p className="leading-snug">205-181 Hollywood Road North, Kelowna, BC, Canada.</p>
-               </div>
-               <div>
-                 <p className="font-bold text-brand-navy text-lg mb-1">New Zealand Sourcing Office</p>
-                 <p className="leading-snug">422 Memorial Avenue, Burnside, Christchurch, New Zealand.</p>
-               </div>
-               <div>
-                 <p className="font-bold text-brand-navy text-lg mb-1">Sweden Sourcing Office</p>
-                 <p className="leading-snug">Address: Trallingsgatan 3B lgh 2401, Boras, Sweden.</p>
-               </div>
-               <div>
-                 <p className="font-bold text-brand-navy text-lg mb-1">China Fabric Sourcing</p>
-                 <p className="leading-snug">Flat-E, 15/F, Alpha House, 27-33 Nathan Road, Kowloon, HK.</p>
-               </div>
+               {/* 
+                  Temporarily hiding other offices as per request.
+                  Can be restored later if needed.
+               */}
             </div>
           </div>
 

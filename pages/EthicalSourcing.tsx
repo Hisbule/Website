@@ -44,17 +44,27 @@ const EthicalSourcing = () => {
   const [currentEnvIndex, setCurrentEnvIndex] = useState(0);
   const envImages = ASSETS.images.ethical.environmental;
 
-  const logos = [
-    { name: 'Disney', url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Disney_wordmark.svg/2560px-Disney_wordmark.svg.png' }, // Placeholder for Disney
-    { name: 'ZDHC', url: 'https://www.roadmaptozero.com/assets/images/ZDHC-Logo-Horizontal-Black.png' }, // Placeholder
+  // Defined Logo Rows - Matching Home Page
+  const logosRow1 = [
     { name: 'RSC', url: ASSETS.images.logos.rsc },
     { name: 'BetterWork', url: ASSETS.images.logos.betterwork },
     { name: 'SMETA', url: ASSETS.images.logos.smeta },
     { name: 'amfori', url: ASSETS.images.logos.amfori },
     { name: 'GOTS', url: ASSETS.images.logos.gots },
+    { name: 'Disney', url: ASSETS.images.logos.disney },
+    { name: 'GRS', url: ASSETS.images.logos.grs },
+    { name: 'Higg', url: ASSETS.images.logos.higg }
+  ];
+
+  const logosRow2 = [
     { name: 'BCI', url: ASSETS.images.logos.bci },
     { name: 'CTPAT', url: ASSETS.images.logos.ctpat },
-    { name: 'NIRAPON', url: ASSETS.images.logos.nirapon }
+    { name: 'NIRAPON', url: ASSETS.images.logos.nirapon },
+    { name: 'ZDHC', url: ASSETS.images.logos.zdhc },
+    { name: 'Oeko-Tex', url: ASSETS.images.logos.oekotex },
+    { name: 'WRAP', url: ASSETS.images.logos.wrap },
+    { name: 'ISO', url: ASSETS.images.logos.iso },
+    { name: 'SA8000', url: ASSETS.images.logos.sa8000 }
   ];
 
   // Auto-play for Environmental images
@@ -87,7 +97,8 @@ const EthicalSourcing = () => {
   `;
 
   // Triple the logos to ensure smooth scrolling on wide screens
-  const marqueeLogos = [...logos, ...logos, ...logos];
+  const marqueeLogos1 = [...logosRow1, ...logosRow1, ...logosRow1];
+  const marqueeLogos2 = [...logosRow2, ...logosRow2, ...logosRow2];
 
   return (
     <div className="bg-white font-sans overflow-x-hidden">
@@ -309,10 +320,10 @@ const EthicalSourcing = () => {
                   />
                   <div className="absolute inset-0 bg-black/40 flex flex-col justify-center gap-12 py-10">
                       
-                      {/* Row 1: Left to Right Animation */}
+                      {/* Row 1: Right to Left Animation (Matches Home) */}
                       <div className="w-full overflow-hidden relative">
                            <div className="flex gap-6 w-max animate-scroll-right pause-hover">
-                               {marqueeLogos.map((logo, index) => (
+                               {marqueeLogos1.map((logo, index) => (
                                    <div key={`row1-${index}`} className="w-[180px] md:w-[220px] h-28 bg-white/95 p-4 rounded-sm flex items-center justify-center shadow-lg hover:scale-105 transition-transform duration-300">
                                        <img 
                                           src={logo.url} 
@@ -329,10 +340,10 @@ const EthicalSourcing = () => {
                            </div>
                       </div>
 
-                      {/* Row 2: Right to Left Animation */}
+                      {/* Row 2: Left to Right Animation (Matches Home) */}
                       <div className="w-full overflow-hidden relative">
                            <div className="flex gap-6 w-max animate-scroll-left pause-hover">
-                               {marqueeLogos.map((logo, index) => (
+                               {marqueeLogos2.map((logo, index) => (
                                    <div key={`row2-${index}`} className="w-[180px] md:w-[220px] h-28 bg-white/95 p-4 rounded-sm flex items-center justify-center shadow-lg hover:scale-105 transition-transform duration-300">
                                        <img 
                                           src={logo.url} 

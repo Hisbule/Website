@@ -281,19 +281,32 @@ const Home = () => {
     }
   ];
 
-  const logos = [
+  // Defined Logo Rows - 8 logos each
+  const logosRow1 = [
     { name: 'RSC', url: ASSETS.images.logos.rsc },
     { name: 'BetterWork', url: ASSETS.images.logos.betterwork },
     { name: 'SMETA', url: ASSETS.images.logos.smeta },
     { name: 'amfori', url: ASSETS.images.logos.amfori },
     { name: 'GOTS', url: ASSETS.images.logos.gots },
-    { name: 'BCI', url: ASSETS.images.logos.bci },
-    { name: 'CTPAT', url: ASSETS.images.logos.ctpat },
-    { name: 'NIRAPON', url: ASSETS.images.logos.nirapon }
+    { name: 'Disney', url: ASSETS.images.logos.disney },
+    { name: 'GRS', url: ASSETS.images.logos.grs },
+    { name: 'Higg', url: ASSETS.images.logos.higg }
   ];
 
-  // Double the logos for marquee effect
-  const marqueeLogos = [...logos, ...logos];
+  const logosRow2 = [
+    { name: 'BCI', url: ASSETS.images.logos.bci },
+    { name: 'CTPAT', url: ASSETS.images.logos.ctpat },
+    { name: 'NIRAPON', url: ASSETS.images.logos.nirapon },
+    { name: 'ZDHC', url: ASSETS.images.logos.zdhc },
+    { name: 'Oeko-Tex', url: ASSETS.images.logos.oekotex },
+    { name: 'WRAP', url: ASSETS.images.logos.wrap },
+    { name: 'ISO', url: ASSETS.images.logos.iso },
+    { name: 'SA8000', url: ASSETS.images.logos.sa8000 }
+  ];
+
+  // Triple the logos for smooth marquee effect
+  const marqueeLogos1 = [...logosRow1, ...logosRow1, ...logosRow1];
+  const marqueeLogos2 = [...logosRow2, ...logosRow2, ...logosRow2];
 
   const marqueeStyles = `
     @keyframes scrollLeft {
@@ -627,9 +640,18 @@ const Home = () => {
                                 {/* Row 1: Right to Left */}
                                 <div className="w-full overflow-hidden">
                                      <div className="flex gap-4 w-max animate-scroll-left pause-hover px-4">
-                                         {marqueeLogos.map((logo, i) => (
+                                         {marqueeLogos1.map((logo, i) => (
                                              <div key={`r1-${i}`} className="w-24 h-16 md:w-32 md:h-20 bg-white/90 p-2 rounded-sm flex items-center justify-center shadow-sm shrink-0">
-                                                 <img src={logo.url} alt={logo.name} className="max-w-full max-h-full object-contain mix-blend-multiply" />
+                                                 <img 
+                                                    src={logo.url} 
+                                                    alt={logo.name} 
+                                                    className="max-w-full max-h-full object-contain mix-blend-multiply" 
+                                                    onError={(e) => {
+                                                        const target = e.target as HTMLImageElement;
+                                                        target.style.display = 'none';
+                                                        // Optional: Add text fallback if image fails
+                                                    }}
+                                                 />
                                              </div>
                                          ))}
                                      </div>
@@ -637,9 +659,17 @@ const Home = () => {
                                 {/* Row 2: Left to Right (Opposite) */}
                                 <div className="w-full overflow-hidden">
                                      <div className="flex gap-4 w-max animate-scroll-right pause-hover px-4">
-                                         {marqueeLogos.map((logo, i) => (
+                                         {marqueeLogos2.map((logo, i) => (
                                              <div key={`r2-${i}`} className="w-24 h-16 md:w-32 md:h-20 bg-white/90 p-2 rounded-sm flex items-center justify-center shadow-sm shrink-0">
-                                                 <img src={logo.url} alt={logo.name} className="max-w-full max-h-full object-contain mix-blend-multiply" />
+                                                 <img 
+                                                    src={logo.url} 
+                                                    alt={logo.name} 
+                                                    className="max-w-full max-h-full object-contain mix-blend-multiply" 
+                                                    onError={(e) => {
+                                                        const target = e.target as HTMLImageElement;
+                                                        target.style.display = 'none';
+                                                    }}
+                                                 />
                                              </div>
                                          ))}
                                      </div>
@@ -757,7 +787,7 @@ const Home = () => {
                    <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-2 font-sans tracking-tight">Fitting/Garment Technical Support</h2>
                    <p className="text-sm font-bold text-gray-800 italic mb-8">Elevating Wearability, Style and Functionality...!!</p>
                    <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light mb-8">
-                      Garments are designed to look stunning, fit flawlessly, and move with effortless grace. Every detail—craftsmanship, fit, and aesthetics—is meticulously refined by a dedicated in-house technical team. Personalized fitting support and technical assistance are provided to ensure expectations are exceeded, enhancing comfort, style, and functionality for greater customer satisfaction.
+                      Garments are designed to look stunning, fit flawlessly, and move with effortless grace. Every detail—craftsmanship, fit, and aesthetics—is meticulously refined by a dedicated in-house technical team. Personalized fitting support and technical assistance are provided, ensuring that expectations are not only met but consistently exceeded, enhancing comfort, style, and functionality for greater customer satisfaction.
                    </p>
                    <Link to="/manufacturing" className="inline-block bg-[#1e3a8a] text-white px-10 py-4 text-xs font-bold uppercase tracking-widest hover:bg-[#1e3a8a]/90 transition-all shadow-xl rounded-sm">
                       EXPLORE MORE
