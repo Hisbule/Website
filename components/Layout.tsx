@@ -261,7 +261,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-20 pt-8 border-t border-gray-300/50 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 font-medium">
-           <p className="mb-2 md:mb-0">Copyright © 2024 APPARELBD Sourcing Limited | Powered By APPARELBD Sourcing Limited</p>
+           <p className="mb-2 md:mb-0">Copyright © 2026 APPARELBD | Powered By APPARELBD</p>
            <p>Concept & Content djk</p>
         </div>
       </div>
