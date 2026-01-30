@@ -104,7 +104,7 @@ export const ASSETS = {
     ethical: {
       img1: "assets/images/ethical/Ethical_1.jpg",
       img2: "assets/images/ethical/Ethical_2.jpg",
-      img3: "assets/images/ethical/Ethical_1.1.jpg",
+      img3: "assets/images/ethical/Ethical_5.jpg",
       img4: "assets/images/ethical/Ethical_4.jpg",
       img5: "assets/images/ethical/Ethical_5.jpg",
       img6: "assets/images/ethical/Ethical_6.jpg",
