@@ -27,7 +27,7 @@ export const ASSETS = {
       slider: [
         "assets/images/home/slide1.jpeg",
         "assets/images/home/slide2.jpeg",
-        "assets/images/home/slide_3.jpg",
+        "assets/images/home/slide_3.png",
       ],
       about: {
         showroom: "assets/images/home/showroom.jpeg",
