@@ -115,14 +115,14 @@ export const ASSETS = {
       ctpat: "assets/images/logos/ctpat.png",
       nirapon: "assets/images/logos/nirapon.png",
       
-      disney: "assets/images/logos/disney.png",
-      zdhc: "assets/images/logos/zdhc.png",
-      oekotex: "assets/images/logos/oekotex.png",
-      wrap: "assets/images/logos/wrap.png",
-      grs: "assets/images/logos/grs.png",
-      higg: "assets/images/logos/higg.png",
-      iso: "assets/images/logos/iso.png",
-      sa8000: "assets/images/logos/sa8000.png"
+      disney: "assets/images/logos/disney.jpg",
+      zdhc: "assets/images/logos/zdhc.jpg",
+      oekotex: "assets/images/logos/oekotex.jpg",
+      wrap: "assets/images/logos/wrap.jpg",
+      grs: "assets/images/logos/grs.jpg",
+      higg: "assets/images/logos/higg.jpg",
+      iso: "assets/images/logos/iso.jpg",
+      sa8000: "assets/images/logos/sa8000.jpg"
     }
   },
 
