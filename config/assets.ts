@@ -25,9 +25,9 @@ export const ASSETS = {
     // ========================================================================
     home: {
       slider: [
-        "assets/images/home/slide1.png",
-        "assets/images/home/slide2.png",
-        "assets/images/home/slide_3.png",
+        "assets/images/home/slide1.jpg",
+        "assets/images/home/slide2.jpg",
+        "assets/images/home/slide_3.jpg",
       ],
       about: {
         showroom: "assets/images/home/showroom.jpeg",
@@ -70,10 +70,10 @@ export const ASSETS = {
       mission1: "assets/images/manufacturing/mission_1.jpg",
       mission2: "assets/images/manufacturing/mission_2.jpg",
       fabric: "assets/images/manufacturing/fabric.jpg",
-      fitting: "assets/images/home/mfg_fitting.png",
+      fitting: "assets/images/home/mfg_fitting.jpg",
       production: "assets/images/home/mfg_production.jpeg",
-      capacity: "assets/images/home/mfg_capacity.png",
-      qa: "assets/images/home/mfg_qa.png",
+      capacity: "assets/images/home/mfg_capacity.jpg",
+      qa: "assets/images/home/mfg_qa.jpg",
       inspection: "assets/images/manufacturing/inspection.jpg",
       philosophy: "assets/images/manufacturing/philosophy.jpg",
       traceability: "assets/images/home/mfg_traceability.png",
