@@ -67,19 +67,19 @@ export const ASSETS = {
     // MANUFACTURING PAGE IMAGES (LOCAL)
     // ========================================================================
     manufacturing: {
-      hero: "assets/images/manufacturing/hero.jpg",
-      mission1: "assets/images/manufacturing/mission_1.jpg",
-      mission2: "assets/images/manufacturing/mission_2.jpg",
-      fabric: "assets/images/manufacturing/fabric.jpg",
-      fitting: "assets/images/home/mfg_fitting.jpg",
-      production: "assets/images/home/mfg_production.jpeg",
-      capacity: "assets/images/home/mfg_capacity.jpg",
-      qa: "assets/images/home/mfg_qa.jpg",
-      inspection: "assets/images/manufacturing/inspection.jpg",
-      philosophy: "assets/images/manufacturing/philosophy.jpg",
-      traceability: "assets/images/home/mfg_traceability.png",
-      logistics: "assets/images/home/mfg_logistics.png",
-      cta: "assets/images/manufacturing/cta.jpg"
+      hero: "assets/images/manufacturing/Manufacturing_Hero.avif",
+      mission1: "assets/images/manufacturing/Manufacturing_1.avif",
+      mission2: "assets/images/manufacturing/Manufacturing_2.avif",
+      fabric: "assets/images/manufacturing/Manufacturing_3.avif",
+      fitting: "assets/images/manufacturing/Manufacturing_4.avif",
+      production: "assets/images/manufacturing/Manufacturing_5.avif",
+      qa: "assets/images/manufacturing/Manufacturing_6.avif",
+      inspection: "assets/images/manufacturing/Manufacturing_7.avif",
+      philosophy: "assets/images/manufacturing/Manufacturing_8.avif",
+      traceability: "assets/images/manufacturing/Manufacturing_9.avif",
+      logistics: "assets/images/manufacturing/Manufacturing_10.avif",
+      cta: "assets/images/manufacturing/Manufacturing_11.avif",
+      capacity: "assets/images/manufacturing/Manufacturing_12.avif"
     },
     // ========================================================================
     // PRODUCTS & OTHERS
@@ -130,40 +130,40 @@ export const ASSETS = {
       
       services: {
         marketIntel: {
-          front: "assets/images/about/Service_1.avif",
-          back: "assets/images/about/Service_2.avif"
+          front: "assets/images/about/Services_1.avif",
+          back: "assets/images/about/Services_2.avif"
         },
         rd: {
-          front: "assets/images/about/Service_3.avif",
-          back: "assets/images/about/Service_4.avif"
+          front: "assets/images/about/Services_3.avif",
+          back: "assets/images/about/Services_4.avif"
         },
         ethical: {
-          front: "assets/images/about/Service_5.avif",
-          back: "assets/images/about/Service_6.avif"
+          front: "assets/images/about/Services_5.avif",
+          back: "assets/images/about/Services_6.avif"
         },
         manufacturing: {
-          front: "assets/images/about/Service_7.avif",
-          back: "assets/images/about/Service_8.avif"
+          front: "assets/images/about/Services_7.avif",
+          back: "assets/images/about/Services_8.avif"
         },
         sustainability: {
-          front: "assets/images/about/Service_9.avif",
-          back: "assets/images/about/Service_10.avif"
+          front: "assets/images/about/Services_9.avif",
+          back: "assets/images/about/Services_10.avif"
         },
         disney: {
-          front: "assets/images/about/Service_11.avif",
-          back: "assets/images/about/Service_12.avif"
+          front: "assets/images/about/Services_11.avif",
+          back: "assets/images/about/Services_12.avif"
         },
         diversified: {
-          front: "assets/images/about/Service_13.avif",
-          back: "assets/images/about/Service_14.avif"
+          front: "assets/images/about/Services_13.avif",
+          back: "assets/images/about/Services_14.avif"
         },
         competitive: {
-          front: "assets/images/about/Service_15.avif",
-          back: "assets/images/about/Service_16.avif"
+          front: "assets/images/about/Services_15.avif",
+          back: "assets/images/about/Services_16.avif"
         },
         jute: {
-          front: "assets/images/about/Service_17.avif",
-          back: "assets/images/about/Service_18.avif"
+          front: "assets/images/about/Services_17.avif",
+          back: "assets/images/about/Services_18.avif"
         }
       }
     },

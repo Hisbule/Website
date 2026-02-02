@@ -171,11 +171,12 @@ const Manufacturing = () => {
             {/* Fitting / Technical Support */}
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-24">
                  <FadeInSection className="lg:order-2">
-                    <div className="w-full">
+                    {/* Updated for responsiveness: h-auto on mobile, fixed on lg */}
+                    <div className="w-full h-auto lg:h-[500px] bg-[#f8f8f8] shadow-2xl rounded-sm overflow-hidden border-4 border-white group">
                          <img 
                             src={ASSETS.images.manufacturing.fitting} 
                             alt="Garment Fitting" 
-                            className="w-full h-auto rounded-sm" 
+                            className="w-full h-full object-cover" 
                         />
                     </div>
                 </FadeInSection>
@@ -298,11 +299,12 @@ const Manufacturing = () => {
                       </div>
                   </FadeInSection>
                   <FadeInSection>
-                      <div className="w-full">
+                      {/* Updated for responsiveness: h-auto on mobile, fixed on lg */}
+                      <div className="w-full h-auto lg:h-[500px] bg-gray-100 rounded-sm overflow-hidden shadow-2xl border-4 border-white relative group">
                            <img 
                               src={ASSETS.images.manufacturing.qa} 
                               alt="Quality Assurance Team" 
-                              className="w-full h-auto rounded-sm" 
+                              className="w-full h-full object-cover" 
                            />
                       </div>
                   </FadeInSection>
@@ -435,17 +437,20 @@ const Manufacturing = () => {
 
           {/* Frameless full width image */}
           <div className="relative w-full">
-              <img 
-                  src={ASSETS.images.manufacturing.logistics} 
-                  alt="Shipping Logistics" 
-                  className="w-full h-auto object-cover" 
-              />
-              <div className="absolute top-10 left-10 bg-white/90 p-8 max-w-2xl rounded-sm shadow-xl hidden md:block">
-                   <FadeInSection>
-                       <h3 className="text-2xl font-bold text-black leading-tight">
-                           “Seamless Shipping, Global Reach-Precision in Fashion Supply Chain, Streamlining Solutions for Your Needs.”
-                       </h3>
-                   </FadeInSection>
+              {/* Updated for responsiveness: h-auto on mobile, fixed on lg */}
+              <div className="w-full h-auto lg:h-[500px] relative group">
+                  <img 
+                      src={ASSETS.images.manufacturing.logistics} 
+                      alt="Shipping Logistics" 
+                      className="w-full h-full object-cover" 
+                  />
+                  <div className="absolute top-10 left-10 bg-white/90 p-8 max-w-2xl rounded-sm shadow-xl hidden md:block">
+                       <FadeInSection>
+                           <h3 className="text-2xl font-bold text-black leading-tight">
+                               “Seamless Shipping, Global Reach-Precision in Fashion Supply Chain, Streamlining Solutions for Your Needs.”
+                           </h3>
+                       </FadeInSection>
+                  </div>
               </div>
           </div>
       </section>
