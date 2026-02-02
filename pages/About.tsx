@@ -136,12 +136,12 @@ const ServiceFlipCard: React.FC<ServiceFlipCardProps> = ({ title, subtitle, fron
 );
 
 const About = () => {
-  // Service Data Definition
+  // Service Data Definition - Using local assets from ASSETS.images.about.services
   const services: ServiceFlipCardProps[] = [
     {
       title: "Market Intel Design Support",
-      frontImage: "https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=2070&auto=format&fit=crop",
-      backImage: "https://images.unsplash.com/photo-1550973886-8969dd3ed8d1?q=80&w=2235&auto=format&fit=crop", 
+      frontImage: ASSETS.images.about.services.marketIntel.front,
+      backImage: ASSETS.images.about.services.marketIntel.back, 
       link: "/market-intel",
       heading: "Crafting the Future of Fashion - Redefining Style in Motion",
       points: [
@@ -156,8 +156,8 @@ const About = () => {
     {
       title: "Research& Development (R&D)",
       subtitle: "Innovation , Product Development",
-      frontImage: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=2274&auto=format&fit=crop",
-      backImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop",
+      frontImage: ASSETS.images.about.services.rd.front,
+      backImage: ASSETS.images.about.services.rd.back,
       link: "/market-intel",
       heading: "To Stay Ahead in the ever evolving Fashion Industry",
       points: [
@@ -174,8 +174,8 @@ const About = () => {
     {
       title: "Ethical Sourcing",
       subtitle: "Garment, Fabric, Yarn, Trims and Accessories",
-      frontImage: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2070&auto=format&fit=crop",
-      backImage: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop",
+      frontImage: ASSETS.images.about.services.ethical.front,
+      backImage: ASSETS.images.about.services.ethical.back,
       link: "/ethical-sourcing",
       heading: "Ensuring Ethical and Responsive Sourcing",
       points: [
@@ -188,8 +188,8 @@ const About = () => {
     {
       title: "Manufacturing Excellence",
       subtitle: "Fabric Manufacturing, Production Control, Quality Assurance",
-      frontImage: "https://images.unsplash.com/photo-1565532525700-111162657e28?q=80&w=1974&auto=format&fit=crop",
-      backImage: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop",
+      frontImage: ASSETS.images.about.services.manufacturing.front,
+      backImage: ASSETS.images.about.services.manufacturing.back,
       link: "/manufacturing",
       heading: "Overseeing Every Stage of Manufacturing process and control.",
       points: [
@@ -205,8 +205,8 @@ const About = () => {
     {
       title: "Sustainability",
       subtitle: "Corporate Social Responsibility",
-      frontImage: "https://images.unsplash.com/photo-1505118380757-91f5f45d8de4?q=80&w=2000&auto=format&fit=crop",
-      backImage: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2071&auto=format&fit=crop",
+      frontImage: ASSETS.images.about.services.sustainability.front,
+      backImage: ASSETS.images.about.services.sustainability.back,
       link: "/sustainability",
       heading: "Sustainability is core of our growth plan",
       points: [
@@ -219,8 +219,8 @@ const About = () => {
     },
     {
       title: "Disney and Popular License Character Products",
-      frontImage: "https://images.unsplash.com/photo-1618336753974-aae8e04506aa?q=80&w=2000&auto=format&fit=crop",
-      backImage: "https://images.unsplash.com/photo-1535572290543-523a3d6e1b0c?q=80&w=2000&auto=format&fit=crop",
+      frontImage: ASSETS.images.about.services.disney.front,
+      backImage: ASSETS.images.about.services.disney.back,
       link: "/products#disney",
       heading: "Walt Disney and popular Iconic Character Products to your customer Wardrobe !",
       points: [
@@ -231,8 +231,8 @@ const About = () => {
     {
       title: "Diversified Wide Ranging Product Categories",
       subtitle: "Knit, Denim, Woven, Sweater, etc.",
-      frontImage: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2070&auto=format&fit=crop",
-      backImage: "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2070&auto=format&fit=crop",
+      frontImage: ASSETS.images.about.services.diversified.front,
+      backImage: ASSETS.images.about.services.diversified.back,
       link: "/products",
       heading: "Committed for diverse and extensive latest trend and timeless classic arrays of product categories",
       points: [
@@ -246,8 +246,8 @@ const About = () => {
     {
       title: "Competitive Price",
       subtitle: "Competitive Lead time, Flexibility in Quantity",
-      frontImage: "https://images.unsplash.com/photo-1554672408-170095e55e69?q=80&w=2070&auto=format&fit=crop",
-      backImage: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=2070&auto=format&fit=crop",
+      frontImage: ASSETS.images.about.services.competitive.front,
+      backImage: ASSETS.images.about.services.competitive.back,
       link: "/manufacturing",
       heading: "Dedicate to Competitive Price offering maintaining Top Notch Quality",
       points: [
@@ -260,8 +260,8 @@ const About = () => {
     },
     {
       title: "Jute Crafts",
-      frontImage: "https://images.unsplash.com/photo-1617325247661-675ab4b64ae4?q=80&w=2000&auto=format&fit=crop",
-      backImage: "https://images.unsplash.com/photo-1616629983995-1f6055106822?q=80&w=1968&auto=format&fit=crop",
+      frontImage: ASSETS.images.about.services.jute.front,
+      backImage: ASSETS.images.about.services.jute.back,
       link: "/products#jute",
       heading: "Jute Creations, Where Art Meets Sustainability Eco-Chic Craftsmanship for a Better Tomorrow",
       points: [
@@ -287,7 +287,7 @@ const About = () => {
           muted
           loop
           playsInline
-          poster="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=2340&auto=format&fit=crop"
+          poster={ASSETS.images.about.heroPoster}
         >
           <source src={ASSETS.videos.about} type="video/mp4" />
         </video>
@@ -323,7 +323,7 @@ const About = () => {
           {/* Large Showroom Image */}
           <FadeInSection className="w-full h-[300px] md:h-[500px] overflow-hidden rounded-sm shadow-xl mb-12">
             <img 
-              src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=2340&auto=format&fit=crop" 
+              src={ASSETS.images.about.introShowroom} 
               alt="ApparelBD Showroom" 
               className="w-full h-full object-cover"
             />
@@ -344,7 +344,7 @@ const About = () => {
           {/* Row 1 */}
           <FadeInSection className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="h-[350px] overflow-hidden rounded-sm shadow-lg">
-               <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2301&auto=format&fit=crop" alt="Office Interior" className="w-full h-full object-cover" />
+               <img src={ASSETS.images.about.expertise1} alt="Office Interior" className="w-full h-full object-cover" />
             </div>
             <div>
               <h2 className="text-3xl font-serif font-bold text-brand-navy mb-8 uppercase">OUR EXPERTISE-</h2>
@@ -367,7 +367,7 @@ const About = () => {
           {/* Row 2 */}
           <FadeInSection className="grid md:grid-cols-2 gap-12 items-center">
              <div className="h-[350px] overflow-hidden rounded-sm shadow-lg md:order-1">
-               <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop" alt="Waiting Area" className="w-full h-full object-cover" />
+               <img src={ASSETS.images.about.expertise2} alt="Waiting Area" className="w-full h-full object-cover" />
             </div>
             <div className="md:order-2">
                <ul className="space-y-4">
@@ -419,7 +419,7 @@ const About = () => {
             </div>
 
             <div className="h-[400px] md:h-[500px] bg-white p-4 shadow-xl rounded-sm rotate-2 hover:rotate-0 transition-transform duration-500">
-               <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=2274&auto=format&fit=crop" alt="Design Studio Work" className="w-full h-full object-cover" />
+               <img src={ASSETS.images.about.designStudio} alt="Design Studio Work" className="w-full h-full object-cover" />
             </div>
           </FadeInSection>
         </div>
@@ -461,14 +461,14 @@ const About = () => {
                  </p>
               </div>
               <div className="h-[400px] rounded-sm overflow-hidden shadow-2xl">
-                 <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" alt="Team Meeting" className="w-full h-full object-cover" />
+                 <img src={ASSETS.images.about.people1} alt="Team Meeting" className="w-full h-full object-cover" />
               </div>
            </FadeInSection>
 
            {/* Roles List */}
            <FadeInSection className="grid md:grid-cols-2 gap-12 items-center mt-20">
               <div className="h-[500px] rounded-sm overflow-hidden shadow-2xl">
-                  <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" alt="Checking Clothes" className="w-full h-full object-cover" />
+                  <img src={ASSETS.images.about.people2} alt="Checking Clothes" className="w-full h-full object-cover" />
               </div>
               <div>
                   <ul className="space-y-6">
@@ -497,7 +497,7 @@ const About = () => {
       <section className="relative py-32 bg-gray-200 overflow-hidden">
         {/* Background Image of Wall with Clock */}
         <div className="absolute inset-0 z-0">
-             <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2069&auto=format&fit=crop" alt="Office Wall" className="w-full h-full object-cover opacity-20" />
+             <img src={ASSETS.images.about.missionBg} alt="Office Wall" className="w-full h-full object-cover opacity-20" />
         </div>
         
         <div className="max-w-[95%] mx-auto px-4 relative z-10 grid md:grid-cols-1 gap-12">
@@ -614,8 +614,7 @@ const About = () => {
                 
                 {/* Map Section */}
                 <div className="relative w-full h-[400px] bg-gray-100 mb-16 rounded-sm overflow-hidden border border-gray-200">
-                    {/* Placeholder for Map - Using an image of a map */}
-                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2074&auto=format&fit=crop" alt="Global Map" className="w-full h-full object-cover opacity-80" />
+                    <img src={ASSETS.images.about.map} alt="Global Map" className="w-full h-full object-cover opacity-80" />
                     <div className="absolute top-8 left-8 bg-white/90 p-4 rounded shadow-lg max-w-xs">
                         <h3 className="text-brand-green font-bold text-lg mb-1">UK DESIGN STUDIO</h3>
                         <p className="text-xs text-gray-600">129 Mile End Road, E1 4BG, London, United Kingdom.</p>
@@ -661,7 +660,7 @@ const About = () => {
 
       {/* 10. Collaboration Banner */}
       <section className="relative h-[400px]">
-          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop" alt="Collaboration" className="w-full h-full object-cover" />
+          <img src={ASSETS.images.about.collaboration} alt="Collaboration" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-4">
                <FadeInSection>
                    <h2 className="text-white font-bold text-xl md:text-3xl max-w-4xl leading-relaxed mb-6">

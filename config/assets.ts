@@ -36,7 +36,7 @@ export const ASSETS = {
       },
       marketIntel: {
         studio: "assets/images/home/market_studio.jpeg",
-        dhaka: "assets/images/home/market_dhaka.jpeg",
+        dhaka: "assets/images/home/market_dhaka.avif",
         parallax: "assets/images/home/market_parallax.jpg"
       },
       ethical: "assets/images/home/ethical_bg.jpg",
@@ -112,6 +112,60 @@ export const ASSETS = {
       img8: "assets/images/ethical/Ethical_8.avif",
       img9: "assets/images/ethical/Ethical_9.png",
       img10: "assets/images/ethical/Ethical_10.avif"
+    },
+    // ========================================================================
+    // ABOUT PAGE IMAGES (LOCAL)
+    // ========================================================================
+    about: {
+      heroPoster: "assets/images/about/About_1.avif",
+      introShowroom: "assets/images/about/About_2.avif",
+      expertise1: "assets/images/about/About_3.avif",
+      expertise2: "assets/images/about/About_4.avif",
+      designStudio: "assets/images/about/About_5.avif",
+      people1: "assets/images/about/About_6.avif",
+      people2: "assets/images/about/About_7.avif",
+      missionBg: "assets/images/about/About_8.avif",
+      map: "assets/images/about/About_9.avif",
+      collaboration: "assets/images/about/About_10.avif",
+      
+      services: {
+        marketIntel: {
+          front: "assets/images/about/Service_1.avif",
+          back: "assets/images/about/Service_2.avif"
+        },
+        rd: {
+          front: "assets/images/about/Service_3.avif",
+          back: "assets/images/about/Service_4.avif"
+        },
+        ethical: {
+          front: "assets/images/about/Service_5.avif",
+          back: "assets/images/about/Service_6.avif"
+        },
+        manufacturing: {
+          front: "assets/images/about/Service_7.avif",
+          back: "assets/images/about/Service_8.avif"
+        },
+        sustainability: {
+          front: "assets/images/about/Service_9.avif",
+          back: "assets/images/about/Service_10.avif"
+        },
+        disney: {
+          front: "assets/images/about/Service_11.avif",
+          back: "assets/images/about/Service_12.avif"
+        },
+        diversified: {
+          front: "assets/images/about/Service_13.avif",
+          back: "assets/images/about/Service_14.avif"
+        },
+        competitive: {
+          front: "assets/images/about/Service_15.avif",
+          back: "assets/images/about/Service_16.avif"
+        },
+        jute: {
+          front: "assets/images/about/Service_17.avif",
+          back: "assets/images/about/Service_18.avif"
+        }
+      }
     },
     logos: {
       rsc: "assets/images/logos/rsc.jpg",
