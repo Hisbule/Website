@@ -79,7 +79,7 @@ export const ASSETS = {
       philosophy: "assets/images/manufacturing/Manufacturing_3.avif",
       traceability: "assets/images/home/mfg_traceability.png",
       logistics: "assets/images/home/mfg_logistics.png",
-      cta: "assets/images/manufacturing/cta.jpg"
+      cta: "assets/images/manufacturing/Manufacturing_1.avif"
     },
     // ========================================================================
     // PRODUCTS & OTHERS
