@@ -67,19 +67,19 @@ export const ASSETS = {
     // MANUFACTURING PAGE IMAGES (LOCAL)
     // ========================================================================
     manufacturing: {
-      hero: "assets/images/manufacturing/Manufacturing_Hero.avif",
-      mission1: "assets/images/manufacturing/Manufacturing_1.avif",
-      mission2: "assets/images/manufacturing/Manufacturing_2.avif",
-      fabric: "assets/images/manufacturing/Manufacturing_3.avif",
-      fitting: "assets/images/manufacturing/Manufacturing_4.avif",
-      production: "assets/images/manufacturing/Manufacturing_5.avif",
-      qa: "assets/images/manufacturing/Manufacturing_6.avif",
-      inspection: "assets/images/manufacturing/Manufacturing_7.avif",
-      philosophy: "assets/images/manufacturing/Manufacturing_8.avif",
-      traceability: "assets/images/manufacturing/Manufacturing_9.avif",
-      logistics: "assets/images/manufacturing/Manufacturing_10.avif",
-      cta: "assets/images/manufacturing/Manufacturing_11.avif",
-      capacity: "assets/images/manufacturing/Manufacturing_12.avif"
+      hero: "assets/images/manufacturing/hero.jpg",
+      mission1: "assets/images/manufacturing/mission_1.jpg",
+      mission2: "assets/images/manufacturing/mission_2.jpg",
+      fabric: "assets/images/manufacturing/fabric.jpg",
+      fitting: "assets/images/home/mfg_fitting.jpg",
+      production: "assets/images/home/mfg_production.jpeg",
+      capacity: "assets/images/home/mfg_capacity.jpg",
+      qa: "assets/images/home/mfg_qa.jpg",
+      inspection: "assets/images/manufacturing/inspection.jpg",
+      philosophy: "assets/images/manufacturing/philosophy.jpg",
+      traceability: "assets/images/home/mfg_traceability.png",
+      logistics: "assets/images/home/mfg_logistics.png",
+      cta: "assets/images/manufacturing/cta.jpg"
     },
     // ========================================================================
     // PRODUCTS & OTHERS
