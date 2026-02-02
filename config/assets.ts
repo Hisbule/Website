@@ -75,7 +75,7 @@ export const ASSETS = {
       production: "assets/images/home/mfg_production.jpeg",
       capacity: "assets/images/home/mfg_capacity.jpg",
       qa: "assets/images/home/mfg_qa.jpg",
-      inspection: "assets/images/manufacturing/Manufacturing_2.avif",
+      inspection: "assets/images/manufacturing/Manufacturing_5.avif",
       philosophy: "assets/images/manufacturing/Manufacturing_3.avif",
       traceability: "assets/images/home/mfg_traceability.png",
       logistics: "assets/images/home/mfg_logistics.png",
