@@ -74,11 +74,10 @@ const Sustainability = () => {
               <FadeInSection>
                   <div className="grid md:grid-cols-2 gap-8">
                       <div className="h-[400px] overflow-hidden rounded-sm shadow-lg">
-                          <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2071&auto=format&fit=crop" alt="Green Forest" className="w-full h-full object-cover" />
+                          <img src={ASSETS.images.sustainabilityPage.img1} alt="Green Forest" className="w-full h-full object-cover" />
                       </div>
                       <div className="h-[400px] overflow-hidden rounded-sm shadow-lg bg-gray-100 flex items-center justify-center relative">
-                          {/* Conceptual image for Recycling */}
-                          <img src="https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?q=80&w=1964&auto=format&fit=crop" alt="Recycling Fashion" className="w-full h-full object-cover" />
+                          <img src={ASSETS.images.sustainabilityPage.img2} alt="Recycling Fashion" className="w-full h-full object-cover" />
                       </div>
                   </div>
               </FadeInSection>
@@ -98,7 +97,7 @@ const Sustainability = () => {
               <FadeInSection>
                   {/* Visual representation of the diagram */}
                   <div className="bg-white p-8 rounded-xl shadow-xl border border-gray-100">
-                      <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb7d5c73?q=80&w=1974&auto=format&fit=crop" alt="Sustainability Cycle" className="w-full h-auto object-contain mix-blend-multiply opacity-80" />
+                      <img src={ASSETS.images.sustainabilityPage.img3} alt="Sustainability Cycle" className="w-full h-auto object-contain mix-blend-multiply opacity-80" />
                   </div>
               </FadeInSection>
               <FadeInSection>
@@ -131,7 +130,7 @@ const Sustainability = () => {
                    </FadeInSection>
                    <FadeInSection>
                        <div className="h-[350px] overflow-hidden rounded-sm shadow-md">
-                           <img src="https://images.unsplash.com/photo-1518531933037-9a847e0f3886?q=80&w=1974&auto=format&fit=crop" alt="Environmental Standards" className="w-full h-full object-cover" />
+                           <img src={ASSETS.images.sustainabilityPage.img4} alt="Environmental Standards" className="w-full h-full object-cover" />
                        </div>
                    </FadeInSection>
               </div>
@@ -145,7 +144,7 @@ const Sustainability = () => {
 
               <FadeInSection>
                   <div className="relative h-[400px] md:h-[500px] w-full rounded-sm overflow-hidden shadow-xl group">
-                      <img src="https://images.unsplash.com/photo-1596392927818-23f42199042b?q=80&w=2070&auto=format&fit=crop" alt="Green Initiative" className="w-full h-full object-cover" />
+                      <img src={ASSETS.images.sustainabilityPage.img5} alt="Green Initiative" className="w-full h-full object-cover" />
                       <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
                           <h2 className="text-white text-3xl md:text-5xl font-serif font-bold text-center px-4 drop-shadow-lg italic">"Crafting Tomorrow: Innovative Solutions for a Greener Fashion Industry."</h2>
                       </div>
@@ -168,8 +167,7 @@ const Sustainability = () => {
               <div className="grid md:grid-cols-2 gap-12 items-center">
                    <FadeInSection>
                        <div className="h-[400px] bg-[#2d5a3f] rounded-sm overflow-hidden shadow-xl flex items-center justify-center p-4">
-                           {/* Chalkboard style graphic */}
-                           <img src="https://img.freepik.com/free-vector/hand-drawn-ecology-concept_23-2148532452.jpg" alt="Green Initiatives Sketch" className="w-full h-full object-cover opacity-90" />
+                           <img src={ASSETS.images.sustainabilityPage.img6} alt="Green Initiatives Sketch" className="w-full h-full object-cover opacity-90" />
                        </div>
                    </FadeInSection>
                    <FadeInSection>
@@ -201,10 +199,10 @@ const Sustainability = () => {
 
               <div className="grid md:grid-cols-2 gap-8 items-center">
                   <FadeInSection className="h-[350px] overflow-hidden rounded-sm shadow-md">
-                      <img src="https://images.unsplash.com/photo-1470723710355-171b4ebce6ca?q=80&w=2070&auto=format&fit=crop" alt="Green Industry" className="w-full h-full object-cover" />
+                      <img src={ASSETS.images.sustainabilityPage.img7} alt="Green Industry" className="w-full h-full object-cover" />
                   </FadeInSection>
                    <FadeInSection className="h-[350px] overflow-hidden rounded-sm shadow-md relative">
-                      <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?q=80&w=1974&auto=format&fit=crop" alt="CO2 Reduction" className="w-full h-full object-cover" />
+                      <img src={ASSETS.images.sustainabilityPage.img8} alt="CO2 Reduction" className="w-full h-full object-cover" />
                       <div className="absolute inset-0 flex items-center justify-center bg-black/30">
                           <h3 className="text-white text-5xl font-bold drop-shadow-lg">CO2</h3>
                       </div>
@@ -234,7 +232,7 @@ const Sustainability = () => {
 
               <FadeInSection className="mt-12">
                   <div className="w-full h-[400px] md:h-[500px] relative overflow-hidden rounded-sm shadow-xl">
-                      <img src="https://images.unsplash.com/photo-1623126908029-58cb08a2b272?q=80&w=2070&auto=format&fit=crop" alt="Sustainable Hands" className="w-full h-full object-cover" />
+                      <img src={ASSETS.images.sustainabilityPage.img9} alt="Sustainable Hands" className="w-full h-full object-cover" />
                   </div>
               </FadeInSection>
           </div>

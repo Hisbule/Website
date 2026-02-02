@@ -73,7 +73,7 @@ const Manufacturing = () => {
       {/* 3. Excellence Mission */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-[95%] mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 items-start mb-12">
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
                 <FadeInSection>
                     <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#1e3a8a] mb-6">Excellence Mission:</h2>
                     <p className="text-gray-800 font-bold italic mb-6 text-lg">Defining Manufacturing Excellence:</p>
@@ -94,18 +94,23 @@ const Manufacturing = () => {
                     </div>
                 </FadeInSection>
 
+                {/* Staggered Image Layout */}
                 <FadeInSection>
-                     <div className="grid grid-cols-2 gap-4">
-                        <img 
-                            src={ASSETS.images.manufacturing.mission1} 
-                            className="w-full h-auto object-cover rounded-sm" 
-                            alt="Mission Image 1" 
-                        />
-                         <img 
-                            src={ASSETS.images.manufacturing.mission2} 
-                            className="w-full h-auto object-cover rounded-sm" 
-                            alt="Mission Image 2" 
-                        />
+                     <div className="relative h-[450px] w-full mt-8 lg:mt-0">
+                        <div className="absolute top-0 left-0 w-3/5 h-[300px] z-10 shadow-2xl rounded-sm border-4 border-white overflow-hidden transform hover:scale-105 transition-transform duration-500">
+                            <img 
+                                src={ASSETS.images.manufacturing.mission1} 
+                                className="w-full h-full object-cover" 
+                                alt="Manufacturing Mission 1" 
+                            />
+                        </div>
+                        <div className="absolute bottom-0 right-0 w-3/5 h-[300px] z-0 shadow-xl rounded-sm border-4 border-white overflow-hidden transform hover:scale-105 transition-transform duration-500">
+                             <img 
+                                src={ASSETS.images.manufacturing.mission2} 
+                                className="w-full h-full object-cover" 
+                                alt="Manufacturing Mission 2" 
+                            />
+                        </div>
                      </div>
                 </FadeInSection>
             </div>
@@ -140,88 +145,199 @@ const Manufacturing = () => {
       {/* 4. Manufacturing Services - R&D */}
       <section className="py-20 bg-white">
         <div className="max-w-[95%] mx-auto px-4 lg:px-8">
-            <FadeInSection className="mb-12">
-                 <h2 className="text-4xl md:text-5xl font-bold text-[#1e3a8a] uppercase mb-12">MANUFACTURING SERVICES:</h2>
-            </FadeInSection>
-
-            {/* Fabric R&D */}
-            <div className="grid lg:grid-cols-2 gap-12 items-center mb-24">
-                <FadeInSection>
-                    <div className="w-full">
-                        <img 
-                            src={ASSETS.images.manufacturing.fabric} 
-                            alt="Fabric R&D" 
-                            className="w-full h-auto rounded-sm" 
-                        />
-                    </div>
-                </FadeInSection>
-                <FadeInSection>
-                    <h3 className="text-3xl font-bold text-black mb-4">Fabric R&D and Innovation:</h3>
-                    <p className="text-gray-800 italic font-bold mb-6">Innovation, Tailored to Trend. Designed to Drive Fashion Forward!!</p>
-                    <p className="text-gray-700 text-lg md:text-xl font-light text-justify mb-8">
-                        At the heart of our innovation lies a passion for pushing fashion forward. Through cutting-edge R&D, we craft next-gen fabrics, daring new designs, advanced embellishments, and progressive wash techniques. Our agile sampling, expert garment fitting, and technical precision ensure we stay ahead of trends—delivering standout style with speed, creativity, and craftsmanship. In a world that never stops evolving, we don't just keep up—we lead.
-                    </p>
-                    <div className="bg-gray-100 p-6 border-l-4 border-[#88c057]">
-                        <p className="text-black font-bold text-lg mb-2">"Ahead of the Curve-</p>
-                        <p className="text-black font-bold text-xl italic">Designing Tomorrow's Fashion, Today."</p>
-                    </div>
-                </FadeInSection>
-            </div>
-
-            {/* Fitting / Technical Support */}
-            <div className="grid lg:grid-cols-2 gap-12 items-center mb-24">
-                 <FadeInSection className="lg:order-2">
-                    {/* Updated for responsiveness: h-auto on mobile, fixed on lg */}
-                    <div className="w-full h-auto lg:h-[500px] bg-[#f8f8f8] shadow-2xl rounded-sm overflow-hidden border-4 border-white group">
-                         <img 
-                            src={ASSETS.images.manufacturing.fitting} 
-                            alt="Garment Fitting" 
-                            className="w-full h-full object-cover" 
-                        />
-                    </div>
-                </FadeInSection>
-                <FadeInSection className="lg:order-1">
-                    <h3 className="text-3xl font-bold text-black mb-4">Fitting / Garment Technical Support</h3>
-                    <p className="text-gray-800 italic font-bold mb-6">Redefining Comfort, Style and Functionality!!</p>
-                    <p className="text-gray-700 text-lg md:text-xl font-light text-justify mb-8">
-                        Garments that not only look stunning but fit like a dream and move with effortless grace are envisioned. Every aspect of the garment—its craftsmanship, fit, and aesthetic attributes—is meticulously perfected by a dedicated in-house technical team. Personalized fitting assistance and garment technical support are provided, ensuring that expectations are not only met but consistently exceeded, enhancing comfort, style, and functionality.
-                    </p>
-                </FadeInSection>
-            </div>
-
-            <FadeInSection className="mb-24 text-center">
-                 <h2 className="text-2xl md:text-3xl font-serif font-bold text-[#1e3a8a] italic">
-                     Precision Fit, Precision Style: Your Style, Our Expertise, Where Comfort Meets Fashion!!
-                 </h2>
-            </FadeInSection>
-
-             {/* Production Control */}
-             <div className="grid lg:grid-cols-2 gap-12 items-start">
-                 <FadeInSection>
-                    <h3 className="text-3xl font-bold text-black mb-4">Production Control</h3>
-                    <p className="text-gray-800 italic font-bold mb-6">Streamlining Operations, Ensuring Quality, Orchestrating Excellence!!</p>
-                    <div className="space-y-6 text-gray-700 text-lg md:text-xl font-light text-justify">
-                        <p>
-                            Behind every flawless garment lies a sophisticated and well-coordinated framework of production control, designed to uphold the highest standards of quality and efficiency.
-                        </p>
-                        <p>
-                             At the heart of this system are robust methodologies such as Material Requirement Planning (MRP), Capacity Planning, Production Scheduling, and Rigorous Quality Control.
-                        </p>
-                        <p>
-                            These elements work in harmony to create a seamless manufacturing process—one that transforms concepts into impeccably crafted clothing.
-                        </p>
-                    </div>
-                 </FadeInSection>
-                 <FadeInSection>
-                    <div className="w-full">
-                         <img 
-                            src={ASSETS.images.manufacturing.production} 
-                            alt="Production Control" 
-                            className="w-full h-auto rounded-sm" 
-                        />
-                    </div>
-                </FadeInSection>
+           {/* Top Text Block */}
+           <FadeInSection>
+             <div className="mb-24 text-left">
+                   <h2 className="text-4xl md:text-6xl font-bold text-[#1e3a8a] mb-2 font-sans tracking-tight uppercase">MANUFACTURING EXCELLENCE</h2>
+                   <p className="text-sm font-bold text-gray-800 italic mb-6">Where Expertise Ignites Precision and Artistry!!</p>
+                   <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light w-full">
+                      APPARELBD Sourcing stands as a Cornerstone of Manufacturing excellence, where the craft transcends machinery to embody precision, safety, and empowerment. From the initial fabric cut to the final stitch, every stage reflects a commitment to surpassing industry standards, delivering garments distinguished by exceptional quality, integrity, and artistry.
+                   </p>
              </div>
+           </FadeInSection>
+
+           {/* Content Grid 1: Fitting/Garment */}
+           <FadeInSection>
+             <div className="grid lg:grid-cols-12 gap-12 items-center mb-32">
+                {/* Left: Text */}
+                <div className="lg:col-span-5 text-left">
+                   <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-2 font-sans tracking-tight">Fitting/Garment Technical Support</h2>
+                   <p className="text-sm font-bold text-gray-800 italic mb-8">Elevating Wearability, Style and Functionality...!!</p>
+                   <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light mb-8">
+                      Garments are designed to look stunning, fit flawlessly, and move with effortless grace. Every detail—craftsmanship, fit, and aesthetics—is meticulously refined by a dedicated in-house technical team. Personalized fitting support and technical assistance are provided, ensuring that expectations are not only met but consistently exceeded, enhancing comfort, style, and functionality for greater customer satisfaction.
+                   </p>
+                   <button onClick={() => window.location.href = 'mailto:info@apparelbd.com'} className="inline-block bg-[#1e3a8a] text-white px-10 py-4 text-xs font-bold uppercase tracking-widest hover:bg-[#1e3a8a]/90 transition-all shadow-xl rounded-sm">
+                      EXPLORE MORE
+                   </button>
+                </div>
+
+                {/* Right: Single Image Area */}
+                <div className="lg:col-span-7 relative h-[500px] bg-[#f8f8f8] shadow-2xl rounded-sm overflow-hidden border-4 border-white group">
+                    <img 
+                        src={ASSETS.images.manufacturing.fitting} 
+                        className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
+                        alt="Manufacturing Excellence"
+                    />
+                </div>
+             </div>
+           </FadeInSection>
+           
+           {/* Content Grid 2: Production Control */}
+           <FadeInSection>
+             <div className="grid lg:grid-cols-2 gap-16 items-center">
+                 {/* Diagram Side (Left) - Now just an image without overlays */}
+                 <div className="relative w-full aspect-[4/3] md:aspect-video bg-gray-100 rounded-sm overflow-hidden shadow-2xl border-4 border-white group">
+                    <img 
+                      src={ASSETS.images.manufacturing.production} 
+                      className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105" 
+                      alt="Production Control" 
+                    />
+                 </div>
+
+                 {/* Text Side (Right) */}
+                 <div className="flex flex-col justify-center">
+                      <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-4">Production Control</h2>
+                      <p className="text-black italic font-medium mb-8 text-lg">
+                          Optimizing Efficiency, Ensuring Quality, Orchestrating Excellence!!
+                      </p>
+                      <div className="space-y-6 text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light">
+                          <p>
+                              At the core of our production control framework are four key components: Material Requirement Planning (MRP), Capacity Planning, Production Scheduling, and Rigorous Quality Control. These elements work together to ensure a seamless, efficient manufacturing process, managing everything from material sourcing to final product inspection.
+                          </p>
+                          <p>
+                              Material Requirement Planning (MRP) manages material needs to maintain optimal inventory and avoid shortages or excess.
+                          </p>
+                      </div>
+                 </div>
+              </div>
+           </FadeInSection>
+
+            {/* Content Grid 3: Capacity Planning Details */}
+           <FadeInSection>
+             <div className="grid lg:grid-cols-2 gap-12 items-center mt-20">
+                 {/* Left: Text */}
+                 <div>
+                     <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light mb-8">
+                          Capacity Planning aligns production with demand to optimize resources and balance workloads. Production Scheduling organizes tasks to maximize output and minimize downtime. Quality Control upholds standards to ensure every product meets or exceeds expectations.
+                     </p>
+                     <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light mb-8">
+                          The supply chain is managed to reduce waste and boost productivity. Competitive pricing and flexible lead times are achieved through this careful oversight. Operational excellence and exceptional client value are ensured by integrating these elements
+                     </p>
+                     <button className="inline-block border border-gray-500 px-6 py-2 text-[10px] font-bold text-black uppercase tracking-widest hover:bg-[#1e3a8a] hover:text-white hover:border-[#1e3a8a] transition-all bg-[#e6e6e6]">
+                          EXPLORE MORE
+                      </button>
+                 </div>
+                 
+                 {/* Right: Image */}
+                 <div className="w-full h-[400px] rounded-sm overflow-hidden shadow-xl border-4 border-white">
+                     <img 
+                          src={ASSETS.images.manufacturing.capacity} 
+                          alt="Garment Factory Production" 
+                          className="w-full h-full object-cover"
+                     />
+                 </div>
+             </div>
+           </FadeInSection>
+
+           {/* Top Quote for QA */}
+           <FadeInSection>
+             <div className="text-center mt-24 mb-12">
+                  <p className="font-serif italic font-bold text-black text-lg md:text-xl tracking-wide">
+                      "Crafting Excellence: Refined Control, Flawless Garments, Excellence in Every Stitch, Efficiency in Every Step."
+                  </p>
+             </div>
+           </FadeInSection>
+
+           {/* Content Grid 4: Quality Assurance */}
+           <FadeInSection>
+             <div className="grid lg:grid-cols-2 gap-16 items-center mb-32">
+                 {/* Left: Image */}
+                 <div className="w-full h-[500px] bg-gray-100 rounded-sm overflow-hidden shadow-2xl border-4 border-white relative group">
+                     <img 
+                          src={ASSETS.images.manufacturing.qa} 
+                          alt="Quality Assurance Team" 
+                          className="w-full h-full object-cover"
+                     />
+                 </div>
+
+                 {/* Right: Text */}
+                 <div>
+                      <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-2 font-sans tracking-tight">Quality Assurance:</h2>
+                      <p className="text-sm font-bold text-gray-800 italic mb-8">Redefining Excellence in Craftsmanship and Enduring Durability</p>
+                      <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light mb-8">
+                          Committed to upholding impeccable standards through rigorous quality control, we ensure every garment exceeds expectations for craftsmanship and durability. In collaboration with our partners, we apply advanced protocols— including lab testing and onsite inspections—at every stage of production, reinforcing confidence in the integrity and excellence of our products.
+                      </p>
+                      <button className="inline-block border border-gray-500 px-6 py-2 text-[10px] font-bold text-black uppercase tracking-widest hover:bg-[#1e3a8a] hover:text-white hover:border-[#1e3a8a] transition-all bg-[#e6e6e6]">
+                          EXPLORE MORE
+                      </button>
+                 </div>
+             </div>
+           </FadeInSection>
+           
+           {/* Fair Traceability Section - New Addition */}
+           <FadeInSection>
+             <div className="grid lg:grid-cols-2 gap-16 items-center mb-32">
+               {/* Left: Text */}
+               <div>
+                  <h2 className="text-4xl md:text-5xl font-bold text-[#1e3a8a] mb-2 font-sans tracking-tight">Fair Traceability</h2>
+                  <p className="text-sm font-bold text-gray-800 italic mb-8">Transparency across the Supply Chain!!</p>
+                  <p className="font-bold text-gray-900 mb-6 italic text-sm md:text-base">
+                     Real-Time Updates Promote-Transparency, Ethics, and Accountability—Fostering Trust Across the Supply Chain.
+                  </p>
+                  <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light mb-8">
+                     We prioritize fair traceability by providing real-time updates at every stage of the product journey—from raw material sourcing to manufacturing—ensuring ethical practices and supply chain accountability.
+                  </p>
+                  <button onClick={() => window.location.href = '#/ethical-sourcing'} className="inline-block border border-gray-500 px-6 py-2 text-[10px] font-bold text-black uppercase tracking-widest hover:bg-[#1e3a8a] hover:text-white hover:border-[#1e3a8a] transition-all bg-[#e6e6e6]">
+                      EXPLORE MORE
+                  </button>
+               </div>
+
+               {/* Right: Picture Only */}
+               <div className="relative w-full aspect-[4/3] bg-white border-4 border-white rounded-sm overflow-hidden shadow-2xl">
+                   <img 
+                      src={ASSETS.images.manufacturing.traceability} 
+                      alt="Traceability Diagram"
+                      className="w-full h-full object-cover" 
+                   />
+               </div>
+             </div>
+           </FadeInSection>
+
+           {/* Shipping And Logistics */}
+           <FadeInSection>
+             <div className="grid lg:grid-cols-2 gap-16 items-center">
+                  {/* Left: Image */}
+                  <div className="w-full h-[400px] md:h-[500px] rounded-sm overflow-hidden shadow-2xl border-4 border-white relative group">
+                      <img 
+                          src={ASSETS.images.manufacturing.logistics} 
+                          alt="Shipping and Logistics" 
+                          className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
+                      />
+                  </div>
+
+                  {/* Right: Text */}
+                  <div>
+                      <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-2 font-sans tracking-tight">Shipping And Logistics</h2>
+                      <p className="text-sm font-bold text-gray-800 italic mb-8">Streamlined Delivery, Global Reach!!</p>
+                      <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light mb-8">
+                          APPARELBD Sourcing ensures a seamless end-to-end logistics experience through our dedicated in-house shipping and logistics team. We streamline supply chain processes and manage all shipping and forwarder formalities with precision. From manufacturing facilities to global destinations, we oversee every step to guarantee efficient delivery and the highest level of customer satisfaction.
+                      </p>
+                      <button className="inline-block border border-gray-500 px-6 py-2 text-[10px] font-bold text-black uppercase tracking-widest hover:bg-[#1e3a8a] hover:text-white hover:border-[#1e3a8a] transition-all bg-[#e6e6e6]">
+                          EXPLORE MORE
+                      </button>
+                  </div>
+             </div>
+           </FadeInSection>
+
+           {/* New Quote Banner */}
+           <FadeInSection>
+             <div className="mt-24 w-full bg-[#e0f7fa] py-12 px-6 text-center shadow-md border-y border-white">
+                  <p className="text-[#3b6d8f] text-xl md:text-2xl font-serif italic font-bold leading-relaxed">
+                      "Manufacturing excellence is never an accident It is always the result of high intention, sincere effort, intelligent direction, and skillful execution."
+                  </p>
+             </div>
+           </FadeInSection>
+
         </div>
       </section>
 
@@ -420,44 +536,43 @@ const Manufacturing = () => {
           </div>
       </section>
 
-      {/* 9. Shipping and Logistics */}
-      <section className="pt-20 pb-0 bg-white">
-          <div className="max-w-[95%] mx-auto px-4 lg:px-8 mb-16">
-              <FadeInSection>
-                  <h2 className="text-3xl font-bold text-black mb-4">Shipping and Logistics</h2>
-                  <p className="text-gray-800 italic font-bold mb-6">Streamlined Delivery, Global Reach-</p>
-                  <p className="text-gray-700 text-lg md:text-xl font-light text-justify mb-8">
-                      Supply chain processes are streamlined, and shipping logistics are meticulously managed by our experienced in-house team. From manufacturing to final delivery, we ensure seamless transportation across global destinations. Every stage is carefully coordinated to optimize efficiency, reduce delays, and maintain strict quality controls.
-                  </p>
-                  <p className="text-gray-700 text-lg md:text-xl font-light text-justify">
-                      Our commitment to precision and reliability guarantees timely delivery, with customer satisfaction always at the forefront of our operations.
-                  </p>
-              </FadeInSection>
-          </div>
-
-          {/* Frameless full width image */}
-          <div className="relative w-full">
-              {/* Updated for responsiveness: h-auto on mobile, fixed on lg */}
-              <div className="w-full h-auto lg:h-[500px] relative group">
-                  <img 
-                      src={ASSETS.images.manufacturing.logistics} 
-                      alt="Shipping Logistics" 
-                      className="w-full h-full object-cover" 
-                  />
-                  <div className="absolute top-10 left-10 bg-white/90 p-8 max-w-2xl rounded-sm shadow-xl hidden md:block">
-                       <FadeInSection>
-                           <h3 className="text-2xl font-bold text-black leading-tight">
-                               “Seamless Shipping, Global Reach-Precision in Fashion Supply Chain, Streamlining Solutions for Your Needs.”
-                           </h3>
-                       </FadeInSection>
-                  </div>
+      {/* 9. Shipping and Logistics (Redesigned to avoid overlap look) */}
+      <section className="py-20 bg-white">
+          <div className="max-w-[95%] mx-auto px-4 lg:px-8">
+              <div className="grid lg:grid-cols-2 gap-16 items-center">
+                  <FadeInSection>
+                      <h2 className="text-3xl font-bold text-black mb-4">Shipping and Logistics</h2>
+                      <p className="text-gray-800 italic font-bold mb-6">Streamlined Delivery, Global Reach-</p>
+                      <p className="text-gray-700 text-lg md:text-xl font-light text-justify mb-8">
+                          Supply chain processes are streamlined, and shipping logistics are meticulously managed by our experienced in-house team. From manufacturing to final delivery, we ensure seamless transportation across global destinations. Every stage is carefully coordinated to optimize efficiency, reduce delays, and maintain strict quality controls.
+                      </p>
+                      <p className="text-gray-700 text-lg md:text-xl font-light text-justify mb-8">
+                          Our commitment to precision and reliability guarantees timely delivery, with customer satisfaction always at the forefront of our operations.
+                      </p>
+                      <div className="p-4 bg-gray-50 border-l-4 border-black">
+                          <p className="text-black font-bold text-lg italic">
+                             “Seamless Shipping, Global Reach-Precision in Fashion Supply Chain, Streamlining Solutions for Your Needs.”
+                          </p>
+                      </div>
+                  </FadeInSection>
+                  
+                  {/* Image Grid Side */}
+                  <FadeInSection>
+                      <div className="w-full h-[400px] md:h-[500px] rounded-sm overflow-hidden shadow-2xl border-4 border-white group">
+                          <img 
+                              src={ASSETS.images.manufacturing.logistics} 
+                              alt="Shipping Logistics" 
+                              className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105" 
+                          />
+                      </div>
+                  </FadeInSection>
               </div>
           </div>
       </section>
       
       {/* 10. Call to Action Banner */}
       <section 
-          className="relative h-[400px] w-full bg-cover bg-center" 
+          className="relative h-[400px] w-full bg-cover bg-center bg-fixed" 
           style={{ backgroundImage: `url('${ASSETS.images.manufacturing.cta}')` }}
       >
           <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center p-6 text-center">
@@ -466,7 +581,7 @@ const Manufacturing = () => {
                       We ensure excellence at every stage, from material Sourcing to Shipping. Experience our commitment to precision and integrity.
                   </p>
                   <h2 className="text-white text-2xl md:text-4xl font-bold mb-10">
-                      Welcome to APPARELBD Sourcing Limited: Where craftsmanship meets innovation!!!
+                      Welcome to APPARELBD : Where craftsmanship meets innovation!!!
                   </h2>
                   <button onClick={() => window.location.href = 'mailto:info@apparelbd.com'} className="border-2 border-[#88c057] text-[#88c057] px-10 py-3 text-sm font-bold uppercase tracking-widest hover:bg-[#88c057] hover:text-white transition-all duration-300">
                       CLICK HERE

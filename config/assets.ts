@@ -13,7 +13,7 @@ export const ASSETS = {
     about: "assets/videos/about.mp4",
     products: "assets/videos/products.mp4",
     marketIntel: "assets/videos/market-intel.mp4",
-    sustainability: "assets/videos/sustainability.mp4",
+    sustainability: "assets/images/sustainability/Sustainability_1.avif",
     ethical: "assets/videos/ethical.mp4",
     manufacturing: "assets/videos/manufacturing.mp4"
   },
@@ -78,7 +78,7 @@ export const ASSETS = {
       inspection: "assets/images/manufacturing/Manufacturing_5.avif",
       philosophy: "assets/images/manufacturing/Manufacturing_3.avif",
       traceability: "assets/images/home/mfg_traceability.png",
-      logistics: "assets/images/home/mfg_logistics.png",
+      logistics: "assets/images/home/mfg_logistics.jpg",
       cta: "assets/images/manufacturing/Manufacturing_1.avif"
     },
     // ========================================================================
@@ -167,6 +167,21 @@ export const ASSETS = {
         }
       }
     },
+    // ========================================================================
+    // SUSTAINABILITY PAGE IMAGES (LOCAL)
+    // ========================================================================
+    sustainabilityPage: {
+      img1: "assets/images/sustainability/Sustainability_1.avif",
+      img2: "assets/images/sustainability/Sustainability_2.avif",
+      img3: "assets/images/sustainability/Sustainability_3.avif",
+      img4: "assets/images/sustainability/Sustainability_4.avif",
+      img5: "assets/images/sustainability/Sustainability_5.avif",
+      img6: "assets/images/sustainability/Sustainability_6.avif",
+      img7: "assets/images/sustainability/Sustainability_7.avif",
+      img8: "assets/images/sustainability/Sustainability_8.avif",
+      img9: "assets/images/sustainability/Sustainability_9.avif"
+    },
+
     logos: {
       rsc: "assets/images/logos/rsc.jpg",
       betterwork: "assets/images/logos/betterwork.jpg",
