@@ -131,38 +131,38 @@ export const ASSETS = {
       services: {
         marketIntel: {
           front: "assets/images/about/Services_1.avif",
-          back: "assets/images/about/Services_2.avif"
+          back: "assets/images/about/Services_.avif"
         },
         rd: {
-          front: "assets/images/about/Services_3.avif",
-          back: "assets/images/about/Services_4.avif"
+          front: "assets/images/about/Services_2.avif",
+          back: "assets/images/about/Services_.avif"
         },
         ethical: {
-          front: "assets/images/about/Services_5.avif",
-          back: "assets/images/about/Services_6.avif"
+          front: "assets/images/about/Services_3.avif",
+          back: "assets/images/about/Services_.avif"
         },
         manufacturing: {
-          front: "assets/images/about/Services_7.avif",
-          back: "assets/images/about/Services_8.avif"
+          front: "assets/images/about/Services_4.avif",
+          back: "assets/images/about/Services_.avif"
         },
         sustainability: {
-          front: "assets/images/about/Services_9.avif",
+          front: "assets/images/about/Services_5.avif",
           back: "assets/images/about/Services_10.avif"
         },
         disney: {
-          front: "assets/images/about/Services_11.avif",
+          front: "assets/images/about/Services_6.avif",
           back: "assets/images/about/Services_12.avif"
         },
         diversified: {
-          front: "assets/images/about/Services_13.avif",
+          front: "assets/images/about/Services_7.avif",
           back: "assets/images/about/Services_14.avif"
         },
         competitive: {
-          front: "assets/images/about/Services_15.avif",
+          front: "assets/images/about/Services_8.avif",
           back: "assets/images/about/Services_16.avif"
         },
         jute: {
-          front: "assets/images/about/Services_17.avif",
+          front: "assets/images/about/Services_9.avif",
           back: "assets/images/about/Services_18.avif"
         }
       }
