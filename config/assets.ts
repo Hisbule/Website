@@ -68,8 +68,8 @@ export const ASSETS = {
     // ========================================================================
     manufacturing: {
       hero: "assets/images/manufacturing/hero.jpg",
-      mission1: "assets/images/manufacturing/mission_1.jpg",
-      mission2: "assets/images/manufacturing/mission_2.jpg",
+      mission1: "assets/images/manufacturing/Manufacturing_1.avif",
+      mission2: "assets/images/manufacturing/Manufacturing_2.avif",
       fabric: "assets/images/manufacturing/fabric.jpg",
       fitting: "assets/images/home/mfg_fitting.jpg",
       production: "assets/images/home/mfg_production.jpeg",
