@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X, ChevronDown, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Menu, X, ChevronDown, Facebook, Linkedin } from 'lucide-react';
 import { NavItem } from '../types';
 import { ASSETS } from '../config/assets';
 
@@ -212,9 +212,7 @@ const Footer = () => {
                 <h4 className="font-bold text-lg mb-4">To Connect With Us</h4>
                 <div className="flex space-x-3">
                     <a href="#" className="p-2.5 bg-brand-navy text-white rounded-md hover:bg-brand-blue hover:-translate-y-1 transition-all shadow-lg"><Facebook className="w-5 h-5" /></a>
-                    <a href="#" className="p-2.5 bg-brand-navy text-white rounded-md hover:bg-brand-blue hover:-translate-y-1 transition-all shadow-lg"><Twitter className="w-5 h-5" /></a>
                     <a href="#" className="p-2.5 bg-brand-navy text-white rounded-md hover:bg-brand-blue hover:-translate-y-1 transition-all shadow-lg"><Linkedin className="w-5 h-5" /></a>
-                    <a href="#" className="p-2.5 bg-brand-navy text-white rounded-md hover:bg-brand-blue hover:-translate-y-1 transition-all shadow-lg"><Instagram className="w-5 h-5" /></a>
                 </div>
             </div>
           </div>
@@ -226,7 +224,7 @@ const Footer = () => {
                <div>
                  <p className="font-bold text-brand-navy text-lg mb-1">Head Quarter and Primary Office</p>
                  <p className="leading-snug">36, Gareeb-E-Newaz Avenue, Level-3 (C2), Sector-13, Uttara, Dhaka-1230, Bangladesh.</p>
-                 <p className="mt-2 text-brand-blue font-medium">Email: info@apparelbd.com</p>
+                 <p className="mt-2 text-brand-blue font-medium">Email: ceo@apparelbd.com</p>
                </div>
                {/* 
                   Temporarily hiding other offices as per request.
@@ -261,7 +259,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-20 pt-8 border-t border-gray-300/50 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 font-medium">
-           <p className="mb-2 md:mb-0">Copyright © 2026 APPARELBD | Powered By APPARELBD</p>
+           <p className="mb-2 md:mb-0">Copyright © 2024 APPARELBD | Powered By APPARELBD </p>
            <p>Concept & Content djk</p>
         </div>
       </div>
