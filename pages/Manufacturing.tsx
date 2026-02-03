@@ -488,7 +488,7 @@ const Manufacturing = () => {
                        </div>
                    </FadeInSection>
                    <FadeInSection>
-                       <h3 className="text-2xl md:text-3xl font-bold text-black uppercase tracking-wide mb-6">ApparelBD believe-</h3>
+                       <h3 className="text-2xl md:text-3xl font-bold text-black tracking-wide mb-6">ApparelBD believe-</h3>
                        <p className="text-2xl md:text-4xl font-bold text-black leading-tight font-sans">
                          “Standards You Trust;<br/>
                          Quality You Feel –<br/>
