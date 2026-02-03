@@ -659,8 +659,10 @@ const About = () => {
       </section>
 
       {/* 10. Collaboration Banner */}
-      <section className="relative h-[400px]">
-          <img src={ASSETS.images.about.collaboration} alt="Collaboration" className="w-full h-full object-cover" />
+      <section 
+        className="relative h-[400px] w-full bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: `url('${ASSETS.images.about.collaboration}')` }}
+      >
           <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-4">
                <FadeInSection>
                    <h2 className="text-white font-bold text-xl md:text-3xl max-w-4xl leading-relaxed mb-6">

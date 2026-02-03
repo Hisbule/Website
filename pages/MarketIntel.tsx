@@ -45,9 +45,9 @@ const MarketIntel = () => {
   // Slideshow state for Fashion Evolution
   const [currentFashionIndex, setCurrentFashionIndex] = useState(0);
   const fashionImages = [
-     "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=2000&auto=format&fit=crop",
-     "https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?q=80&w=2000&auto=format&fit=crop",
-     "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2000&auto=format&fit=crop"
+     ASSETS.images.marketIntelPage.img1,
+     ASSETS.images.marketIntelPage.img2,
+     ASSETS.images.marketIntelPage.img3
   ];
 
   useEffect(() => {
@@ -149,7 +149,7 @@ const MarketIntel = () => {
 
            <FadeInSection>
               <div className="h-[500px] w-full rounded-sm overflow-hidden shadow-xl border-8 border-gray-100">
-                  <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=2274&auto=format&fit=crop" alt="Fabric Shelves" className="w-full h-full object-cover" />
+                  <img src={ASSETS.images.marketIntelPage.img4} alt="Fabric Shelves" className="w-full h-full object-cover" />
               </div>
            </FadeInSection>
         </div>
@@ -172,7 +172,7 @@ const MarketIntel = () => {
            <div className="grid lg:grid-cols-2 gap-12 items-center">
               <FadeInSection>
                  <div className="h-[400px] rounded-sm overflow-hidden shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=2070&auto=format&fit=crop" alt="Design Team" className="w-full h-full object-cover" />
+                    <img src={ASSETS.images.marketIntelPage.img5} alt="Design Team" className="w-full h-full object-cover" />
                  </div>
               </FadeInSection>
               
@@ -218,7 +218,7 @@ const MarketIntel = () => {
 
             <FadeInSection>
                <div className="h-[400px] md:h-[500px] rounded-sm overflow-hidden shadow-2xl border-4 border-white transform rotate-1 hover:rotate-0 transition-transform duration-500">
-                  <img src="https://images.unsplash.com/photo-1542060748-10c287222651?q=80&w=2340&auto=format&fit=crop" alt="Trend Board" className="w-full h-full object-cover" />
+                  <img src={ASSETS.images.marketIntelPage.img6} alt="Trend Board" className="w-full h-full object-cover" />
                </div>
             </FadeInSection>
         </div>
@@ -295,12 +295,12 @@ const MarketIntel = () => {
                <div className="grid md:grid-cols-2 gap-8">
                   <FadeInSection>
                       <div className="h-[400px] rounded-sm overflow-hidden shadow-xl">
-                          <img src="https://images.unsplash.com/photo-1596482103565-d603a1163152?q=80&w=2000&auto=format&fit=crop" alt="Mannequins" className="w-full h-full object-cover" />
+                          <img src={ASSETS.images.marketIntelPage.img7} alt="Mannequins" className="w-full h-full object-cover" />
                       </div>
                   </FadeInSection>
                   <FadeInSection>
                       <div className="h-[400px] rounded-sm overflow-hidden shadow-xl">
-                          <img src="https://images.unsplash.com/photo-1606041008023-472dfb5e530f?q=80&w=1976&auto=format&fit=crop" alt="Sketching" className="w-full h-full object-cover" />
+                          <img src={ASSETS.images.marketIntelPage.img8} alt="Sketching" className="w-full h-full object-cover" />
                       </div>
                   </FadeInSection>
                </div>
@@ -357,12 +357,12 @@ const MarketIntel = () => {
                    </FadeInSection>
                    <FadeInSection>
                         <div className="h-[300px] rounded-sm overflow-hidden shadow-md">
-                            <img src="https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=2070&auto=format&fit=crop" alt="Easel" className="w-full h-full object-cover" />
+                            <img src={ASSETS.images.marketIntelPage.img9} alt="Easel" className="w-full h-full object-cover" />
                         </div>
                    </FadeInSection>
                    <FadeInSection>
                         <div className="h-[300px] rounded-sm overflow-hidden shadow-md">
-                            <img src="https://images.unsplash.com/photo-1537832816519-689ad163238b?q=80&w=2059&auto=format&fit=crop" alt="Sewing Kit" className="w-full h-full object-cover" />
+                            <img src={ASSETS.images.marketIntelPage.img10} alt="Sewing Kit" className="w-full h-full object-cover" />
                         </div>
                    </FadeInSection>
                </div>
@@ -372,7 +372,7 @@ const MarketIntel = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-24">
                 <FadeInSection>
                     <div className="h-[400px] rounded-sm overflow-hidden shadow-xl">
-                        <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2127&auto=format&fit=crop" alt="Working Fabric" className="w-full h-full object-cover" />
+                        <img src={ASSETS.images.marketIntelPage.img11} alt="Working Fabric" className="w-full h-full object-cover" />
                     </div>
                 </FadeInSection>
                 <FadeInSection>
@@ -394,7 +394,7 @@ const MarketIntel = () => {
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <FadeInSection>
                         <div className="h-[400px] rounded-sm overflow-hidden shadow-xl border-4 border-white">
-                            <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=2274&auto=format&fit=crop" alt="Approaches" className="w-full h-full object-cover" />
+                            <img src={ASSETS.images.marketIntelPage.img4} alt="Approaches" className="w-full h-full object-cover" />
                         </div>
                     </FadeInSection>
                     <FadeInSection className="space-y-6">
@@ -455,7 +455,7 @@ const MarketIntel = () => {
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                      <FadeInSection>
                          <div className="h-[300px] rounded-sm overflow-hidden shadow-lg">
-                             <img src="https://images.unsplash.com/photo-1544022613-e87ca75a784a?q=80&w=2000&auto=format&fit=crop" alt="Rack" className="w-full h-full object-cover" />
+                             <img src={ASSETS.images.marketIntelPage.img12} alt="Rack" className="w-full h-full object-cover" />
                          </div>
                          <p className="mt-4 font-bold text-gray-800">• Rapid sampling keeps your collection on schedule.</p>
                      </FadeInSection>
@@ -498,7 +498,7 @@ const MarketIntel = () => {
 
                     <FadeInSection>
                         <div className="h-[500px] bg-gray-100 rounded-sm overflow-hidden shadow-xl flex items-center justify-center p-8">
-                            <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=2070&auto=format&fit=crop" alt="Photo Studio" className="w-full h-full object-cover" />
+                            <img src={ASSETS.images.marketIntelPage.img13} alt="Photo Studio" className="w-full h-full object-cover" />
                         </div>
                     </FadeInSection>
                 </div>

@@ -366,7 +366,7 @@ const Manufacturing = () => {
                                    <span className="font-bold text-sm">Material Supply Chain</span>
                                </div>
                                <div className="col-span-2 bg-[#1e3a8a] text-white p-4 rounded font-bold uppercase">
-                                   APPARELBD Sourcing Limited
+                                   APPARELBD 
                                </div>
                            </div>
                        </div>
@@ -488,7 +488,12 @@ const Manufacturing = () => {
                        </div>
                    </FadeInSection>
                    <FadeInSection>
-                       <h3 className="text-2xl md:text-3xl font-bold text-black uppercase tracking-wide">APPARELBD SOURCING believe-</h3>
+                       <h3 className="text-2xl md:text-3xl font-bold text-black uppercase tracking-wide mb-6">APPARELBD  believe-</h3>
+                       <p className="text-2xl md:text-3xl font-bold text-black uppercase tracking-wide mb-6">
+                         “Standards You Trust;<br/>
+                         Quality You Feel –<br/>
+                         Crafting Perfection, Built to Last."
+                       </p>
                    </FadeInSection>
               </div>
           </div>

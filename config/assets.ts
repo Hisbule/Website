@@ -13,7 +13,7 @@ export const ASSETS = {
     about: "assets/videos/about.mp4",
     products: "assets/videos/products.mp4",
     marketIntel: "assets/videos/market-intel.mp4",
-    sustainability: "assets/images/sustainability/Sustainability_1.avif",
+    sustainability: "assets/images/sustainability/Sustainability_hero.avif",
     ethical: "assets/videos/ethical.mp4",
     manufacturing: "assets/videos/manufacturing.mp4"
   },
@@ -68,7 +68,7 @@ export const ASSETS = {
     // ========================================================================
     manufacturing: {
       hero: "assets/images/manufacturing/hero.jpg",
-      mission1: "assets/images/manufacturing/Manufacturing_1.avif",
+      mission1: "assets/images/manufacturing/Manufacturing_6.avif",
       mission2: "assets/images/manufacturing/Manufacturing_2.avif",
       fabric: "assets/images/manufacturing/Manufacturing_4.avif",
       fitting: "assets/images/home/mfg_fitting.jpg",
@@ -180,6 +180,25 @@ export const ASSETS = {
       img7: "assets/images/sustainability/Sustainability_7.avif",
       img8: "assets/images/sustainability/Sustainability_8.avif",
       img9: "assets/images/sustainability/Sustainability_9.avif"
+    },
+
+       // ========================================================================
+    // MARKET INTEL PAGE IMAGES (LOCAL)
+    // ========================================================================
+    marketIntelPage: {
+      img1: "assets/images/market-intel/MarketIntel_1.avif",
+      img2: "assets/images/market-intel/MarketIntel_2.avif",
+      img3: "assets/images/market-intel/MarketIntel_3.avif",
+      img4: "assets/images/market-intel/MarketIntel_4.avif",
+      img5: "assets/images/market-intel/MarketIntel_5.avif",
+      img6: "assets/images/market-intel/MarketIntel_6.avif",
+      img7: "assets/images/market-intel/MarketIntel_7.avif",
+      img8: "assets/images/market-intel/MarketIntel_8.avif",
+      img9: "assets/images/market-intel/MarketIntel_9.avif",
+      img10: "assets/images/market-intel/MarketIntel_10.avif",
+      img11: "assets/images/market-intel/MarketIntel_11.avif",
+      img12: "assets/images/market-intel/MarketIntel_12.avif",
+      img13: "assets/images/market-intel/MarketIntel_13.avif"
     },
 
     logos: {
