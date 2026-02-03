@@ -189,78 +189,120 @@ const Navbar = () => {
 };
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email) {
+      window.location.href = `mailto:ceo@apparelbd.com?subject=Newsletter Subscription&body=I would like to subscribe to the newsletter. My email is: ${email}`;
+      setEmail('');
+    }
+  };
+
   return (
-    <footer className="bg-[#eaf2ff] text-brand-navy pt-20 pb-10">
-      <div className="w-full px-6 md:px-12 lg:px-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-20">
+    <footer className="bg-[#eaf2ff] text-brand-navy pt-16 pb-8 border-t border-white">
+      <div className="max-w-[95%] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           
-          {/* Column 1: Brand & About */}
-          <div className="space-y-6">
-             {/* Logo in Footer */}
-             <div className="mb-6">
+          {/* 1. Brand Section */}
+          <div className="flex flex-col space-y-6">
+             <Link to="/" className="block w-fit">
                 <img 
                     src={ASSETS.logo} 
                     alt="ApparelBD Logo" 
-                    className="h-16 md:h-24 w-auto object-contain" 
+                    className="h-16 w-auto object-contain" 
                 />
+             </Link>
+             <p className="text-gray-600 text-sm leading-relaxed text-justify font-light">
+               We believe that fashion is not just about clothing, it's an ever evolving statement, an expression of Identity. Culture context of time and place, perception, aspiration, creativity and innovation.
+             </p>
+             <div className="flex gap-4 pt-2">
+                <a href="https://www.facebook.com/profile.php?id=61587356734292" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-brand-navy hover:bg-[#1877F2] hover:text-white transition-all shadow-sm border border-gray-100 group">
+                  <Facebook className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                </a>
+                <a href="#" className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-brand-navy hover:bg-[#0A66C2] hover:text-white transition-all shadow-sm border border-gray-100 group">
+                  <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                </a>
              </div>
-            <h3 className="font-bold text-xl border-b-2 border-brand-green inline-block pb-1">All About Us</h3>
-            <p className="text-base text-gray-700 leading-relaxed text-justify">
-              We believe that fashion is not just about clothing, it's an ever evolving statement, an expression of Identity. Culture context of time and place, perception, aspiration, creativity and innovation, value and belief of individual and community.
-            </p>
-            <div className="pt-4">
-                <h4 className="font-bold text-lg mb-4">To Connect With Us</h4>
-                <div className="flex space-x-3">
-                    <a href="#" className="p-2.5 bg-brand-navy text-white rounded-md hover:bg-brand-blue hover:-translate-y-1 transition-all shadow-lg"><Facebook className="w-5 h-5" /></a>
-                    <a href="#" className="p-2.5 bg-brand-navy text-white rounded-md hover:bg-brand-blue hover:-translate-y-1 transition-all shadow-lg"><Linkedin className="w-5 h-5" /></a>
-                </div>
-            </div>
           </div>
 
-          {/* Column 2: Where We Are */}
-          <div className="col-span-1 md:col-span-2">
-            <h3 className="text-brand-blue font-bold uppercase text-xl mb-8 border-b border-gray-300 pb-2">Where We Are</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-10 text-base text-gray-700">
+          {/* 2. Quick Links */}
+          <div className="lg:pl-8">
+            <h3 className="font-bold text-lg mb-6 text-brand-navy uppercase tracking-wide relative inline-block">
+              Quick Links
+              <span className="absolute -bottom-2 left-0 w-12 h-1 bg-brand-green rounded-full"></span>
+            </h3>
+            <ul className="space-y-3 text-sm text-gray-600 font-medium">
+               {[
+                 { label: 'Home', path: '/' },
+                 { label: 'About Us', path: '/about' },
+                 { label: 'Services', path: '/about#services' },
+                 { label: 'Ethical Sourcing', path: '/ethical-sourcing' },
+                 { label: 'Manufacturing', path: '/manufacturing' },
+                 { label: 'Products', path: '/products' },
+                 { label: 'Sustainability', path: '/sustainability' }
+               ].map((link) => (
+                 <li key={link.label}>
+                   <Link to={link.path} className="hover:text-brand-green hover:pl-2 transition-all duration-300 block">
+                     {link.label}
+                   </Link>
+                 </li>
+               ))}
+            </ul>
+          </div>
+
+          {/* 3. Contact Info */}
+          <div>
+            <h3 className="font-bold text-lg mb-6 text-brand-navy uppercase tracking-wide relative inline-block">
+              Contact Us
+              <span className="absolute -bottom-2 left-0 w-12 h-1 bg-brand-green rounded-full"></span>
+            </h3>
+            <div className="space-y-6 text-sm text-gray-600">
                <div>
-                 <p className="font-bold text-brand-navy text-lg mb-1">Head Quarter and Primary Office</p>
-                 <p className="leading-snug">36, Gareeb-E-Newaz Avenue, Level-3 (C2), Sector-13, Uttara, Dhaka-1230, Bangladesh.</p>
-                 <p className="mt-2 text-brand-blue font-medium">Email: info@apparelbd.com</p>
+                 <p className="font-bold text-brand-navy mb-2 text-base">Head Quarter</p>
+                 <div className="font-light leading-relaxed">
+                   <p>36, Gareeb-E-Newaz Avenue,</p>
+                   <p>Level-3 (C2), Sector-13,</p>
+                   <p>Uttara, Dhaka-1230, Bangladesh.</p>
+                 </div>
                </div>
-               {/* 
-                  Temporarily hiding other offices as per request.
-                  Can be restored later if needed.
-               */}
+               <div>
+                 <p className="font-bold text-brand-navy mb-2 text-base">Get in Touch</p>
+                 <a href="mailto:ceo@apparelbd.com" className="text-brand-blue hover:text-brand-green transition-colors font-medium">ceo@apparelbd.com</a>
+               </div>
             </div>
           </div>
 
-          {/* Column 3: Quick Links & Subscribe */}
-          <div className="space-y-10">
-             <div>
-                 <h3 className="text-brand-navy font-bold uppercase text-xl mb-6 border-b border-gray-300 pb-2">Quick Link</h3>
-                 <ul className="space-y-3 text-base text-gray-700">
-                   <li><Link to="/" className="hover:text-brand-blue hover:pl-2 transition-all block">Home</Link></li>
-                   <li><Link to="/about" className="hover:text-brand-blue hover:pl-2 transition-all block">About Us</Link></li>
-                   <li><Link to="/about#services" className="hover:text-brand-blue hover:pl-2 transition-all block">Services</Link></li>
-                   <li><Link to="/ethical-sourcing" className="hover:text-brand-blue hover:pl-2 transition-all block">Ethical Sourcing</Link></li>
-                   <li><Link to="/manufacturing" className="hover:text-brand-blue hover:pl-2 transition-all block">Manufacturing Excellence</Link></li>
-                   <li><Link to="/products" className="hover:text-brand-blue hover:pl-2 transition-all block">Products</Link></li>
-                   <li><Link to="/sustainability" className="hover:text-brand-blue hover:pl-2 transition-all block">Sustainability</Link></li>
-                 </ul>
-             </div>
-             
-             <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                 <h3 className="text-brand-navy font-bold uppercase text-lg mb-4">Subscribe for Newsletter</h3>
-                 <div className="flex flex-col gap-3">
-                   <input type="email" placeholder="Your E-mail" className="w-full px-4 py-3 border border-gray-200 bg-gray-50 text-base focus:outline-none focus:border-brand-blue focus:bg-white rounded transition-colors" />
-                   <button className="w-full bg-brand-green text-white text-base py-3 font-bold uppercase hover:bg-green-600 transition rounded shadow-md">Subscribe</button>
-                 </div>
-             </div>
+          {/* 4. Newsletter */}
+          <div>
+            <h3 className="font-bold text-lg mb-6 text-brand-navy uppercase tracking-wide relative inline-block">
+              Newsletter
+              <span className="absolute -bottom-2 left-0 w-12 h-1 bg-brand-green rounded-full"></span>
+            </h3>
+            <p className="text-sm text-gray-600 mb-6 font-light leading-relaxed">
+              Subscribe to our newsletter for the latest updates and sourcing trends.
+            </p>
+            <form className="space-y-3" onSubmit={handleSubscribe}>
+              <input 
+                type="email" 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Your email address" 
+                required
+                className="w-full px-4 py-3 text-sm bg-white border border-gray-200 rounded-sm focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all"
+              />
+              <button className="w-full px-4 py-3 text-sm font-bold text-white bg-brand-navy hover:bg-brand-green rounded-sm transition-colors uppercase tracking-wider shadow-md">
+                Subscribe Now
+              </button>
+            </form>
           </div>
+
         </div>
 
-        <div className="mt-20 pt-8 border-t border-gray-300/50 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 font-medium">
-           <p className="mb-2 md:mb-0">Copyright © 2024 ApparelBD | Powered By ApparelBD </p>
-           <p>Concept & Content djk</p>
+        {/* Copyright */}
+        <div className="border-t border-gray-300/50 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 font-medium">
+           <p className="mb-2 md:mb-0">Copyright © {new Date().getFullYear()} ApparelBD | All Rights Reserved.</p>
+           <p className="opacity-75">Designed & Developed by ApparelBD Team</p>
         </div>
       </div>
     </footer>
