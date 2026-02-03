@@ -5,23 +5,40 @@ import { ASSETS } from '../config/assets';
 interface ProductSectionProps {
   id: string;
   title: string;
-  image: string;
+  images: string[];
 }
 
-const ProductSection: React.FC<ProductSectionProps> = ({ id, title, image }) => (
-  <section id={id} className="py-16 border-b border-gray-100 last:border-0 scroll-mt-20">
-    <div className="max-w-7xl mx-auto px-4">
-      <div className="flex items-center gap-4 mb-8">
-         <div className="w-2 h-10 bg-brand-green rounded-sm"></div>
-         <h2 className="text-3xl font-bold text-brand-navy">{title}</h2>
+const ProductSection: React.FC<ProductSectionProps> = ({ id, title, images }) => (
+  <section id={id} className="py-20 border-b border-gray-100 last:border-0 scroll-mt-20">
+    <div className="max-w-[95%] mx-auto px-4">
+      <div className="flex items-center justify-between mb-8">
+         <div className="flex items-center gap-4">
+            <div className="w-2 h-10 bg-brand-green rounded-sm"></div>
+            <h2 className="text-3xl font-bold text-brand-navy uppercase tracking-wide">{title}</h2>
+         </div>
+         <span className="hidden md:inline-block text-sm text-gray-400 italic font-light">
+            Scroll to view more &rarr;
+         </span>
       </div>
-      <div className="w-full h-[400px] bg-gray-100 rounded-lg overflow-hidden relative group shadow-lg">
-        <img src={image} alt={title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-        <div className="absolute inset-0 bg-brand-navy/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <div className="text-center">
-                <h3 className="text-2xl text-white font-serif italic mb-2">{title} Collection</h3>
-                <p className="text-white/80 uppercase tracking-widest text-sm">View Details</p>
+      
+      {/* Horizontal Scrolling Gallery */}
+      <div className="w-full overflow-x-auto pb-6 scrollbar-hide">
+        <div className="flex gap-4 md:gap-6 min-w-max">
+          {images.map((img, index) => (
+            <div 
+              key={index} 
+              className="relative w-[280px] md:w-[350px] aspect-[3/4] flex-shrink-0 overflow-hidden rounded-sm bg-gray-100 group shadow-md hover:shadow-xl transition-all duration-300"
+            >
+              <img 
+                src={img} 
+                alt={`${title} product ${index + 1}`} 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                 <span className="text-white font-bold uppercase tracking-widest text-sm border-b border-white pb-1">View Detail</span>
+              </div>
             </div>
+          ))}
         </div>
       </div>
     </div>
@@ -29,26 +46,25 @@ const ProductSection: React.FC<ProductSectionProps> = ({ id, title, image }) => 
 );
 
 const Products = () => {
+  // Use productPage assets (Indices 1-6 from product_page folder)
   const products = [
-    { id: 'knit', title: 'Knit', image: 'https://images.unsplash.com/photo-1620799140408-ed5341cd2431?q=80&w=2000&auto=format&fit=crop' },
-    { id: 'woven', title: 'Woven', image: 'https://images.unsplash.com/photo-1520218508822-998633d997a6?q=80&w=2000&auto=format&fit=crop' },
-    { id: 'nightwear', title: 'Nightwear and Loungewear', image: 'https://images.unsplash.com/photo-1571513722275-4b41940954b3?q=80&w=2000&auto=format&fit=crop' },
-    { id: 'denim', title: 'Denim', image: 'https://images.unsplash.com/photo-1542272617-08f08630329f?q=80&w=2000&auto=format&fit=crop' },
-    { id: 'outerwear', title: 'Outer Wear', image: 'https://images.unsplash.com/photo-1544022613-e87ca75a784a?q=80&w=2000&auto=format&fit=crop' },
-    { id: 'lingerie', title: 'Lingerie and Swimwear', image: 'https://images.unsplash.com/photo-1596482103565-d603a1163152?q=80&w=2000&auto=format&fit=crop' },
-    { id: 'activewear', title: 'Activewear, Workwear, Sportswear', image: 'https://images.unsplash.com/photo-1518459031867-a89b944bffe4?q=80&w=2000&auto=format&fit=crop' },
-    { id: 'hometextile', title: 'Home Textile', image: 'https://images.unsplash.com/photo-1522771753035-4a503f3a6352?q=80&w=2000&auto=format&fit=crop' },
-    { id: 'sweater', title: 'Sweater', image: 'https://images.unsplash.com/photo-1611090159492-3866d936e788?q=80&w=2000&auto=format&fit=crop' },
-    { id: 'uniform', title: 'Uniform and Healthcare wear', image: 'https://images.unsplash.com/photo-1584467541268-b040f83be3dd?q=80&w=2000&auto=format&fit=crop' },
-    { id: 'disney', title: 'Disney and License Character Products', image: 'https://images.unsplash.com/photo-1535572290543-523a3d6e1b0c?q=80&w=2000&auto=format&fit=crop' },
-    { id: 'jute', title: 'Jute Crafts, Shoes and Others', image: 'https://images.unsplash.com/photo-1550974797-0dc2a420952d?q=80&w=2000&auto=format&fit=crop' },
+    { id: 'knit', title: 'Knit', images: ASSETS.images.productPage.knit },
+    { id: 'woven', title: 'Woven', images: ASSETS.images.productPage.woven },
+    { id: 'nightwear', title: 'Nightwear and Loungewear', images: ASSETS.images.productPage.nightwear },
+    { id: 'denim', title: 'Denim', images: ASSETS.images.productPage.denim },
+    { id: 'outerwear', title: 'Outer Wear', images: ASSETS.images.productPage.outerwear },
+    { id: 'lingerie', title: 'Lingerie and Swimwear', images: ASSETS.images.productPage.lingerie },
+    { id: 'activewear', title: 'Activewear, Workwear, Sportswear', images: ASSETS.images.productPage.activewear },
+    { id: 'hometextile', title: 'Home Textile', images: ASSETS.images.productPage.hometextile },
+    { id: 'uniform', title: 'Uniform and Healthcare wear', images: ASSETS.images.productPage.uniform },
+    { id: 'sweater', title: 'Sweater', images: ASSETS.images.productPage.sweater },
+    { id: 'disney', title: 'Disney and License Character Products', images: ASSETS.images.productPage.license },
   ];
 
   return (
     <div>
       {/* 
-        Using centralized video config
-        Video: Close up of fabric texture/hands feeling material 
+        Hero Video stays as the first image type (video)
       */}
       <HeroVideo 
         title="Our Product Lines" 
@@ -57,14 +73,29 @@ const Products = () => {
       />
       
       <div className="bg-white min-h-screen">
+        <div className="max-w-[95%] mx-auto px-4 py-16 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1e3a8a] mb-6 font-serif">Product Categories</h2>
+            <p className="text-gray-700 max-w-4xl mx-auto leading-relaxed text-lg md:text-xl font-light">
+                Discover our extensive range of high-quality apparel. Each category represents our commitment to excellence, innovation, and diverse fashion needs.
+            </p>
+        </div>
+
         {products.map(product => (
           <ProductSection 
             key={product.id} 
             id={product.id} 
             title={product.title} 
-            image={product.image} 
+            images={product.images} 
           />
         ))}
+
+        {/* Call to Action at bottom */}
+         <section className="py-20 bg-gray-50 text-center">
+             <h2 className="text-2xl md:text-3xl font-bold text-brand-navy mb-6">Need a custom sourcing solution?</h2>
+             <a href="mailto:ceo@apparelbd.com" className="inline-block bg-brand-green text-white px-10 py-4 text-sm font-bold uppercase tracking-widest hover:bg-brand-navy transition-all shadow-lg rounded-sm">
+                 Contact Us
+             </a>
+         </section>
       </div>
     </div>
   );

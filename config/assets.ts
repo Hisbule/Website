@@ -98,6 +98,55 @@ export const ASSETS = {
       license: ["assets/images/products/License_1.png", "assets/images/products/License_2.png", "assets/images/products/License_3.png"],
       jute: ["assets/images/products/Jute_1.png", "assets/images/products/Jute_2.png", "assets/images/products/Jute_3.png"]
     },
+ // ========================================================================
+    // PRODUCTS PAGE IMAGES (Indices 1-6 from product_page folder, .avif format)
+    // ========================================================================
+    productPage: {
+      knit: [
+        "assets/images/product_page/Knit_1.avif", "assets/images/product_page/Knit_2.avif", "assets/images/product_page/Knit_3.avif",
+        "assets/images/product_page/Knit_4.avif", "assets/images/product_page/Knit_5.avif", "assets/images/product_page/Knit_6.avif"
+      ],
+      woven: [
+        "assets/images/product_page/Woven_1.avif", "assets/images/product_page/Woven_2.avif", "assets/images/product_page/Woven_3.avif",
+        "assets/images/product_page/Woven_4.avif", "assets/images/product_page/Woven_5.avif", "assets/images/product_page/Woven_6.avif"
+      ],
+      nightwear: [
+        "assets/images/product_page/Nightwear_1.avif", "assets/images/product_page/Nightwear_2.avif", "assets/images/product_page/Nightwear_3.avif",
+        "assets/images/product_page/Nightwear_4.avif", "assets/images/product_page/Nightwear_5.avif", "assets/images/product_page/Nightwear_6.avif"
+      ],
+      denim: [
+        "assets/images/product_page/Denim_1.avif", "assets/images/product_page/Denim_2.avif", "assets/images/product_page/Denim_3.avif",
+        "assets/images/product_page/Denim_4.avif", "assets/images/product_page/Denim_5.avif", "assets/images/product_page/Denim_6.avif"
+      ],
+      outerwear: [
+        "assets/images/product_page/OuterWear_1.avif", "assets/images/product_page/OuterWear_2.avif", "assets/images/product_page/OuterWear_3.avif",
+        "assets/images/product_page/OuterWear_4.avif", "assets/images/product_page/OuterWear_5.avif", "assets/images/product_page/OuterWear_6.avif"
+      ],
+      lingerie: [
+        "assets/images/product_page/Lingerie_Swimwear_1.avif", "assets/images/product_page/Lingerie_Swimwear_2.avif", "assets/images/product_page/Lingerie_Swimwear_3.avif",
+        "assets/images/product_page/Lingerie_Swimwear_4.avif", "assets/images/product_page/Lingerie_Swimwear_5.avif", "assets/images/product_page/Lingerie_Swimwear_6.avif"
+      ],
+      activewear: [
+        "assets/images/product_page/Activewear_1.avif", "assets/images/product_page/Activewear_2.avif", "assets/images/product_page/Activewear_3.avif",
+        "assets/images/product_page/Activewear_4.avif", "assets/images/product_page/Activewear_5.avif", "assets/images/product_page/Activewear_6.avif"
+      ],
+      hometextile: [
+        "assets/images/product_page/Home_Textile_1.avif", "assets/images/product_page/Home_Textile_2.avif", "assets/images/product_page/Home_Textile_3.avif",
+        "assets/images/product_page/Home_Textile_4.avif", "assets/images/product_page/Home_Textile_5.avif", "assets/images/product_page/Home_Textile_6.avif"
+      ],
+      uniform: [
+        "assets/images/product_page/Uniform_1.avif", "assets/images/product_page/Uniform_2.avif", "assets/images/product_page/Uniform_3.avif",
+        "assets/images/product_page/Uniform_4.avif", "assets/images/product_page/Uniform_5.avif", "assets/images/product_page/Uniform_6.avif"
+      ],
+      sweater: [
+        "assets/images/product_page/Sweater_1.avif", "assets/images/product_page/Sweater_2.avif", "assets/images/product_page/Sweater_3.avif",
+        "assets/images/product_page/Sweater_4.avif", "assets/images/product_page/Sweater_5.avif", "assets/images/product_page/Sweater_6.avif"
+      ],
+      license: [
+        "assets/images/product_page/License_1.avif", "assets/images/product_page/License_2.avif", "assets/images/product_page/License_3.avif",
+        "assets/images/product_page/License_4.avif", "assets/images/product_page/License_5.avif", "assets/images/product_page/License_6.avif"
+      ]
+    },
     // ========================================================================
     // ETHICAL SOURCING PAGE IMAGES (LOCAL)
     // ========================================================================
