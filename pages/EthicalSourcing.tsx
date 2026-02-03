@@ -127,7 +127,7 @@ const EthicalSourcing = () => {
                         <span className="font-bold text-black">Ethical sourcing</span> is our corner stone of responsible business practices. As consumers increasingly demand transparency and accountability, fashion brands are recognizing the importance of ensuring that every thread in their supply chain is merged with integrity.
                     </p>
                     <p>
-                        At APPARELBD, we are dedicated to ethical and responsive sourcing practices that protect both individuals and the environment.
+                        At ApparelBD, we are dedicated to ethical and responsive sourcing practices that protect both individuals and the environment.
                     </p>
                 </div>
              </FadeInSection>
@@ -211,7 +211,7 @@ const EthicalSourcing = () => {
       <section className="py-12 bg-[#88c057] text-center px-4">
           <FadeInSection>
               <h2 className="text-xl md:text-3xl font-serif font-bold text-white uppercase leading-snug">
-                  APPARELBD, Where Fashion Meets Integrity!!<br/>
+                  ApparelBD, Where Fashion Meets Integrity!!<br/>
                   Elevate Your Wardrobe, Elevate Your Values!!
               </h2>
           </FadeInSection>

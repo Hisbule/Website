@@ -56,7 +56,7 @@ const Manufacturing = () => {
         <div className="max-w-[95%] mx-auto px-4 lg:px-8">
             <FadeInSection className="mb-12">
                 <h2 className="text-2xl md:text-4xl font-bold text-[#1e3a8a] mb-6 font-serif">
-                    Welcome to APPARELBD, Where Excellence is Crafted into Every Stitch!!
+                    Welcome to ApparelBD, Where Excellence is Crafted into Every Stitch!!
                 </h2>
                 <div className="space-y-6 text-gray-700 leading-relaxed text-lg md:text-xl font-light text-justify">
                     <p>
@@ -151,7 +151,7 @@ const Manufacturing = () => {
                    <h2 className="text-4xl md:text-6xl font-bold text-[#1e3a8a] mb-2 font-sans tracking-tight uppercase">MANUFACTURING EXCELLENCE</h2>
                    <p className="text-sm font-bold text-gray-800 italic mb-6">Where Expertise Ignites Precision and Artistry!!</p>
                    <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light w-full">
-                      APPARELBD Sourcing stands as a Cornerstone of Manufacturing excellence, where the craft transcends machinery to embody precision, safety, and empowerment. From the initial fabric cut to the final stitch, every stage reflects a commitment to surpassing industry standards, delivering garments distinguished by exceptional quality, integrity, and artistry.
+                      ApparelBD Sourcing stands as a Cornerstone of Manufacturing excellence, where the craft transcends machinery to embody precision, safety, and empowerment. From the initial fabric cut to the final stitch, every stage reflects a commitment to surpassing industry standards, delivering garments distinguished by exceptional quality, integrity, and artistry.
                    </p>
              </div>
            </FadeInSection>
@@ -320,7 +320,7 @@ const Manufacturing = () => {
                       <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-2 font-sans tracking-tight">Shipping And Logistics</h2>
                       <p className="text-sm font-bold text-gray-800 italic mb-8">Streamlined Delivery, Global Reach!!</p>
                       <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light mb-8">
-                          APPARELBD Sourcing ensures a seamless end-to-end logistics experience through our dedicated in-house shipping and logistics team. We streamline supply chain processes and manage all shipping and forwarder formalities with precision. From manufacturing facilities to global destinations, we oversee every step to guarantee efficient delivery and the highest level of customer satisfaction.
+                          ApparelBD Sourcing ensures a seamless end-to-end logistics experience through our dedicated in-house shipping and logistics team. We streamline supply chain processes and manage all shipping and forwarder formalities with precision. From manufacturing facilities to global destinations, we oversee every step to guarantee efficient delivery and the highest level of customer satisfaction.
                       </p>
                       <button className="inline-block border border-gray-500 px-6 py-2 text-[10px] font-bold text-black uppercase tracking-widest hover:bg-[#1e3a8a] hover:text-white hover:border-[#1e3a8a] transition-all bg-[#e6e6e6]">
                           EXPLORE MORE
@@ -366,7 +366,7 @@ const Manufacturing = () => {
                                    <span className="font-bold text-sm">Material Supply Chain</span>
                                </div>
                                <div className="col-span-2 bg-[#1e3a8a] text-white p-4 rounded font-bold uppercase">
-                                   APPARELBD 
+                                   ApparelBD 
                                </div>
                            </div>
                        </div>
@@ -488,8 +488,8 @@ const Manufacturing = () => {
                        </div>
                    </FadeInSection>
                    <FadeInSection>
-                       <h3 className="text-2xl md:text-3xl font-bold text-black uppercase tracking-wide mb-6">APPARELBD  believe-</h3>
-                       <p className="text-2xl md:text-3xl font-bold text-black uppercase tracking-wide mb-6">
+                       <h3 className="text-2xl md:text-3xl font-bold text-black uppercase tracking-wide mb-6">ApparelBD believe-</h3>
+                       <p className="text-2xl md:text-4xl font-bold text-black leading-tight font-sans">
                          “Standards You Trust;<br/>
                          Quality You Feel –<br/>
                          Crafting Perfection, Built to Last."
@@ -586,7 +586,7 @@ const Manufacturing = () => {
                       We ensure excellence at every stage, from material Sourcing to Shipping. Experience our commitment to precision and integrity.
                   </p>
                   <h2 className="text-white text-2xl md:text-4xl font-bold mb-10">
-                      Welcome to APPARELBD : Where craftsmanship meets innovation!!!
+                      Welcome to ApparelBD : Where craftsmanship meets innovation!!!
                   </h2>
                   <button onClick={() => window.location.href = 'mailto:info@apparelbd.com'} className="border-2 border-[#88c057] text-[#88c057] px-10 py-3 text-sm font-bold uppercase tracking-widest hover:bg-[#88c057] hover:text-white transition-all duration-300">
                       CLICK HERE

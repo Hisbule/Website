@@ -172,7 +172,7 @@ const Sustainability = () => {
                    </FadeInSection>
                    <FadeInSection>
                        <div className="text-right md:text-left">
-                           <h3 className="text-3xl md:text-4xl font-serif font-bold text-[#1e3a8a] mb-4">Conscious APPARELBD</h3>
+                           <h3 className="text-3xl md:text-4xl font-serif font-bold text-[#1e3a8a] mb-4">Conscious ApparelBD</h3>
                            <h4 className="text-2xl md:text-3xl font-bold text-[#88c057] mb-6">Wear the Change for a Sustainable and Green Tomorrow!</h4>
                        </div>
                    </FadeInSection>

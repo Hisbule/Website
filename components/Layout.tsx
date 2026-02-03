@@ -224,7 +224,7 @@ const Footer = () => {
                <div>
                  <p className="font-bold text-brand-navy text-lg mb-1">Head Quarter and Primary Office</p>
                  <p className="leading-snug">36, Gareeb-E-Newaz Avenue, Level-3 (C2), Sector-13, Uttara, Dhaka-1230, Bangladesh.</p>
-                 <p className="mt-2 text-brand-blue font-medium">Email: ceo@apparelbd.com</p>
+                 <p className="mt-2 text-brand-blue font-medium">Email: info@apparelbd.com</p>
                </div>
                {/* 
                   Temporarily hiding other offices as per request.
@@ -259,7 +259,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-20 pt-8 border-t border-gray-300/50 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 font-medium">
-           <p className="mb-2 md:mb-0">Copyright © 2024 APPARELBD | Powered By APPARELBD </p>
+           <p className="mb-2 md:mb-0">Copyright © 2024 ApparelBD | Powered By ApparelBD </p>
            <p>Concept & Content djk</p>
         </div>
       </div>

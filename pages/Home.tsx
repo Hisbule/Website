@@ -470,7 +470,7 @@ const Home = () => {
                    <h2 className="text-4xl md:text-5xl font-bold text-[#1e3a8a] mb-2 font-sans tracking-tight">Fashion Evolution</h2>
                    <p className="text-sm font-bold text-gray-800 italic mb-4">Where Trends Begin — Designing Fashion in Motion... !!</p>
                    <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light w-full">
-                      Embark on the journey of Fashion Evolution — where trendsetting design and cutting-edge technology shape the future of style. At APPARELBD, fashion speaks the language of shifting identities, where imagination meets science and tradition blends with innovation.
+                      Embark on the journey of Fashion Evolution — where trendsetting design and cutting-edge technology shape the future of style. At ApparelBD, fashion speaks the language of shifting identities, where imagination meets science and tradition blends with innovation.
                    </p>
               </div>
             </FadeInSection>
@@ -531,9 +531,9 @@ const Home = () => {
                         <h3 className="text-lg font-bold text-black leading-tight">Design Innovation, Elevating Creation, Embracing Co-Creation-</h3>
                         <p className="text-sm font-bold text-black italic">This is more than fashion — it's a revolution !!</p>
                         <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light">
-                            A fearless pursuit of creativity. A commitment to responsible design. A force for global transformation. Whether launching a label or reimagining your brand, APPARELBD is your visionary partner. Rooted in London and Dhaka, we blend artistry, innovation, and sustainability to redefine fashion. From concept to runway, every stitch reflects purpose where imagination meets intention. At APPARELBD, co-creation is a shared journey. We partner with brands to merge identity and expertise, creating collections that are authentic, relevant, and future-ready.
+                            A fearless pursuit of creativity. A commitment to responsible design. A force for global transformation. Whether launching a label or reimagining your brand, ApparelBD is your visionary partner. Rooted in London and Dhaka, we blend artistry, innovation, and sustainability to redefine fashion. From concept to runway, every stitch reflects purpose where imagination meets intention. At ApparelBD, co-creation is a shared journey. We partner with brands to merge identity and expertise, creating collections that are authentic, relevant, and future-ready.
                         </p>
-                        <p className="text-[11px] md:text-[12px] font-bold italic text-gray-500">"Timeless Design, Future-Ready Fashion, Crafted by APPARELBD!!</p>
+                        <p className="text-[11px] md:text-[12px] font-bold italic text-gray-500">"Timeless Design, Future-Ready Fashion, Crafted by ApparelBD!!</p>
                     </div>
                 </div>
               </FadeInSection>
@@ -555,7 +555,7 @@ const Home = () => {
                             <h3 className="text-2xl font-bold text-[#1e3a8a] mb-4">London, UK Design Studio:</h3>
                             <div className="space-y-4">
                                 <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light">
-                                    The Global Epicenter of Fashion Innovation Based in the heart of the UK, our London studio blends market insight, creative innovation, and cultural fluency to craft timeless, trend-setting collections that embody your brand. Led by UK-born designers with top-brand experience, our team fuses artistic vision with commercial strategy to create striking, sustainable, market-ready collections. At APPARELBD, we co-create from concept to product—amplifying your brand through purposeful design and innovation.
+                                    The Global Epicenter of Fashion Innovation Based in the heart of the UK, our London studio blends market insight, creative innovation, and cultural fluency to craft timeless, trend-setting collections that embody your brand. Led by UK-born designers with top-brand experience, our team fuses artistic vision with commercial strategy to create striking, sustainable, market-ready collections. At ApparelBD, we co-create from concept to product—amplifying your brand through purposeful design and innovation.
                                 </p>
                                 <p className="text-[11px] md:text-[12px] font-bold italic text-black">Let's build the Future of Fashion together!!</p>
                             </div>
@@ -573,7 +573,7 @@ const Home = () => {
                                     Nestled in Dhaka's textile hub, our studio fuses generational craft with modern design. Together with our London team, we deliver authentic, scalable fashion that meets global standards.
                                 </p>
                                 <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light">
-                                    From concept to production, we deliver sustainable, innovative designs with global insight. At APPARELBD, we create purpose-driven collections that honor artisanship and shape responsible fashion.
+                                    From concept to production, we deliver sustainable, innovative designs with global insight. At ApparelBD, we create purpose-driven collections that honor artisanship and shape responsible fashion.
                                 </p>
                                 <p className="text-[11px] md:text-[12px] font-bold italic text-black">Let's shape the future of fashion — From Dhaka to the world!</p>
                             </div>
@@ -774,7 +774,7 @@ const Home = () => {
                    <h2 className="text-4xl md:text-6xl font-bold text-[#1e3a8a] mb-2 font-sans tracking-tight uppercase">MANUFACTURING EXCELLENCE</h2>
                    <p className="text-sm font-bold text-gray-800 italic mb-6">Where Expertise Ignites Precision and Artistry!!</p>
                    <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light w-full">
-                      APPARELBD Sourcing stands as a Cornerstone of Manufacturing excellence, where the craft transcends machinery to embody precision, safety, and empowerment. From the initial fabric cut to the final stitch, every stage reflects a commitment to surpassing industry standards, delivering garments distinguished by exceptional quality, integrity, and artistry.
+                      ApparelBD Sourcing stands as a Cornerstone of Manufacturing excellence, where the craft transcends machinery to embody precision, safety, and empowerment. From the initial fabric cut to the final stitch, every stage reflects a commitment to surpassing industry standards, delivering garments distinguished by exceptional quality, integrity, and artistry.
                    </p>
              </div>
            </FadeInSection>
@@ -943,7 +943,7 @@ const Home = () => {
                       <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-2 font-sans tracking-tight">Shipping And Logistics</h2>
                       <p className="text-sm font-bold text-gray-800 italic mb-8">Streamlined Delivery, Global Reach!!</p>
                       <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light mb-8">
-                          APPARELBD Sourcing ensures a seamless end-to-end logistics experience through our dedicated in-house shipping and logistics team. We streamline supply chain processes and manage all shipping and forwarder formalities with precision. From manufacturing facilities to global destinations, we oversee every step to guarantee efficient delivery and the highest level of customer satisfaction.
+                          ApparelBD Sourcing ensures a seamless end-to-end logistics experience through our dedicated in-house shipping and logistics team. We streamline supply chain processes and manage all shipping and forwarder formalities with precision. From manufacturing facilities to global destinations, we oversee every step to guarantee efficient delivery and the highest level of customer satisfaction.
                       </p>
                       <Link to="/manufacturing" className="inline-block border border-gray-500 px-6 py-2 text-[10px] font-bold text-black uppercase tracking-widest hover:bg-[#1e3a8a] hover:text-white hover:border-[#1e3a8a] transition-all bg-[#e6e6e6]">
                           EXPLORE MORE
