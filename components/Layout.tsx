@@ -36,6 +36,7 @@ const navItems: NavItem[] = [
       { label: 'Sweater', path: '/products#sweater' },
       { label: 'Uniform', path: '/products#uniform' },
       { label: 'Disney', path: '/products#disney' },
+      { label: 'Jersey', path: '/products#jersey' },
     ]
   },
 ];
@@ -266,11 +267,32 @@ const Footer = () => {
                    href="https://maps.app.goo.gl/cpazdQ4ryKrFuKks8" 
                    target="_blank" 
                    rel="noopener noreferrer"
-                   className="font-light leading-relaxed hover:text-brand-green transition-colors block"
+                   className="font-light leading-relaxed hover:text-brand-green transition-colors block mb-4"
                  >
                    <p>36, Gareeb-E-Newaz Avenue,</p>
                    <p>Level-3 (C2), Sector-13,</p>
                    <p>Uttara, Dhaka-1230, Bangladesh.</p>
+                 </a>
+
+                 {/* Map Iframe */}
+                 <a 
+                   href="https://maps.app.goo.gl/cpazdQ4ryKrFuKks8" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   className="block w-full h-40 rounded-lg overflow-hidden shadow-md border border-gray-200 mt-2 hover:shadow-xl transition-shadow duration-300 relative group"
+                 >
+                    <iframe 
+                        width="100%" 
+                        height="100%" 
+                        frameBorder="0" 
+                        scrolling="no" 
+                        marginHeight={0} 
+                        marginWidth={0} 
+                        src="https://maps.google.com/maps?q=36%20Gareeb-E-Newaz%20Avenue%2C%20Sector-13%2C%20Uttara%2C%20Dhaka-1230&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        title="ApparelBD Location"
+                        className="filter grayscale group-hover:grayscale-0 transition-all duration-500 pointer-events-none"
+                    ></iframe>
+                    <div className="absolute inset-0 bg-transparent group-hover:bg-black/5 transition-colors pointer-events-none"></div>
                  </a>
                </div>
                <div>

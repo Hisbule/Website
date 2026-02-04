@@ -101,9 +101,6 @@ export const ASSETS = {
  // ========================================================================
     // PRODUCTS PAGE IMAGES (Indices 1-6 from product_page folder, .avif format)
     // ========================================================================
-    // ========================================================================
-    // PRODUCTS PAGE IMAGES (Indices 1-6 from product_page folder, .avif format)
-    // ========================================================================
     productPage: {
       knit: [
         "assets/images/product_page/Knit_1.avif", "assets/images/product_page/Knit_2.avif", "assets/images/product_page/Knit_3.avif",
@@ -148,6 +145,10 @@ export const ASSETS = {
       license: [
         "assets/images/product_page/Disney_1.avif", "assets/images/product_page/Disney_2.avif", "assets/images/product_page/Disney_3.avif",
         "assets/images/product_page/Disney_4.avif", "assets/images/product_page/Disney_5.avif", "assets/images/product_page/Disney_6.avif"
+      ],
+      jersey: [
+        "assets/images/product_page/Jersey_1.avif", "assets/images/product_page/Jersey_2.avif", "assets/images/product_page/Jersey_3.avif",
+        "assets/images/product_page/Jersey_4.avif", "assets/images/product_page/Jersey_5.avif", "assets/images/product_page/Jersey_6.avif"
       ]
     },
     // ========================================================================

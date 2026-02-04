@@ -193,6 +193,7 @@ const Products = () => {
     { id: 'uniform', title: 'Uniform and Healthcare wear', images: ASSETS.images.productPage.uniform },
     { id: 'sweater', title: 'Sweater', images: ASSETS.images.productPage.sweater },
     { id: 'disney', title: 'Disney and License Character Products', images: ASSETS.images.productPage.license },
+    { id: 'jersey', title: 'Sports Jersey', images: ASSETS.images.productPage.jersey },
   ];
 
   return (
