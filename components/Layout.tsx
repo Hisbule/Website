@@ -54,9 +54,9 @@ const navItems: NavItem[] = [
     dropdown: [
       { label: 'Overview', path: '/about#overview' },
       { label: 'Mission', path: '/about#mission' },
+      { label: 'Vision', path: '/about#vision' },
       { label: 'Services', path: '/about#services' },
       { label: 'Values & Philosophy', path: '/about#values' },
-      { label: 'Global Presence', path: '/about#presence' },
     ]
   },
   { label: 'Market Intel Design', path: '/market-intel' },

@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { Target, Eye, Users, Lightbulb, ShieldCheck, Heart, Leaf, Globe, CheckCircle, TrendingUp, Handshake, DollarSign, Award, Truck, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -300,8 +301,8 @@ const About = () => {
         </div>
       </div>
 
-      {/* 2. Intro Section */}
-      <section className="py-16 md:py-24 bg-white">
+      {/* 2. Intro Section - OVERVIEW */}
+      <section id="overview" className="py-16 md:py-24 bg-white scroll-mt-20">
         <div className="max-w-[95%] mx-auto px-4 sm:px-6 lg:px-8">
           <FadeInSection className="mb-12">
             <h2 className="text-2xl md:text-4xl font-serif font-bold text-brand-navy mb-4">
@@ -503,30 +504,34 @@ const About = () => {
         <div className="max-w-[95%] mx-auto px-4 relative z-10 grid md:grid-cols-1 gap-12">
             
             {/* Mission Bubble */}
-            <FadeInSection className="bg-white/90 backdrop-blur-sm p-8 rounded-full shadow-xl flex items-center gap-8 max-w-4xl mx-auto transform -translate-x-4 md:-translate-x-12 border-l-8 border-[#88c057]">
-                <div className="bg-[#88c057] p-4 rounded-full flex-shrink-0">
-                    <TrendingUp className="text-white w-8 h-8" />
-                </div>
-                <div>
-                    <h3 className="text-2xl font-bold text-brand-navy mb-2">Mission:</h3>
-                    <p className="text-gray-700 leading-relaxed text-base md:text-lg font-light">
-                        Delivering innovative, ethical fashion sourcing with exceptional design, quality, and manufacturing—prioritizing trend riven design creation, sustainability, traceability, and lasting partnerships for mutual success and positive impact.
-                    </p>
-                </div>
-            </FadeInSection>
+            <div id="mission" className="scroll-mt-24">
+                <FadeInSection className="bg-white/90 backdrop-blur-sm p-8 rounded-full shadow-xl flex items-center gap-8 max-w-4xl mx-auto transform -translate-x-4 md:-translate-x-12 border-l-8 border-[#88c057]">
+                    <div className="bg-[#88c057] p-4 rounded-full flex-shrink-0">
+                        <TrendingUp className="text-white w-8 h-8" />
+                    </div>
+                    <div>
+                        <h3 className="text-2xl font-bold text-brand-navy mb-2">Mission:</h3>
+                        <p className="text-gray-700 leading-relaxed text-base md:text-lg font-light">
+                            Delivering innovative, ethical fashion sourcing with exceptional design, quality, and manufacturing—prioritizing trend riven design creation, sustainability, traceability, and lasting partnerships for mutual success and positive impact.
+                        </p>
+                    </div>
+                </FadeInSection>
+            </div>
 
              {/* Vision Bubble */}
-             <FadeInSection className="bg-white/90 backdrop-blur-sm p-8 rounded-full shadow-xl flex items-center gap-8 max-w-4xl mx-auto transform translate-x-4 md:translate-x-12 border-l-8 border-[#88c057] mt-8">
-                <div className="bg-[#88c057] p-4 rounded-full flex-shrink-0">
-                    <Eye className="text-white w-8 h-8" />
-                </div>
-                <div>
-                    <h3 className="text-2xl font-bold text-brand-navy mb-2">Vision:</h3>
-                    <p className="text-gray-700 leading-relaxed text-base md:text-lg font-light">
-                        ApparelBD aims to be a global leader in apparel sourcing, setting new standards in design innovation, customer support, and ethical sourcing, while promoting creativity, sustainability, and traceability to deliver lasting value.
-                    </p>
-                </div>
-            </FadeInSection>
+            <div id="vision" className="scroll-mt-24">
+                 <FadeInSection className="bg-white/90 backdrop-blur-sm p-8 rounded-full shadow-xl flex items-center gap-8 max-w-4xl mx-auto transform translate-x-4 md:translate-x-12 border-l-8 border-[#88c057] mt-8">
+                    <div className="bg-[#88c057] p-4 rounded-full flex-shrink-0">
+                        <Eye className="text-white w-8 h-8" />
+                    </div>
+                    <div>
+                        <h3 className="text-2xl font-bold text-brand-navy mb-2">Vision:</h3>
+                        <p className="text-gray-700 leading-relaxed text-base md:text-lg font-light">
+                            ApparelBD aims to be a global leader in apparel sourcing, setting new standards in design innovation, customer support, and ethical sourcing, while promoting creativity, sustainability, and traceability to deliver lasting value.
+                        </p>
+                    </div>
+                </FadeInSection>
+            </div>
 
         </div>
       </section>
@@ -550,7 +555,7 @@ const About = () => {
       </section>
 
       {/* 8. Values and Philosophy */}
-      <section className="py-20 bg-brand-navy">
+      <section id="values" className="py-20 bg-brand-navy scroll-mt-20">
         <div className="max-w-[95%] mx-auto px-4 sm:px-6 lg:px-8">
            <FadeInSection>
                <h2 className="text-4xl font-serif font-bold text-white text-center mb-16">Values and Sourcing Philosophy</h2>
