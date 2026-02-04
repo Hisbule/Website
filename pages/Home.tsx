@@ -3,6 +3,7 @@ import HeroVideo from '../components/HeroVideo';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Globe, Users, Award, Leaf, CheckCircle, Scissors, Package, Ship, Truck, ClipboardCheck, Layers, Settings, Sparkles, ChevronLeft, ChevronRight, Eye } from 'lucide-react';
 import { ASSETS } from '../config/assets';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface Product {
   id: string;
@@ -158,6 +159,7 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
 };
 
 const Home = () => {
+  const { t } = useLanguage();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentAboutSlide, setCurrentAboutSlide] = useState(0);
   
@@ -167,62 +169,62 @@ const Home = () => {
   const productCategories = [
     { 
       id: 'knit',
-      name: 'Knit', 
+      name: t('knit'), 
       images: ASSETS.images.products.knit
     },
     { 
       id: 'woven',
-      name: 'Woven', 
+      name: t('woven'), 
       images: ASSETS.images.products.woven
     },
     { 
       id: 'nightwear',
-      name: 'Nightwear', 
+      name: t('nightwear'), 
       images: ASSETS.images.products.nightwear
     },
     { 
       id: 'denim',
-      name: 'Denim', 
+      name: t('denim'), 
       images: ASSETS.images.products.denim
     },
     { 
       id: 'outerwear',
-      name: 'Outer Wear', 
+      name: t('outerwear'), 
       images: ASSETS.images.products.outerwear
     },
     { 
       id: 'lingerie',
-      name: 'Lingerie', 
+      name: t('lingerie'), 
       images: ASSETS.images.products.lingerie
     },
     { 
       id: 'activewear',
-      name: 'Activewear', 
+      name: t('activewear'), 
       images: ASSETS.images.products.activewear
     },
     { 
       id: 'hometextile',
-      name: 'Home Textile', 
+      name: t('hometextile'), 
       images: ASSETS.images.products.hometextile
     },
     { 
       id: 'uniform',
-      name: 'Uniform', 
+      name: t('uniform'), 
       images: ASSETS.images.products.uniform
     },
     { 
       id: 'sweater',
-      name: 'Sweater', 
+      name: t('sweater'), 
       images: ASSETS.images.products.sweater
     },
     { 
       id: 'disney',
-      name: 'License Products', 
+      name: t('disney'), 
       images: ASSETS.images.products.license
     },
     { 
       id: 'jute',
-      name: 'Jute & Crafts', 
+      name: t('jute'), 
       images: ASSETS.images.products.jute
     },
   ];
@@ -232,52 +234,52 @@ const Home = () => {
   // Slide content for About Us slider
   const aboutSlidesData = [
     {
-      title: "Fashion Evolution",
-      description: "From Tradition to Trend, A Journey Through Fashion Evolution"
+      title: t('home_slide_1_title'),
+      description: t('home_slide_1_desc')
     },
     {
-      title: "R&D and Innovation",
-      description: "Shaping Tomorrow, the Future-Focused R&D Initiatives in fabric Innovation Transforming Fashion Advancement.."
+      title: t('home_slide_2_title'),
+      description: t('home_slide_2_desc')
     },
     {
-      title: "Ethical Sourcing",
-      description: "Putting People and Society first, Our Ethical Sourcing Practices move on."
+      title: t('home_slide_3_title'),
+      description: t('home_slide_3_desc')
     },
     {
-      title: "Sustainability",
-      description: "Our Planet, Our Responsibility, turning Greener Planet!! Nurturing Environmental Sustainability...."
+      title: t('home_slide_4_title'),
+      description: t('home_slide_4_desc')
     },
     {
-      title: "Manufacturing Excellence",
-      description: "Unleashing Potential, Innovate, Optimize, Excel, Driving Manufacturing Excellence..."
+      title: t('home_slide_5_title'),
+      description: t('home_slide_5_desc')
     },
     {
-      title: "Quality Assurance",
-      description: "Precision in Practice, The Evolution of Laboratory Testing in Quality Assurance."
+      title: t('home_slide_6_title'),
+      description: t('home_slide_6_desc')
     },
     {
-      title: "Fair Traceability",
-      description: "Innovating Transparency, Fair Traceability in Action.."
+      title: t('home_slide_7_title'),
+      description: t('home_slide_7_desc')
     },
     {
-      title: "Shipping",
-      description: "Efficiency in Motion: Streamlining Your Supply Chain"
+      title: t('home_slide_8_title'),
+      description: t('home_slide_8_desc')
     },
     {
-      title: "Sustainability",
-      description: "Purifying Our Planet, The Quest for Clean Water...."
+      title: t('home_slide_9_title'),
+      description: t('home_slide_9_desc')
     },
     {
-      title: "Retail Store and Happy Customer",
-      description: "Fashion for Every Body: Embrace Your Unique Style, Latest Trends Inside!!!"
+      title: t('home_slide_10_title'),
+      description: t('home_slide_10_desc')
     },
     {
-      title: "Disney and License Character Products",
-      description: "Wear Your Imagination: Disney and else Dream Characters,the signature Icons Come to Life!!"
+      title: t('home_slide_11_title'),
+      description: t('home_slide_11_desc')
     },
     {
-      title: "Happy Customer",
-      description: "Customer Spotlight, Customer Experiences That Shine"
+      title: t('home_slide_12_title'),
+      description: t('home_slide_12_desc')
     }
   ];
 
@@ -354,12 +356,11 @@ const Home = () => {
     <div className="overflow-x-hidden">
       <style>{marqueeStyles}</style>
 
-      {/* 
-        1. Hero Video Section 
+      {/* 1. Hero Video Section 
       */}
       <HeroVideo 
-        title="Committed for Fashion Evolution through..." 
-        subtitle="Market Intel Design Support, Product Innovation & Newness, Wide Ranging Versatile Products"
+        title={t('home_hero_title')} 
+        subtitle={t('home_hero_subtitle')}
         videoUrl={ASSETS.videos.home}
       />
 
@@ -368,10 +369,10 @@ const Home = () => {
         <FadeInSection>
           <div className="max-w-[85%] mx-auto text-center px-4">
             <p className="text-2xl md:text-4xl font-serif italic text-brand-blue font-semibold leading-relaxed">
-              "The way to get started is to quit talking and begin doing."
+              "{t('home_quote')}"
             </p>
             <div className="w-20 h-1 bg-brand-green mx-auto mt-6 mb-4"></div>
-            <p className="text-gray-500 font-bold uppercase tracking-[0.2em] text-sm md:text-base">- Walt Disney</p>
+            <p className="text-gray-500 font-bold uppercase tracking-[0.2em] text-sm md:text-base">{t('quote_author')}</p>
           </div>
         </FadeInSection>
       </section>
@@ -382,15 +383,15 @@ const Home = () => {
           <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-[#e7f9fd] py-12 px-8 rounded-3xl text-center shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-brand-light">
                   <AnimatedCounter target={5} prefix="+" />
-                  <p className="text-base md:text-lg text-gray-600 uppercase tracking-widest font-bold">Global Presence</p>
+                  <p className="text-base md:text-lg text-gray-600 uppercase tracking-widest font-bold">{t('stats_global')}</p>
               </div>
               <div className="bg-[#e7f9fd] py-12 px-8 rounded-3xl text-center shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-brand-light">
                   <AnimatedCounter target={40} prefix="+" />
-                  <p className="text-base md:text-lg text-gray-600 uppercase tracking-widest font-bold">Staff World Wide</p>
+                  <p className="text-base md:text-lg text-gray-600 uppercase tracking-widest font-bold">{t('stats_staff')}</p>
               </div>
               <div className="bg-[#e7f9fd] py-12 px-8 rounded-3xl text-center shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-brand-light">
                   <AnimatedCounter target={20} prefix="+" />
-                  <p className="text-base md:text-lg text-gray-600 uppercase tracking-widest font-bold">Recommended</p>
+                  <p className="text-base md:text-lg text-gray-600 uppercase tracking-widest font-bold">{t('stats_rec')}</p>
               </div>
           </div>
         </FadeInSection>
@@ -403,19 +404,19 @@ const Home = () => {
               <div className="text-left w-full">
                   <div className="flex items-center gap-4 mb-4">
                       <div className="w-16 h-1 bg-brand-navy"></div>
-                      <h2 className="text-3xl md:text-5xl font-serif font-bold text-brand-navy tracking-tight">ABOUT US</h2>
+                      <h2 className="text-3xl md:text-5xl font-serif font-bold text-brand-navy tracking-tight">{t('home_about_title')}</h2>
                   </div>
-                  <h3 className="text-2xl md:text-3xl text-gray-400 italic mb-8 font-light">Who We Are... !!</h3>
+                  <h3 className="text-2xl md:text-3xl text-gray-400 italic mb-8 font-light">{t('home_about_subtitle')}</h3>
                   <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light border-l-4 border-brand-green pl-6">
-                      At ApparelBD, we believe fashion is not just about Clothing, it's an ever evolving statement, an expression of Identity. Culture context of time and place, perception, aspiration, creativity and innovation, value and belief of individual and community. We drive fashion forward through market intelligence, trend analysis, innovative design, and ethical sourcing. Backed by strong quality assurance, reliable logistics, and exceptional service, we aim to deliver outstanding value to our customers.
+                      {t('home_about_text')}
                   </p>
               </div>
             </FadeInSection>
 
             <FadeInSection>
               <div className="w-full h-[50vh] md:h-[70vh] overflow-hidden rounded-2xl shadow-2xl relative group">
-                   <img src={ASSETS.images.home.about.showroom} alt="ApparelBD Showroom" className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-[2s]" />
-                   <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+                    <img src={ASSETS.images.home.about.showroom} alt="ApparelBD Showroom" className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-[2s]" />
+                    <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
               </div>
             </FadeInSection>
 
@@ -423,7 +424,7 @@ const Home = () => {
               <div className="w-full py-16 border-y border-gray-100 bg-gray-50/50">
                   <div className="w-full px-4">
                       <p className="font-serif italic text-brand-navy font-bold text-center leading-normal text-lg md:text-2xl">
-                          "Our commitment to fashion progression spans market intelligence, trend analysis, innovative design and R&D."
+                          "{t('home_about_quote')}"
                       </p>
                   </div>
               </div>
@@ -431,7 +432,7 @@ const Home = () => {
 
             <FadeInSection>
               <div className="w-full h-[50vh] md:h-[70vh] overflow-hidden rounded-2xl shadow-2xl">
-                   <img src={ASSETS.images.home.about.process} alt="Design Process" className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-[2s]" />
+                    <img src={ASSETS.images.home.about.process} alt="Design Process" className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-[2s]" />
               </div>
             </FadeInSection>
 
@@ -439,22 +440,22 @@ const Home = () => {
               <div className="w-full text-left">
                   <div className="mb-8">
                       <h4 className="font-bold text-black text-xl md:text-2xl mb-4">
-                          Trend-Driven, Ethically Sourced, Trusted & Traceable – Your Fashion Manufacturing Partner-
+                          {t('home_about_section_title')}
                       </h4>
                       <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light md:text-left">
-                          We collaborate with globally compliant manufacturers to ensure traceability, quality, and process control. Our design studios in London and Dhaka blend Global Creativity with local talent, focusing on R&D, trend-driven products, and iconic licensed characters like Disney and others. Onsite inspections and full logistics support highlight our commitment to responsible, innovative manufacturing.
+                          {t('home_about_section_text')}
                       </p>
                   </div>
                   
                   <div className="w-full bg-[#eeffff] py-10 px-4 mb-10">
                       <p className="text-brand-navy font-bold text-lg md:text-2xl text-center font-serif">
-                          "Ethical sourcing, sustainability, manufacturing excellence and superior service- delivers added Customer value."
+                          {t('home_about_value_prop')}
                       </p>
                   </div>
 
                   <div className="text-left">
                       <Link to="/about" className="inline-block border border-brand-green px-6 py-2 text-xs font-medium uppercase tracking-wider text-black hover:bg-brand-green hover:text-white transition duration-300 rounded-sm">
-                          Explore More
+                          {t('explore_more')}
                       </Link>
                   </div>
               </div>
@@ -467,24 +468,24 @@ const Home = () => {
         <div className="max-w-[95%] mx-auto px-4">
             <FadeInSection>
               <div className="mb-12 text-left w-full">
-                   <h2 className="text-4xl md:text-5xl font-bold text-[#1e3a8a] mb-2 font-sans tracking-tight">Fashion Evolution</h2>
-                   <p className="text-sm font-bold text-gray-800 italic mb-4">Where Trends Begin — Designing Fashion in Motion... !!</p>
-                   <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light w-full">
-                      Embark on the journey of Fashion Evolution — where trendsetting design and cutting-edge technology shape the future of style. At ApparelBD, fashion speaks the language of shifting identities, where imagination meets science and tradition blends with innovation.
-                   </p>
+                    <h2 className="text-4xl md:text-5xl font-bold text-[#1e3a8a] mb-2 font-sans tracking-tight">{t('home_fashion_title')}</h2>
+                    <p className="text-sm font-bold text-gray-800 italic mb-4">{t('home_fashion_subtitle')}</p>
+                    <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light w-full">
+                      {t('home_fashion_text')}
+                    </p>
               </div>
             </FadeInSection>
 
             <FadeInSection>
               <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
                   <div className="lg:col-span-5 flex flex-col justify-center">
-                       <ul className="space-y-6 text-lg md:text-xl font-bold text-gray-800 mb-20">
+                        <ul className="space-y-6 text-lg md:text-xl font-bold text-gray-800 mb-20">
                           {[
-                              "Bold minds. Breakthrough fashion.",
-                              "Timeless style, built for tomorrow.",
-                              "Where ethics dress like elegance.",
-                              "Next-gen materials. Zero waste. Pure impact.",
-                              "Evolution isn't a trend — it's our blueprint."
+                              t('fashion_list_1'),
+                              t('fashion_list_2'),
+                              t('fashion_list_3'),
+                              t('fashion_list_4'),
+                              t('fashion_list_5'),
                           ].map((item, i) => (
                               <li key={i} className="flex items-start">
                                   <span className="mr-3 transform scale-125 text-[#1e3a8a]">•</span>
@@ -493,15 +494,15 @@ const Home = () => {
                           ))}
                       </ul>
                       <div>
-                           <Link to="/market-intel" className="inline-block border-2 border-gray-600 px-8 py-3 text-xs md:text-sm font-bold text-gray-800 hover:bg-[#1e3a8a] hover:text-white hover:border-[#1e3a8a] transition uppercase tracking-wider bg-transparent">
-                              Explore More
+                            <Link to="/market-intel" className="inline-block border-2 border-gray-600 px-8 py-3 text-xs md:text-sm font-bold text-gray-800 hover:bg-[#1e3a8a] hover:text-white hover:border-[#1e3a8a] transition uppercase tracking-wider bg-transparent">
+                              {t('explore_more')}
                           </Link>
                       </div>
                   </div>
 
                   {/* Fashion Evolution Slide Images - Updated: No frame, auto height, no logo */}
                   <div className="lg:col-span-7 w-full relative">
-                       {sliderImages.map((src, index) => (
+                        {sliderImages.map((src, index) => (
                           <img 
                             key={index}
                             src={src} 
@@ -512,7 +513,7 @@ const Home = () => {
                             }`}
                             alt={`Fashion Slide ${index + 1}`} 
                           />
-                       ))}
+                        ))}
                   </div>
               </div>
             </FadeInSection>
@@ -524,24 +525,25 @@ const Home = () => {
           <div className="max-w-[95%] mx-auto px-4">
               <FadeInSection>
                 <div className="mb-12">
-                    <h2 className="text-4xl font-bold text-[#1e3a8a] uppercase tracking-tight mb-1">MARKET INTEL DESIGN</h2>
-                    <p className="text-[11px] font-medium text-gray-800 italic mb-10">Crafting the Future of Fashion — Elevating Style, Redefining Elegance...!!</p>
+                    <h2 className="text-4xl font-bold text-[#1e3a8a] uppercase tracking-tight mb-1">{t('marketIntel')}</h2>
+                    <p className="text-[11px] font-medium text-gray-800 italic mb-10">{t('mi_subtitle')}</p>
                     
                     <div className="space-y-6">
-                        <h3 className="text-lg font-bold text-black leading-tight">Design Innovation, Elevating Creation, Embracing Co-Creation-</h3>
-                        <p className="text-sm font-bold text-black italic">This is more than fashion — it's a revolution !!</p>
+                        <h3 className="text-lg font-bold text-black leading-tight">{t('mi_innovation_title')}</h3>
+                        <p className="text-sm font-bold text-black italic">{t('mi_revolution_text')}</p>
                         <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light">
-                            A fearless pursuit of creativity. A commitment to responsible design. A force for global transformation. Whether launching a label or reimagining your brand, ApparelBD is your visionary partner. Rooted in London and Dhaka, we blend artistry, innovation, and sustainability to redefine fashion. From concept to runway, every stitch reflects purpose where imagination meets intention. At ApparelBD, co-creation is a shared journey. We partner with brands to merge identity and expertise, creating collections that are authentic, relevant, and future-ready.
+                            {t('mi_desc_text')}
                         </p>
-                        <p className="text-[11px] md:text-[12px] font-bold italic text-gray-500">"Timeless Design, Future-Ready Fashion, Crafted by ApparelBD!!</p>
+
+                        <p className="text-[11px] md:text-[12px] font-bold italic text-gray-500">"{t('mi_final_banner')}</p>
                     </div>
                 </div>
               </FadeInSection>
 
               <div className="mt-16">
                   <FadeInSection>
-                    <h2 className="text-4xl font-bold text-[#1e3a8a] mb-1">Design Studio</h2>
-                    <p className="text-[11px] font-medium text-gray-800 italic mb-8">Creative Hub where Fashion Inspiration turns in Wearable Art..!!</p>
+                    <h2 className="text-4xl font-bold text-[#1e3a8a] mb-1">{t('mi_studio_header')}</h2>
+                    <p className="text-[11px] font-medium text-gray-800 italic mb-8">{t('mi_studio_sub')}</p>
                   </FadeInSection>
 
                   <FadeInSection>
@@ -552,12 +554,12 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="lg:col-span-4">
-                            <h3 className="text-2xl font-bold text-[#1e3a8a] mb-4">London, UK Design Studio:</h3>
+                            <h3 className="text-2xl font-bold text-[#1e3a8a] mb-4">{t('mi_london_title')}</h3>
                             <div className="space-y-4">
                                 <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light">
-                                    The Global Epicenter of Fashion Innovation Based in the heart of the UK, our London studio blends market insight, creative innovation, and cultural fluency to craft timeless, trend-setting collections that embody your brand. Led by UK-born designers with top-brand experience, our team fuses artistic vision with commercial strategy to create striking, sustainable, market-ready collections. At ApparelBD, we co-create from concept to product—amplifying your brand through purposeful design and innovation.
+                                    {t('mi_london_text')}
                                 </p>
-                                <p className="text-[11px] md:text-[12px] font-bold italic text-black">Let's build the Future of Fashion together!!</p>
+                                <p className="text-[11px] md:text-[12px] font-bold italic text-black">{t('mi_build_future')}</p>
                             </div>
                         </div>
                     </div>
@@ -566,16 +568,13 @@ const Home = () => {
                   <FadeInSection>
                     <div className="grid lg:grid-cols-12 gap-8 items-center mb-16">
                         <div className="lg:col-span-5">
-                            <h3 className="text-2xl font-bold text-[#1e3a8a] mb-2">Dhaka, Bangladesh Design Studio:</h3>
-                            <p className="text-[11px] font-medium text-gray-500 italic mb-4">Where Blending Heritage, Innovation and Global Vision</p>
+                            <h3 className="text-2xl font-bold text-[#1e3a8a] mb-2">{t('mi_dhaka_title')}</h3>
+                            <p className="text-[11px] font-medium text-gray-500 italic mb-4">{t('mi_dhaka_sub')}</p>
                             <div className="space-y-4">
                                 <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light">
-                                    Nestled in Dhaka's textile hub, our studio fuses generational craft with modern design. Together with our London team, we deliver authentic, scalable fashion that meets global standards.
+                                    {t('mi_dhaka_text')}
                                 </p>
-                                <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light">
-                                    From concept to production, we deliver sustainable, innovative designs with global insight. At ApparelBD, we create purpose-driven collections that honor artisanship and shape responsible fashion.
-                                </p>
-                                <p className="text-[11px] md:text-[12px] font-bold italic text-black">Let's shape the future of fashion — From Dhaka to the world!</p>
+                                <p className="text-[11px] md:text-[12px] font-bold italic text-black">{t('mi_from_dhaka_text')}</p>
                             </div>
                         </div>
                         <div className="lg:col-span-7">
@@ -590,7 +589,7 @@ const Home = () => {
               <div className="mt-20 pt-10 pb-20 border-t border-gray-200 text-left">
                   <FadeInSection>
                     <Link to="/market-intel" className="inline-block border border-brand-green px-6 py-1.5 text-[10px] font-bold text-gray-700 hover:bg-brand-green hover:text-white transition uppercase tracking-widest rounded-sm">
-                        EXPLORE MORE
+                        {t('explore_more')}
                     </Link>
                   </FadeInSection>
               </div>
@@ -608,11 +607,11 @@ const Home = () => {
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
-             <FadeInSection>
-               <h3 className="text-white font-serif text-2xl md:text-5xl italic leading-relaxed font-semibold shadow-black/50 drop-shadow-2xl">
-                  "Fashion is not static; it's an ever-evolving art form. To stay ahead, we must embrace change and innovation."
+              <FadeInSection>
+                <h3 className="text-white font-serif text-2xl md:text-5xl italic leading-relaxed font-semibold shadow-black/50 drop-shadow-2xl">
+                  "{t('home_fashion_quote_parallax')}"
                </h3>
-             </FadeInSection>
+              </FadeInSection>
         </div>
       </section>
 
@@ -622,12 +621,12 @@ const Home = () => {
               <FadeInSection>
                 <div className="grid lg:grid-cols-2 gap-12 items-start">
                     <div className="pt-10">
-                        <h2 className="text-4xl md:text-6xl font-bold text-[#88c057] mb-8">Ethical & Responsive Sourcing</h2>
+                        <h2 className="text-4xl md:text-6xl font-bold text-[#88c057] mb-8">{t('eth_hero_title')}</h2>
                         <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light mb-10">
-                          Though out the Supply Chain, we are dedicated to ensure Ethical and Responsive Sourcing practices to protect the Individual and Environment. We prioritize transparency, fair labor practices, environmental sustainability, and corporate social responsibility, demonstrating our commitment to ethical business practices and the welfare of all stakeholders. We actively collaborate with our manufacturing partners to incorporate green initiatives and sustainability practices, different CSR programs, promoting for the use of organic, eco-friendly, and recycled materials while leveraging our extensive networks across diverse product categories to promote responsible sourcing and production.
+                          {t('eth_desc_home')}
                         </p>
                         <Link to="/ethical-sourcing" className="inline-block border border-gray-400 px-6 py-2 text-[10px] font-bold text-black uppercase tracking-widest hover:bg-brand-green hover:text-white transition-all">
-                          EXPLORE MORE
+                          {t('explore_more')}
                         </Link>
                     </div>
                     
@@ -639,46 +638,46 @@ const Home = () => {
                             <div className="absolute inset-0 flex flex-col justify-center gap-6 py-4 bg-black/10">
                                 {/* Row 1: Right to Left */}
                                 <div className="w-full overflow-hidden">
-                                     <div className="flex gap-4 w-max animate-scroll-left pause-hover px-4">
+                                      <div className="flex gap-4 w-max animate-scroll-left pause-hover px-4">
                                          {marqueeLogos1.map((logo, i) => (
                                              <div key={`r1-${i}`} className="w-24 h-16 md:w-32 md:h-20 bg-white/90 p-2 rounded-sm flex items-center justify-center shadow-sm shrink-0">
-                                                 <img 
-                                                    src={logo.url} 
-                                                    alt={logo.name} 
-                                                    className="max-w-full max-h-full object-contain mix-blend-multiply" 
-                                                    onError={(e) => {
-                                                        const target = e.target as HTMLImageElement;
-                                                        target.style.display = 'none';
-                                                        // Optional: Add text fallback if image fails
-                                                    }}
-                                                 />
+                                                  <img 
+                                                     src={logo.url} 
+                                                     alt={logo.name} 
+                                                     className="max-w-full max-h-full object-contain mix-blend-multiply" 
+                                                     onError={(e) => {
+                                                         const target = e.target as HTMLImageElement;
+                                                         target.style.display = 'none';
+                                                         // Optional: Add text fallback if image fails
+                                                     }}
+                                                  />
                                              </div>
                                          ))}
-                                     </div>
+                                      </div>
                                 </div>
                                 {/* Row 2: Left to Right (Opposite) */}
                                 <div className="w-full overflow-hidden">
-                                     <div className="flex gap-4 w-max animate-scroll-right pause-hover px-4">
+                                      <div className="flex gap-4 w-max animate-scroll-right pause-hover px-4">
                                          {marqueeLogos2.map((logo, i) => (
                                              <div key={`r2-${i}`} className="w-24 h-16 md:w-32 md:h-20 bg-white/90 p-2 rounded-sm flex items-center justify-center shadow-sm shrink-0">
-                                                 <img 
-                                                    src={logo.url} 
-                                                    alt={logo.name} 
-                                                    className="max-w-full max-h-full object-contain mix-blend-multiply" 
-                                                    onError={(e) => {
-                                                        const target = e.target as HTMLImageElement;
-                                                        target.style.display = 'none';
-                                                    }}
-                                                 />
+                                                  <img 
+                                                     src={logo.url} 
+                                                     alt={logo.name} 
+                                                     className="max-w-full max-h-full object-contain mix-blend-multiply" 
+                                                     onError={(e) => {
+                                                         const target = e.target as HTMLImageElement;
+                                                         target.style.display = 'none';
+                                                     }}
+                                                  />
                                              </div>
                                          ))}
-                                     </div>
+                                      </div>
                                 </div>
                             </div>
                         </div>
                         <div className="mt-6 bg-[#88c057] py-4 px-6 text-center">
                             <p className="text-white font-serif italic text-lg md:text-2xl font-bold">
-                              Our partners are compliant with international social and environmental standards to protect both People and the Planet.
+                              {t('eth_banner_text')}
                             </p>
                         </div>
                     </div>
@@ -695,13 +694,13 @@ const Home = () => {
             <FadeInSection>
               <div className="grid lg:grid-cols-2 gap-8 items-start mb-24 relative z-0">
                 <div className="pt-10">
-                  <h2 className="text-4xl md:text-6xl font-bold text-[#88c057] mb-8 tracking-tight">Sustainability</h2>
+                  <h2 className="text-4xl md:text-6xl font-bold text-[#88c057] mb-8 tracking-tight">{t('sustainability')}</h2>
                   <div className="space-y-6">
                     <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light">
-                      Our operations are guided by a vision of achieving social and ecological equilibrium, where the well-being of both humanity and the environment are prioritized and sustained.
+                      {t('sus_desc_1')}
                     </p>
                     <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light">
-                      Ethically sourcing products and nurturing sustainability are fundamental to our mission, ensuring equitable treatment for workers and actively reducing our environmental impact
+                      {t('sus_desc_2')}
                     </p>
                   </div>
                 </div>
@@ -719,8 +718,8 @@ const Home = () => {
                 <div className="relative w-full max-w-4xl aspect-[21/9] rounded-sm overflow-hidden shadow-2xl border-4 border-white">
                   <img src={ASSETS.images.home.sustainability.stones} alt="Stones" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-6 text-center">
-                    <p className="text-white font-bold text-lg md:text-3xl leading-tight drop-shadow-lg">
-                      Sustainability is not only a Tagline, it's a life style<br/>and at the core of our business operation.
+                    <p className="text-white font-bold text-lg md:text-3xl leading-tight drop-shadow-lg whitespace-pre-line">
+                      {t('sus_image_text')}
                     </p>
                   </div>
                 </div>
@@ -738,13 +737,13 @@ const Home = () => {
                 <div className="pb-8 pl-10">
                   <div className="space-y-6">
                     <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light">
-                      Our growth focuses on environmental responsibility, with an emphasis on circular thinking, emission reduction, water conservation, and responsible consumption. We collaborate with partners committed to ethical sourcing and environmental compliance.
+                      {t('sus_desc_3')}
                     </p>
                     <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light">
-                      Sustainability is at the core of our growth plan, influencing every decision and action we take, as we collaborate with the likeminded dedicated partners!!
+                      {t('sus_heading')}
                     </p>
                     <Link to="/sustainability" className="inline-block border border-brand-green px-8 py-3 text-xs font-bold text-black uppercase tracking-widest hover:bg-brand-green hover:text-white transition-all shadow-sm">
-                      EXPLORE MORE
+                      {t('explore_more')}
                     </Link>
                   </div>
                 </div>
@@ -759,7 +758,7 @@ const Home = () => {
           <FadeInSection>
             <div className="max-w-7xl mx-auto">
                <p className="text-xl md:text-2xl lg:text-3xl font-serif italic font-bold tracking-tight leading-none drop-shadow-md whitespace-nowrap overflow-hidden text-ellipsis">
-                  "The Earth does not belong to us, We belong to the Earth!"
+                  "{t('earth_quote')}"
                </p>
             </div>
           </FadeInSection>
@@ -771,10 +770,10 @@ const Home = () => {
            {/* Top Text Block */}
            <FadeInSection>
              <div className="mb-24 text-left">
-                   <h2 className="text-4xl md:text-6xl font-bold text-[#1e3a8a] mb-2 font-sans tracking-tight uppercase">MANUFACTURING EXCELLENCE</h2>
-                   <p className="text-sm font-bold text-gray-800 italic mb-6">Where Expertise Ignites Precision and Artistry!!</p>
+                   <h2 className="text-4xl md:text-6xl font-bold text-[#1e3a8a] mb-2 font-sans tracking-tight uppercase">{t('manufacturing')}</h2>
+                   <p className="text-sm font-bold text-gray-800 italic mb-6">{t('mfg_subtitle_home')}</p>
                    <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light w-full">
-                      ApparelBD Sourcing stands as a Cornerstone of Manufacturing excellence, where the craft transcends machinery to embody precision, safety, and empowerment. From the initial fabric cut to the final stitch, every stage reflects a commitment to surpassing industry standards, delivering garments distinguished by exceptional quality, integrity, and artistry.
+                     {t('mfg_desc_home')}
                    </p>
              </div>
            </FadeInSection>
@@ -784,13 +783,13 @@ const Home = () => {
              <div className="grid lg:grid-cols-12 gap-12 items-center mb-32">
                 {/* Left: Text */}
                 <div className="lg:col-span-5 text-left">
-                   <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-2 font-sans tracking-tight">Fitting/Garment Technical Support</h2>
-                   <p className="text-sm font-bold text-gray-800 italic mb-8">Elevating Wearability, Style and Functionality...!!</p>
+                   <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-2 font-sans tracking-tight">{t('mfg_fitting_title')}</h2>
+                   <p className="text-sm font-bold text-gray-800 italic mb-8">{t('mfg_fitting_sub')}</p>
                    <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light mb-8">
-                      Garments are designed to look stunning, fit flawlessly, and move with effortless grace. Every detail—craftsmanship, fit, and aesthetics—is meticulously refined by a dedicated in-house technical team. Personalized fitting support and technical assistance are provided, ensuring that expectations are not only met but consistently exceeded, enhancing comfort, style, and functionality for greater customer satisfaction.
+                     {t('mfg_fitting_desc')}
                    </p>
                    <Link to="/manufacturing" className="inline-block bg-[#1e3a8a] text-white px-10 py-4 text-xs font-bold uppercase tracking-widest hover:bg-[#1e3a8a]/90 transition-all shadow-xl rounded-sm">
-                      EXPLORE MORE
+                     {t('explore_more')}
                    </Link>
                 </div>
 
@@ -819,20 +818,20 @@ const Home = () => {
 
                  {/* Text Side (Right) */}
                  <div className="flex flex-col justify-center">
-                      <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-4">Production Control</h2>
+                      <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-4">{t('mfg_prod_ctrl_title')}</h2>
                       <p className="text-black italic font-medium mb-8 text-lg">
-                          Optimizing Efficiency, Ensuring Quality, Orchestrating Excellence!!
+                          {t('mfg_prod_sub')}
                       </p>
                       <div className="space-y-6 text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light">
                           <p>
-                              At the core of our production control framework are four key components: Material Requirement Planning (MRP), Capacity Planning, Production Scheduling, and Rigorous Quality Control. These elements work together to ensure a seamless, efficient manufacturing process, managing everything from material sourcing to final product inspection.
+                              {t('mfg_prod_desc_1')}
                           </p>
                           <p>
-                              Material Requirement Planning (MRP) manages material needs to maintain optimal inventory and avoid shortages or excess.
+                              {t('mfg_prod_desc_2')}
                           </p>
                       </div>
                  </div>
-              </div>
+             </div>
            </FadeInSection>
 
             {/* Content Grid 3: Capacity Planning Details */}
@@ -841,13 +840,13 @@ const Home = () => {
                  {/* Left: Text */}
                  <div>
                      <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light mb-8">
-                          Capacity Planning aligns production with demand to optimize resources and balance workloads. Production Scheduling organizes tasks to maximize output and minimize downtime. Quality Control upholds standards to ensure every product meets or exceeds expectations.
+                         {t('mfg_capacity_desc_1')}
                      </p>
                      <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light mb-8">
-                          The supply chain is managed to reduce waste and boost productivity. Competitive pricing and flexible lead times are achieved through this careful oversight. Operational excellence and exceptional client value are ensured by integrating these elements
+                         {t('mfg_capacity_desc_2')}
                      </p>
                      <Link to="/manufacturing" className="inline-block border border-gray-500 px-6 py-2 text-[10px] font-bold text-black uppercase tracking-widest hover:bg-[#1e3a8a] hover:text-white hover:border-[#1e3a8a] transition-all bg-[#e6e6e6]">
-                          EXPLORE MORE
+                         {t('explore_more')}
                       </Link>
                  </div>
                  
@@ -866,7 +865,7 @@ const Home = () => {
            <FadeInSection>
              <div className="text-center mt-24 mb-12">
                   <p className="font-serif italic font-bold text-black text-lg md:text-xl tracking-wide">
-                      "Crafting Excellence: Refined Control, Flawless Garments, Excellence in Every Stitch, Efficiency in Every Step."
+                      "{t('mfg_qa_quote')}"
                   </p>
              </div>
            </FadeInSection>
@@ -885,13 +884,13 @@ const Home = () => {
 
                  {/* Right: Text */}
                  <div>
-                      <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-2 font-sans tracking-tight">Quality Assurance:</h2>
-                      <p className="text-sm font-bold text-gray-800 italic mb-8">Redefining Excellence in Craftsmanship and Enduring Durability</p>
+                      <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-2 font-sans tracking-tight">{t('mfg_qa_title')}</h2>
+                      <p className="text-sm font-bold text-gray-800 italic mb-8">{t('mfg_qa_sub')}</p>
                       <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light mb-8">
-                          Committed to upholding impeccable standards through rigorous quality control, we ensure every garment exceeds expectations for craftsmanship and durability. In collaboration with our partners, we apply advanced protocols— including lab testing and onsite inspections—at every stage of production, reinforcing confidence in the integrity and excellence of our products.
+                          {t('mfg_qa_desc')}
                       </p>
                       <Link to="/manufacturing" className="inline-block border border-gray-500 px-6 py-2 text-[10px] font-bold text-black uppercase tracking-widest hover:bg-[#1e3a8a] hover:text-white hover:border-[#1e3a8a] transition-all bg-[#e6e6e6]">
-                          EXPLORE MORE
+                          {t('explore_more')}
                       </Link>
                  </div>
              </div>
@@ -902,16 +901,16 @@ const Home = () => {
              <div className="grid lg:grid-cols-2 gap-16 items-center mb-32">
                {/* Left: Text */}
                <div>
-                  <h2 className="text-4xl md:text-5xl font-bold text-[#1e3a8a] mb-2 font-sans tracking-tight">Fair Traceability</h2>
-                  <p className="text-sm font-bold text-gray-800 italic mb-8">Transparency across the Supply Chain!!</p>
+                  <h2 className="text-4xl md:text-5xl font-bold text-[#1e3a8a] mb-2 font-sans tracking-tight">{t('mfg_trace_title')}</h2>
+                  <p className="text-sm font-bold text-gray-800 italic mb-8">{t('mfg_trace_sub')}</p>
                   <p className="font-bold text-gray-900 mb-6 italic text-sm md:text-base">
-                     Real-Time Updates Promote-Transparency, Ethics, and Accountability—Fostering Trust Across the Supply Chain.
+                      {t('mfg_trace_bold')}
                   </p>
                   <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light mb-8">
-                     We prioritize fair traceability by providing real-time updates at every stage of the product journey—from raw material sourcing to manufacturing—ensuring ethical practices and supply chain accountability.
+                      {t('mfg_trace_desc')}
                   </p>
                   <Link to="/ethical-sourcing" className="inline-block border border-gray-500 px-6 py-2 text-[10px] font-bold text-black uppercase tracking-widest hover:bg-[#1e3a8a] hover:text-white hover:border-[#1e3a8a] transition-all bg-[#e6e6e6]">
-                      EXPLORE MORE
+                      {t('explore_more')}
                   </Link>
                </div>
 
@@ -929,35 +928,35 @@ const Home = () => {
            {/* Shipping And Logistics */}
            <FadeInSection>
              <div className="grid lg:grid-cols-2 gap-16 items-center">
-                  {/* Left: Image */}
-                  <div className="w-full h-[400px] md:h-[500px] rounded-sm overflow-hidden shadow-2xl border-4 border-white relative group">
-                      <img 
+                 {/* Left: Image */}
+                 <div className="w-full h-[400px] md:h-[500px] rounded-sm overflow-hidden shadow-2xl border-4 border-white relative group">
+                     <img 
                           src={ASSETS.images.manufacturing.logistics} 
                           alt="Shipping and Logistics" 
                           className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
-                      />
-                  </div>
+                     />
+                 </div>
 
-                  {/* Right: Text */}
-                  <div>
-                      <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-2 font-sans tracking-tight">Shipping And Logistics</h2>
-                      <p className="text-sm font-bold text-gray-800 italic mb-8">Streamlined Delivery, Global Reach!!</p>
+                 {/* Right: Text */}
+                 <div>
+                      <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-2 font-sans tracking-tight">{t('mfg_logistics_title')}</h2>
+                      <p className="text-sm font-bold text-gray-800 italic mb-8">{t('mfg_logistics_sub')}</p>
                       <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light mb-8">
-                          ApparelBD ensures a seamless end-to-end logistics experience through our dedicated in-house shipping and logistics team. We streamline supply chain processes and manage all shipping and forwarder formalities with precision. From manufacturing facilities to global destinations, we oversee every step to guarantee efficient delivery and the highest level of customer satisfaction.
+                          {t('mfg_logistics_desc')}
                       </p>
                       <Link to="/manufacturing" className="inline-block border border-gray-500 px-6 py-2 text-[10px] font-bold text-black uppercase tracking-widest hover:bg-[#1e3a8a] hover:text-white hover:border-[#1e3a8a] transition-all bg-[#e6e6e6]">
-                          EXPLORE MORE
+                          {t('explore_more')}
                       </Link>
-                  </div>
+                 </div>
              </div>
            </FadeInSection>
 
            {/* New Quote Banner */}
            <FadeInSection>
              <div className="mt-24 w-full bg-[#e0f7fa] py-12 px-6 text-center shadow-md border-y border-white">
-                  <p className="text-[#3b6d8f] text-xl md:text-2xl font-serif italic font-bold leading-relaxed">
-                      "Manufacturing excellence is never an accident It is always the result of high intention, sincere effort, intelligent direction, and skillful execution."
-                  </p>
+                 <p className="text-[#3b6d8f] text-xl md:text-2xl font-serif italic font-bold leading-relaxed">
+                     "{t('mfg_logistics_quote')}"
+                 </p>
              </div>
            </FadeInSection>
 
@@ -969,9 +968,9 @@ const Home = () => {
         <div className="max-w-[95%] mx-auto px-4">
              <FadeInSection>
                <div className="text-center mb-16">
-                   <h2 className="text-4xl md:text-5xl font-bold text-[#1e3a8a] mb-6">Products</h2>
+                   <h2 className="text-4xl md:text-5xl font-bold text-[#1e3a8a] mb-6">{t('products')}</h2>
                    <p className="text-gray-700 mx-auto leading-relaxed text-lg md:text-xl text-justify font-light">
-                      At the crossroads of innovation and style, we provide an extensive range of products to meet diverse fashion preferences, blending timeless elegance with the latest trends. Our mission is to enhance your sourcing supply chain from design to delivery. With a focus on 12 distinct categories, we tailor sourcing solutions to meet your needs effectively.
+                     {t('prod_desc_home')} {t('prod_desc_home_2')}
                    </p>
                </div>
              </FadeInSection>
@@ -998,13 +997,13 @@ const Home = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-12 w-full text-left">
              <FadeInSection>
                <h2 className="text-3xl md:text-5xl font-bold text-white mb-2 drop-shadow-lg">
-                  We are eager to deliver you Superior Value
+                 {t('inquiry_title')}
                </h2>
                <h3 className="text-2xl md:text-3xl font-bold text-white mb-10 drop-shadow-lg">
-                  To Enquire with Us
+                 {t('inquiry_subtitle')}
                </h3>
                <a href="mailto:info@apparelbd.com" className="inline-block border border-[#88c057] text-white px-8 py-3 text-sm font-bold uppercase tracking-widest hover:bg-[#88c057] transition-all bg-[#88c057]/20 backdrop-blur-sm rounded-sm">
-                  CLICK HERE
+                 {t('click_here')}
                </a>
              </FadeInSection>
         </div>
@@ -1018,9 +1017,9 @@ const Home = () => {
                   
                   {/* Left Side: Text */}
                   <div className="text-left">
-                      <h2 className="text-4xl md:text-5xl font-bold text-[#1e3a8a] mb-8 font-sans">All About Us</h2>
+                      <h2 className="text-4xl md:text-5xl font-bold text-[#1e3a8a] mb-8 font-sans">{t('all_about_us_title')}</h2>
                       <p className="text-gray-700 leading-relaxed text-lg md:text-xl text-justify font-light">
-                          We believe that Fashion is not just about Clothing, it's an ever evolving statement, an expression of Identity, Culture context of time and place, perception, aspiration, creativity and innovation, value and belief of individual and community.
+                          {t('all_about_us_desc')}
                       </p>
                   </div>
 

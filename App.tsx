@@ -1,5 +1,7 @@
+
 import React, { useEffect } from 'react';
 import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { LanguageProvider } from './contexts/LanguageContext';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -33,20 +35,22 @@ const ScrollToAnchor = () => {
 
 const App = () => {
   return (
-    <HashRouter>
-      <ScrollToAnchor />
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/market-intel" element={<MarketIntel />} />
-          <Route path="/sustainability" element={<Sustainability />} />
-          <Route path="/ethical-sourcing" element={<EthicalSourcing />} />
-          <Route path="/manufacturing" element={<Manufacturing />} />
-        </Routes>
-      </Layout>
-    </HashRouter>
+    <LanguageProvider>
+      <HashRouter>
+        <ScrollToAnchor />
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/market-intel" element={<MarketIntel />} />
+            <Route path="/sustainability" element={<Sustainability />} />
+            <Route path="/ethical-sourcing" element={<EthicalSourcing />} />
+            <Route path="/manufacturing" element={<Manufacturing />} />
+          </Routes>
+        </Layout>
+      </HashRouter>
+    </LanguageProvider>
   );
 };
 

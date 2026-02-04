@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ASSETS } from '../config/assets';
 import HeroVideo from '../components/HeroVideo';
 import { ShieldCheck, Recycle, Leaf } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 // FadeInSection Component
 const FadeInSection: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className = '' }) => {
@@ -42,6 +43,7 @@ const FadeInSection: React.FC<{ children: React.ReactNode; className?: string }>
 };
 
 const EthicalSourcing = () => {
+  const { t } = useLanguage();
   const [currentEnvIndex, setCurrentEnvIndex] = useState(0);
   
   // Using the new local assets Ethical_5, Ethical_6, Ethical_7
@@ -113,8 +115,8 @@ const EthicalSourcing = () => {
 
       {/* 1. Hero Section - Video Background */}
       <HeroVideo 
-        title="Ethical and Responsive Sourcing" 
-        subtitle="Ensuring integrity, transparency, and responsibility in every stitch."
+        title={t('eth_hero_title')} 
+        subtitle={t('eth_hero_sub')}
         videoUrl={ASSETS.videos.ethical}
       />
 
@@ -124,10 +126,10 @@ const EthicalSourcing = () => {
              <FadeInSection>
                 <div className="space-y-6 text-gray-700 leading-relaxed text-lg md:text-xl font-light text-justify">
                     <p>
-                        <span className="font-bold text-black">Ethical sourcing</span> is our corner stone of responsible business practices. As consumers increasingly demand transparency and accountability, fashion brands are recognizing the importance of ensuring that every thread in their supply chain is merged with integrity.
+                        {t('eth_intro')} {t('eth_intro_text')}
                     </p>
                     <p>
-                        At ApparelBD, we are dedicated to ethical and responsive sourcing practices that protect both individuals and the environment.
+                        {t('eth_page_intro_1')}
                     </p>
                 </div>
              </FadeInSection>
@@ -152,10 +154,10 @@ const EthicalSourcing = () => {
            <FadeInSection>
                 <div className="space-y-6 text-gray-700 leading-relaxed text-lg md:text-xl font-light text-justify">
                     <p>
-                        <span className="font-bold text-black">Transparency and traceability</span> are fundamental principles guiding our operations. We believe in providing full visibility into the journey of each garment, from the sourcing of raw materials to the final production stage. This commitment ensures that consumers and buyers can make informed choices, knowing where and how their garments were produced.
+                        {t('eth_transparency')} {t('eth_transparency_p1')}
                     </p>
                     <p>
-                        Our traceability measures ensure accountability across the supply chain, allowing us to quickly address any ethical concerns. With transparency at our core, customers can trust our commitment to sourcing ethically and responsibly. These principles build trust in our brand and enable customers to make sustainable, ethical fashion choices with every purchase.
+                        {t('eth_traceability_desc')}
                     </p>
                 </div>
            </FadeInSection>
@@ -164,15 +166,15 @@ const EthicalSourcing = () => {
            <FadeInSection className="mt-16 flex justify-center gap-12 md:gap-24 text-[#88c057] opacity-80 hover:opacity-100 transition-all">
                 <div className="flex flex-col items-center gap-2">
                     <ShieldCheck className="h-16 md:h-20 w-16 md:w-20" strokeWidth={1} />
-                    <span className="text-xs uppercase font-bold tracking-widest text-gray-500">Protection</span>
+                    <span className="text-xs uppercase font-bold tracking-widest text-gray-500">{t('protection_label')}</span>
                 </div>
                 <div className="flex flex-col items-center gap-2">
                     <Recycle className="h-16 md:h-20 w-16 md:w-20" strokeWidth={1} />
-                    <span className="text-xs uppercase font-bold tracking-widest text-gray-500">Recycle</span>
+                    <span className="text-xs uppercase font-bold tracking-widest text-gray-500">{t('recycle_label')}</span>
                 </div>
                 <div className="flex flex-col items-center gap-2">
                     <Leaf className="h-16 md:h-20 w-16 md:w-20" strokeWidth={1} />
-                    <span className="text-xs uppercase font-bold tracking-widest text-gray-500">Eco</span>
+                    <span className="text-xs uppercase font-bold tracking-widest text-gray-500">{t('eco_label')}</span>
                 </div>
            </FadeInSection>
         </div>
@@ -211,8 +213,7 @@ const EthicalSourcing = () => {
       <section className="py-12 bg-[#88c057] text-center px-4">
           <FadeInSection>
               <h2 className="text-xl md:text-3xl font-serif font-bold text-white uppercase leading-snug">
-                  ApparelBD, Where Fashion Meets Integrity!!<br/>
-                  Elevate Your Wardrobe, Elevate Your Values!!
+                  {t('eth_banner_integrity')}
               </h2>
           </FadeInSection>
       </section>
@@ -222,12 +223,13 @@ const EthicalSourcing = () => {
           <div className="max-w-[95%] mx-auto px-4 lg:px-8">
               <div className="grid md:grid-cols-2 gap-12 items-center">
                   <FadeInSection>
-                      <h3 className="text-2xl md:text-3xl font-bold text-brand-navy mb-4">Fair Labour Practice</h3>
+                      <h3 className="text-2xl md:text-3xl font-bold text-brand-navy mb-4">{t('eth_fair_labour')}</h3>
                       <p className="text-gray-700 leading-relaxed text-lg md:text-xl font-light text-justify mb-4">
-                        We stand firmly committed to upholding fair labor practices across our supply chain.
+                        {t('eth_fair_labour_p1')}
                       </p>
+
                       <p className="text-gray-700 leading-relaxed text-lg md:text-xl font-light text-justify">
-                        This commitment ensures workers are treated with dignity and respect, receiving fair wages, safe working conditions, and reasonable hours. Through active engagement with our suppliers, we promote fair labor practices and support initiatives that enhance workers' rights and welfare.
+                        {t('eth_fair_labour_p2')}
                       </p>
                   </FadeInSection>
                   <FadeInSection>
@@ -250,7 +252,7 @@ const EthicalSourcing = () => {
           <div className="max-w-[95%] mx-auto px-4 lg:px-8">
               <FadeInSection className="mb-12">
                   <p className="text-gray-700 leading-relaxed text-lg md:text-xl font-light text-justify">
-                      <span className="font-bold text-black">Environmental Concern</span> at ApparelBD, we're committed to minimizing our environmental impact by partnering with like-minded collaborators. We prioritize sustainable materials like organic cotton, recycled polyester, and ecofriendly fibers, aiming to reduce energy use, waste, and pollution across our supply chain. With a focus on environmental stewardship, we strive to lead the way toward a more sustainable, eco-conscious fashion industry. Join us in creating a greener tomorrow, one stitch at a time.
+                      <span className="font-bold text-black">{t('eth_env_concern')}</span> {t('eth_env_concern_text')}
                   </p>
               </FadeInSection>
               
@@ -260,10 +262,10 @@ const EthicalSourcing = () => {
                   <div className="relative w-full h-[300px] sm:h-[400px] md:h-[700px] rounded-sm overflow-hidden shadow-2xl group">
                        {envImages.map((img, index) => (
                            <div
-                              key={index}
-                              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-                                index === currentEnvIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
-                              }`}
+                             key={index}
+                             className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                               index === currentEnvIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                             }`}
                            >
                               <img 
                                 src={img} 
@@ -273,7 +275,7 @@ const EthicalSourcing = () => {
                               {/* Overlay Gradient */}
                               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                               <div className="absolute bottom-10 left-10 text-white z-20">
-                                   <h3 className="text-3xl font-bold drop-shadow-md">Sustainable Initiative {index + 1}</h3>
+                                   <h3 className="text-3xl font-bold drop-shadow-md">{t('eth_sustainable_initiative')} {index + 1}</h3>
                               </div>
                            </div>
                        ))}
@@ -312,9 +314,9 @@ const EthicalSourcing = () => {
                       </div>
                   </FadeInSection>
                   <FadeInSection>
-                      <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-6">Social Engagement & CSR Programs</h2>
+                      <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-6">{t('eth_social_engagement_title')}</h2>
                       <p className="text-gray-700 leading-relaxed text-lg md:text-xl font-light text-justify">
-                          We prioritize social engagement and CSR programs to positively impact our communities. We collaborate with local artisans, support education and healthcare, and empower individuals through fair-trade partnerships and a commitment to diversity and inclusion. Our dedication to social responsibility drives us to create a sustainable future where fashion fosters positive change.
+                          {t('eth_social_engagement_text')}
                       </p>
                   </FadeInSection>
               </div>
@@ -325,13 +327,13 @@ const EthicalSourcing = () => {
       <section className="py-20 bg-white">
           <div className="max-w-[95%] mx-auto px-4 lg:px-8">
               <FadeInSection className="mb-12">
-                  <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#1e3a8a] mb-6">Supplier Audits and Certifications</h2>
+                  <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#1e3a8a] mb-6">{t('eth_supplier_audits_title')}</h2>
                   <div className="space-y-4 text-gray-700 leading-relaxed text-lg md:text-xl font-light text-justify">
                       <p>
-                          We prioritize ethical practices and sustainability across our supply chain. Our compliance team conducts thorough audits to ensure suppliers meet our high standards for labor practices, worker safety, and environmental impact. We seek certifications that validate our commitment to ethical sourcing, providing assurance to clients and stakeholders that our products are responsibly sourced with respect for social and environmental values.
+                          {t('eth_supplier_audits_p1')}
                       </p>
                       <p>
-                          Our partners are with Social, Technical and Environmental standard and certifications to comply with Word Standard.
+                          {t('eth_supplier_audits_p2')}
                       </p>
                   </div>
               </FadeInSection>
@@ -350,17 +352,17 @@ const EthicalSourcing = () => {
                            <div className="flex gap-4 md:gap-6 w-max animate-scroll-right pause-hover">
                                {marqueeLogos1.map((logo, index) => (
                                    <div key={`row1-${index}`} className="w-[120px] md:w-[220px] h-20 md:h-28 bg-white/95 p-4 rounded-sm flex items-center justify-center shadow-lg hover:scale-105 transition-transform duration-300">
-                                       <img 
-                                          src={logo.url} 
-                                          alt={logo.name} 
-                                          className="max-w-full max-h-full object-contain"
-                                          onError={(e) => {
-                                              const target = e.target as HTMLImageElement;
-                                              target.style.display = 'none';
-                                              target.parentElement!.innerHTML = `<span class="text-xs font-bold text-gray-600">${logo.name}</span>`;
-                                          }}
-                                        />
-                                   </div>
+                                           <img 
+                                              src={logo.url} 
+                                              alt={logo.name} 
+                                              className="max-w-full max-h-full object-contain"
+                                              onError={(e) => {
+                                                  const target = e.target as HTMLImageElement;
+                                                  target.style.display = 'none';
+                                                  target.parentElement!.innerHTML = `<span class="text-xs font-bold text-gray-600">${logo.name}</span>`;
+                                              }}
+                                           />
+                                    </div>
                                ))}
                            </div>
                       </div>
@@ -370,17 +372,17 @@ const EthicalSourcing = () => {
                            <div className="flex gap-4 md:gap-6 w-max animate-scroll-left pause-hover">
                                {marqueeLogos2.map((logo, index) => (
                                    <div key={`row2-${index}`} className="w-[120px] md:w-[220px] h-20 md:h-28 bg-white/95 p-4 rounded-sm flex items-center justify-center shadow-lg hover:scale-105 transition-transform duration-300">
-                                       <img 
-                                          src={logo.url} 
-                                          alt={logo.name} 
-                                          className="max-w-full max-h-full object-contain"
-                                          onError={(e) => {
-                                              const target = e.target as HTMLImageElement;
-                                              target.style.display = 'none';
-                                              target.parentElement!.innerHTML = `<span class="text-xs font-bold text-gray-600">${logo.name}</span>`;
-                                          }}
-                                        />
-                                   </div>
+                                           <img 
+                                              src={logo.url} 
+                                              alt={logo.name} 
+                                              className="max-w-full max-h-full object-contain"
+                                              onError={(e) => {
+                                                  const target = e.target as HTMLImageElement;
+                                                  target.style.display = 'none';
+                                                  target.parentElement!.innerHTML = `<span class="text-xs font-bold text-gray-600">${logo.name}</span>`;
+                                              }}
+                                           />
+                                    </div>
                                ))}
                            </div>
                       </div>
@@ -390,9 +392,9 @@ const EthicalSourcing = () => {
 
               {/* Continuous Improvement */}
               <FadeInSection className="mb-12">
-                  <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#1e3a8a] mb-6">Continuous Improvement</h2>
+                  <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#1e3a8a] mb-6">{t('eth_continuous_title')}</h2>
                   <p className="text-gray-700 leading-relaxed text-lg md:text-xl font-light text-justify">
-                      we are committed to proactive sustainability practices. Through ongoing assessments and audits, we monitor our performance, making necessary improvements to minimize our environmental impact. Collaboration is central to our sustainability efforts, as we engage with stakeholders to drive forward sustainable practices collectively. Additionally, we embrace innovation to enhance our sustainability efforts, always seeking new solutions and technologies to advance ethical sourcing and environmental responsibility.
+                      {t('eth_continuous_desc')}
                   </p>
               </FadeInSection>
           </div>
@@ -403,13 +405,13 @@ const EthicalSourcing = () => {
           <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center p-6 text-center">
               <FadeInSection>
                   <h2 className="text-white text-3xl md:text-5xl font-serif font-bold mb-6 max-w-4xl leading-tight">
-                      ApparelBD Sourcing, Where Fashion Meets Integrity!! Elevate Your Wardrobe, Elevate Your Values!!
+                      {t('eth_final_banner')}
                   </h2>
                   <h3 className="text-[#88c057] text-2xl md:text-4xl font-bold mb-10 uppercase tracking-widest">
-                      To Enquire with Us
+                      {t('inquiry_subtitle')}
                   </h3>
                   <button onClick={() => window.location.href = 'mailto:info@apparelbd.com'} className="border-2 border-white text-white px-10 py-3 text-sm font-bold uppercase tracking-widest hover:bg-[#88c057] hover:border-[#88c057] transition-all duration-300">
-                      CLICK HERE
+                      {t('click_here')}
                   </button>
               </FadeInSection>
           </div>
@@ -420,7 +422,7 @@ const EthicalSourcing = () => {
           <div className="max-w-[95%] mx-auto px-4">
               <FadeInSection>
                   <p className="text-gray-600 text-sm md:text-base font-light">
-                      <span className="font-bold text-black">Ethical and responsive sourcing</span> is at the core of ApparelBD's mission. With our dedication to transparency, fair practices, sustainability, and adherence to international standards, we surpass ethical expectations. Choosing us means opting for responsible sourcing that values both people and the planet. Together, we pave the way for a future of ethical business practices.
+                      {t('eth_footer_text')}
                   </p>
               </FadeInSection>
           </div>

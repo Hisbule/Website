@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ASSETS } from '../config/assets';
 import { Link } from 'react-router-dom';
 import HeroVideo from '../components/HeroVideo';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const FadeInSection: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className = '' }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -41,12 +42,13 @@ const FadeInSection: React.FC<{ children: React.ReactNode; className?: string }>
 };
 
 const Sustainability = () => {
+  const { t } = useLanguage();
   return (
     <div className="bg-white font-sans overflow-x-hidden">
       
       {/* 1. Hero Section - VIDEO */}
       <HeroVideo 
-        title="Sustainability" 
+        title={t('sus_hero_title')} 
         videoUrl={ASSETS.videos.sustainability}
       />
 
@@ -55,7 +57,7 @@ const Sustainability = () => {
         <div className="max-w-[95%] mx-auto px-4 lg:px-8">
             <FadeInSection>
                 <p className="text-gray-700 text-lg md:text-xl leading-relaxed font-light text-justify">
-                    We prioritize social and ecological balance, valuing well-being and environmental health. Our mission focuses on ethical sourcing and sustainability, ensuring fair treatment for workers and minimizing our footprint. We emphasize circular thinking, emission reduction, water conservation, and responsible consumption while partnering with organizations that share our commitment to sustainability.
+                    {t('sus_intro_desc')}
                 </p>
             </FadeInSection>
         </div>
@@ -65,9 +67,9 @@ const Sustainability = () => {
       <section className="pb-16 bg-white">
           <div className="max-w-[95%] mx-auto px-4 lg:px-8">
               <FadeInSection className="mb-12">
-                  <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#1e3a8a] mb-6">Building A Greener Future Together</h2>
+                  <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#1e3a8a] mb-6">{t('sus_green_title')}</h2>
                   <p className="text-gray-700 text-lg md:text-xl leading-relaxed font-light text-justify">
-                    Transformative Potential of Sustainable Fashion, we believe in the power of sustainable fashion. Committed to sustainability, our operations focus on positive environmental and social outcomes, from sourcing to manufacturing.
+                    {t('sus_green_desc')}
                   </p>
               </FadeInSection>
 
@@ -87,7 +89,7 @@ const Sustainability = () => {
       {/* Green Quote Banner */}
       <section className="py-12 bg-[#88c057] text-center px-4">
           <FadeInSection>
-              <h2 className="text-2xl md:text-4xl font-serif font-bold text-white italic">"Revive the Earth, Renew Our Future and Choose Today for a Greener Tomorrow"</h2>
+              <h2 className="text-2xl md:text-4xl font-serif font-bold text-white italic">{t('sus_revive_earth')}</h2>
           </FadeInSection>
       </section>
 
@@ -101,13 +103,13 @@ const Sustainability = () => {
                   </div>
               </FadeInSection>
               <FadeInSection>
-                  <h3 className="text-3xl md:text-4xl font-serif font-bold text-[#1e3a8a] mb-6">Environmental Responsibility and Accountability</h3>
+                  <h3 className="text-3xl md:text-4xl font-serif font-bold text-[#1e3a8a] mb-6">{t('sus_env_resp_title')}</h3>
                   <div className="space-y-6">
                     <p className="text-gray-700 leading-relaxed text-lg md:text-xl font-light text-justify">
-                        Our growth strategy revolves around environmental responsibility and accountability.
+                        {t('sus_growth_strategy')}
                     </p>
                     <p className="text-gray-700 leading-relaxed text-lg md:text-xl font-light text-justify">
-                        We prioritize sourcing eco-friendly, circular, sustainable, and recycled materials to minimize our environmental footprint while promoting growth that benefits both our business and the planet.
+                        {t('sus_priority')}
                     </p>
                   </div>
               </FadeInSection>
@@ -118,14 +120,14 @@ const Sustainability = () => {
       <section className="py-20 bg-white">
           <div className="max-w-[95%] mx-auto px-4 lg:px-8">
               <FadeInSection className="mb-16">
-                  <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#1e3a8a] mb-4">Together We Thrive: Partnering for a Greener, Sustainable Future</h2>
+                  <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#1e3a8a] mb-4">{t('sus_partner_title')}</h2>
               </FadeInSection>
 
               <div className="grid md:grid-cols-2 gap-12 items-start mb-24">
                    <FadeInSection>
-                       <h3 className="text-2xl md:text-3xl font-serif font-bold text-[#1e3a8a] mb-6">Environmental Standards & Compliance</h3>
+                       <h3 className="text-2xl md:text-3xl font-serif font-bold text-[#1e3a8a] mb-6">{t('sus_standards_title')}</h3>
                        <p className="text-gray-700 leading-relaxed text-lg md:text-xl font-light text-justify">
-                           We maintain high standards of compliance and environmental stewardship by partnering with suppliers who ensure fair labor practices and safe workplaces. Our in-house compliance team upholds these standards across our supply chain, ensuring operational integrity.
+                           {t('sus_standards_desc')}
                        </p>
                    </FadeInSection>
                    <FadeInSection>
@@ -136,9 +138,9 @@ const Sustainability = () => {
               </div>
 
               <FadeInSection className="mb-8">
-                  <h3 className="text-3xl md:text-4xl font-serif font-bold text-[#1e3a8a] mb-6">Partnering for a Sustainable and Greener Future</h3>
+                  <h3 className="text-3xl md:text-4xl font-serif font-bold text-[#1e3a8a] mb-6">{t('sus_partnering_title')}</h3>
                   <p className="text-gray-700 leading-relaxed text-lg md:text-xl font-light text-justify mb-8">
-                      Collaborating with partners in Sustainability and Green initiatives programs, we organize various Corporate Social Responsibility (CSR) programs aimed at creating positive impacts in communities. By working together, we can amplify our efforts and make a meaningful difference in society.
+                      {t('sus_partnering_desc')}
                   </p>
               </FadeInSection>
 
@@ -146,7 +148,7 @@ const Sustainability = () => {
                   <div className="relative h-[400px] md:h-[500px] w-full rounded-sm overflow-hidden shadow-xl group">
                       <img src={ASSETS.images.sustainabilityPage.img5} alt="Green Initiative" className="w-full h-full object-cover" />
                       <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                          <h2 className="text-white text-3xl md:text-5xl font-serif font-bold text-center px-4 drop-shadow-lg italic">"Crafting Tomorrow: Innovative Solutions for a Greener Fashion Industry."</h2>
+                          <h2 className="text-white text-3xl md:text-5xl font-serif font-bold text-center px-4 drop-shadow-lg italic">{t('sus_crafting_tomorrow')}</h2>
                       </div>
                   </div>
               </FadeInSection>
@@ -157,10 +159,10 @@ const Sustainability = () => {
       <section className="py-20 bg-[#f8f9fa]">
           <div className="max-w-[95%] mx-auto px-4 lg:px-8">
               <FadeInSection className="mb-16">
-                  <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#1e3a8a] mb-6">Redefining Fashion: Green Initiatives for a Sustainable Future</h2>
+                  <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#1e3a8a] mb-6">{t('sus_redefining_title')}</h2>
                   <div className="space-y-4">
-                    <p className="text-gray-700 text-lg md:text-xl font-light text-justify">Green Initiatives, we are fervently dedicated to spearheading green initiatives that transcend conventional sustainability practices.</p>
-                    <p className="text-gray-700 text-lg md:text-xl font-light text-justify">From pioneering eco-friendly packaging innovations to actively championing carbon offset programs, we are committed to driving impactful change within the fashion industry. Our unwavering pursuit of innovative solutions underscores our dedication to creating a more sustainable and environmentally conscious future for fashion.</p>
+                    <p className="text-gray-700 text-lg md:text-xl font-light text-justify">{t('sus_redefining_p1')}</p>
+                    <p className="text-gray-700 text-lg md:text-xl font-light text-justify">{t('sus_redefining_p2')}</p>
                   </div>
               </FadeInSection>
 
@@ -172,8 +174,8 @@ const Sustainability = () => {
                    </FadeInSection>
                    <FadeInSection>
                        <div className="text-right md:text-left">
-                           <h3 className="text-3xl md:text-4xl font-serif font-bold text-[#1e3a8a] mb-4">Conscious ApparelBD</h3>
-                           <h4 className="text-2xl md:text-3xl font-bold text-[#88c057] mb-6">Wear the Change for a Sustainable and Green Tomorrow!</h4>
+                           <h3 className="text-3xl md:text-4xl font-serif font-bold text-[#1e3a8a] mb-4">{t('sus_conscious_title')}</h3>
+                           <h4 className="text-2xl md:text-3xl font-bold text-[#88c057] mb-6">{t('sus_conscious_sub')}</h4>
                        </div>
                    </FadeInSection>
               </div>
@@ -183,7 +185,7 @@ const Sustainability = () => {
       {/* Green Bar Quote */}
       <section className="py-12 bg-[#88c057] text-center px-4">
           <FadeInSection>
-              <h2 className="text-2xl md:text-4xl font-serif font-bold text-white italic">"Driving Eco-Friendly Fashion: Where Innovation Meets Responsibility."</h2>
+              <h2 className="text-2xl md:text-4xl font-serif font-bold text-white italic">{t('sus_green_bar_2')}</h2>
           </FadeInSection>
       </section>
 
@@ -191,9 +193,9 @@ const Sustainability = () => {
       <section className="py-20 bg-white">
           <div className="max-w-[95%] mx-auto px-4 lg:px-8">
               <FadeInSection className="mb-12">
-                  <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#1e3a8a] mb-6">Commit to Change: Lower Carbon Footprint to Safeguard the Planet!</h2>
+                  <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#1e3a8a] mb-6">{t('sus_commit_change_title')}</h2>
                   <p className="text-gray-700 text-lg md:text-xl font-light text-justify leading-relaxed">
-                    Carbon Footprint, we are steadfastly committed to assisting you in minimizing your carbon footprint in apparel sourcing. Partnering with us grants you access to a comprehensive range of sustainable materials, eco-friendly manufacturing processes, and renewable energy solutions. Through these initiatives, we actively contribute to fostering a more sustainable fashion industry while safeguarding our planet for future generations to thrive.
+                    {t('sus_commit_change_desc')}
                   </p>
               </FadeInSection>
 
@@ -210,7 +212,7 @@ const Sustainability = () => {
               </div>
               
               <FadeInSection className="text-center mt-12">
-                  <p className="text-2xl font-serif font-bold text-black italic">"Source Sustainably: Together, We Lower Carbon Footprints."</p>
+                  <p className="text-2xl font-serif font-bold text-black italic">{t('sus_source_quote')}</p>
               </FadeInSection>
           </div>
       </section>
@@ -219,14 +221,14 @@ const Sustainability = () => {
       <section className="py-20 bg-[#f0fff4]">
           <div className="max-w-[95%] mx-auto px-4 lg:px-8">
               <FadeInSection className="mb-12">
-                  <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#1e3a8a] mb-8">Crafted with Care: Committed to Impact through Sustainability, Renewal and Circularity</h2>
+                  <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#1e3a8a] mb-8">{t('sus_crafted_care_title')}</h2>
                   
                   <div className="space-y-6 text-lg md:text-xl text-gray-700 leading-relaxed text-justify font-light">
-                      <p><span className="font-bold text-brand-navy">Commitment to Sustainable Materials,</span> we meticulously select natural and organic fibers, recycled materials, non-hazardous chemicals, eco-friendly dyes, and waterless processing techniques to minimize our environmental impact. Our commitment to sustainable materials is evident in the quality and integrity of our products.</p>
+                      <p>{t('sus_crafted_p1')}</p>
                       
-                      <p><span className="font-bold text-brand-navy">Renewable Energy,</span> we are committed to reducing our reliance on fossil fuels and combating climate change by incorporating solar, wind, and other renewable energy technologies into our operations. Transitioning to renewable energy is a crucial step towards a more sustainable future.</p>
+                      <p>{t('sus_crafted_p2')}</p>
                       
-                      <p><span className="font-bold text-brand-navy">Circular Economy Practices,</span> embracing circular economy practices, we implement waste reduction strategies, champion recycling and upcycling initiatives, and invest in energy-efficient technologies. By closing the loop, we strive to create a more sustainable and resource-efficient fashion industry.</p>
+                      <p>{t('sus_crafted_p3')}</p>
                   </div>
               </FadeInSection>
 
@@ -250,13 +252,13 @@ const Sustainability = () => {
           <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-12 w-full text-left">
               <FadeInSection>
                   <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg leading-tight max-w-4xl">
-                      Discover our services and partner with us on the journey towards responsible fashion and a more sustainable world.
+                      {t('sus_discover_partner')}
                   </h2>
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-10 drop-shadow-lg">
-                      To Enquire with Us
+                      {t('inquiry_subtitle')}
                   </h3>
                   <a href="mailto:info@apparelbd.com" className="inline-block border border-[#88c057] text-white px-8 py-3 text-sm font-bold uppercase tracking-widest hover:bg-[#88c057] transition-all bg-[#88c057]/20 backdrop-blur-sm rounded-sm">
-                      CLICK HERE
+                      {t('click_here')}
                   </a>
               </FadeInSection>
           </div>

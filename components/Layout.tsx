@@ -1,25 +1,25 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X, ChevronDown, Facebook, Linkedin } from 'lucide-react';
+import { Menu, X, ChevronDown, Facebook, Linkedin, Globe } from 'lucide-react';
 import { NavItem } from '../types';
 import { ASSETS } from '../config/assets';
-
-// ... (Existing Imports)
+import { useLanguage } from '../contexts/LanguageContext';
+import { Language } from '../config/translations';
 
 // ==========================================
 // Floating WhatsApp Component
 // ==========================================
 const FloatingWhatsApp = () => {
+  const { t } = useLanguage();
   const phoneNumber = "8801713046455"; 
-  const message = "Hello! I would like to know more about ApparelBD.";
+  const message = t('whatsapp_msg');
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
     <div className="fixed bottom-8 right-8 z-[100] flex flex-col items-end gap-2 group">
       {/* Tooltip Label */}
       <div className="bg-white text-brand-navy px-4 py-2 rounded-lg shadow-xl mb-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 text-sm font-bold pointer-events-none">
-        Chat with us on WhatsApp!
+        {t('whatsapp_tooltip')}
       </div>
 
       {/* Button */}
@@ -46,50 +46,71 @@ const FloatingWhatsApp = () => {
   );
 };
 
-const navItems: NavItem[] = [
-  { label: 'Home', path: '/' },
-  { 
-    label: 'About', 
-    path: '/about',
-    dropdown: [
-      { label: 'Overview', path: '/about#overview' },
-      { label: 'Mission', path: '/about#mission' },
-      { label: 'Vision', path: '/about#vision' },
-      { label: 'Services', path: '/about#services' },
-      { label: 'Values & Philosophy', path: '/about#values' },
-    ]
-  },
-  { label: 'Market Intel Design', path: '/market-intel' },
-  { label: 'Sustainability', path: '/sustainability' },
-  { label: 'Ethical Sourcing', path: '/ethical-sourcing' },
-  { label: 'Manufacturing Excellence', path: '/manufacturing' },
-  { 
-    label: 'Products', 
-    path: '/products',
-    dropdown: [
-      { label: 'Knit', path: '/products#knit' },
-      { label: 'Woven', path: '/products#woven' },
-      { label: 'Nightwear', path: '/products#nightwear' },
-      { label: 'Denim', path: '/products#denim' },
-      { label: 'Outer Wear', path: '/products#outerwear' },
-      { label: 'Lingerie', path: '/products#lingerie' },
-      { label: 'Activewear', path: '/products#activewear' },
-      { label: 'Home Textile', path: '/products#hometextile' },
-      { label: 'Sweater', path: '/products#sweater' },
-      { label: 'Uniform', path: '/products#uniform' },
-      { label: 'Disney', path: '/products#disney' },
-      { label: 'Jersey', path: '/products#jersey' },
-    ]
-  },
-  { label: 'Contact', path: '/#footer' }, // Added for better mobile navigation flow
-];
-
 const Navbar = () => {
+  const { t, language, setLanguage } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<{[key: string]: boolean}>({});
+  const [langDropdownOpen, setLangDropdownOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+
+  // Language options
+  const languages: { code: Language; label: string; flag: string }[] = [
+    { code: 'en', label: 'English', flag: 'gb' },
+    { code: 'ar', label: 'العربية', flag: 'sa' },
+    { code: 'zh', label: '中文', flag: 'cn' },
+    { code: 'nl', label: 'Nederlands', flag: 'nl' },
+    { code: 'fr', label: 'Français', flag: 'fr' },
+    { code: 'de', label: 'Deutsch', flag: 'de' },
+    { code: 'es', label: 'Español', flag: 'es' },
+  ];
+
+  const currentLang = languages.find(l => l.code === language) || languages[0];
+
+  const changeLanguage = (lang: Language) => {
+    setLanguage(lang);
+    setLangDropdownOpen(false);
+  };
+
+  const navItems: NavItem[] = [
+    { label: t('home'), path: '/' },
+    { 
+      label: t('about'), 
+      path: '/about',
+      dropdown: [
+        { label: t('overview'), path: '/about#overview' },
+        { label: t('mission'), path: '/about#mission' },
+        { label: t('vision'), path: '/about#vision' },
+        { label: t('services'), path: '/about#services' },
+        { label: t('values'), path: '/about#values' },
+      ]
+    },
+    { label: t('marketIntel'), path: '/market-intel' },
+    { label: t('sustainability'), path: '/sustainability' },
+    { label: t('ethical'), path: '/ethical-sourcing' },
+    { label: t('manufacturing'), path: '/manufacturing' },
+    { 
+      label: t('products'), 
+      path: '/products',
+      dropdown: [
+        { label: t('knit'), path: '/products#knit' },
+        { label: t('woven'), path: '/products#woven' },
+        { label: t('nightwear'), path: '/products#nightwear' },
+        { label: t('denim'), path: '/products#denim' },
+        { label: t('outerwear'), path: '/products#outerwear' },
+        { label: t('lingerie'), path: '/products#lingerie' },
+        { label: t('activewear'), path: '/products#activewear' },
+        { label: t('hometextile'), path: '/products#hometextile' },
+        { label: t('sweater'), path: '/products#sweater' },
+        { label: t('uniform'), path: '/products#uniform' },
+        { label: t('disney'), path: '/products#disney' },
+        { label: t('jersey'), path: '/products#jersey' },
+        { label: t('jute'), path: '/products#jute' },
+      ]
+    },
+    { label: t('contact'), path: '/#footer' },
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -100,6 +121,7 @@ const Navbar = () => {
   // Close mobile menu when route changes
   useEffect(() => {
     setIsOpen(false);
+    setLangDropdownOpen(false);
   }, [location]);
 
   const handleNavClick = (path: string) => {
@@ -141,7 +163,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-4 xl:space-x-6">
             {navItems.map((item) => (
               <div key={item.label} className="relative group">
                 <button 
@@ -173,10 +195,84 @@ const Navbar = () => {
                 )}
               </div>
             ))}
+
+            {/* Language Switcher Desktop */}
+            <div className="relative ml-4 rtl:mr-4 z-50 language-switcher">
+               <button 
+                  onClick={() => setLangDropdownOpen(!langDropdownOpen)}
+                  className={`flex items-center gap-2 ${textColorClass} hover:text-brand-green transition-all px-3 py-1.5 border border-white/20 hover:border-brand-green rounded-full bg-black/10 backdrop-blur-sm shadow-sm`}
+               >
+                  <img 
+                    src={`https://flagcdn.com/w40/${currentLang.flag}.png`} 
+                    alt={currentLang.label}
+                    className="w-5 h-3.5 object-cover rounded-[2px] shadow-sm"
+                  />
+                  <span className="uppercase text-xs font-bold tracking-wide">{currentLang.code}</span>
+                  <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${langDropdownOpen ? 'rotate-180' : ''}`} />
+               </button>
+
+               {langDropdownOpen && (
+                 <div className="absolute right-0 rtl:left-0 mt-2 w-48 bg-white rounded-lg shadow-xl py-2 z-50 border border-gray-100 animate-fade-in-up ring-1 ring-black/5 overflow-hidden">
+                    <div className="px-4 py-2 text-xs font-bold text-gray-400 uppercase tracking-wider border-b border-gray-50 mb-1">
+                        Select Language
+                    </div>
+                    {languages.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => changeLanguage(lang.code)}
+                        className={`w-full text-left rtl:text-right px-4 py-2.5 text-sm hover:bg-gray-50 flex items-center gap-3 transition-colors ${language === lang.code ? 'bg-blue-50 text-brand-blue' : 'text-gray-700'}`}
+                      >
+                        <img 
+                          src={`https://flagcdn.com/w40/${lang.flag}.png`}
+                          alt={lang.label}
+                          className="w-6 h-4 object-cover rounded-[2px] shadow-sm"
+                        />
+                        <span className={`flex-1 ${language === lang.code ? 'font-bold' : 'font-medium'}`}>{lang.label}</span>
+                        {language === lang.code && <div className="w-1.5 h-1.5 rounded-full bg-brand-green"></div>}
+                      </button>
+                    ))}
+                 </div>
+               )}
+            </div>
           </div>
 
           {/* Mobile menu button */}
-          <div className="flex lg:hidden">
+          <div className="flex lg:hidden items-center gap-4">
+            {/* Language Switcher Mobile */}
+            <div className="relative language-switcher">
+               <button 
+                  onClick={() => setLangDropdownOpen(!langDropdownOpen)}
+                  className={`flex items-center gap-1.5 ${mobileMenuButtonClass} px-2 py-1 rounded-full border border-gray-300/50`}
+               >
+                  <img 
+                    src={`https://flagcdn.com/w40/${currentLang.flag}.png`} 
+                    alt={currentLang.label}
+                    className="w-4 h-3 object-cover rounded-[1px]"
+                  />
+                  <span className="uppercase text-xs font-bold">{currentLang.code}</span>
+                  <ChevronDown className="w-3 h-3" />
+               </button>
+
+               {langDropdownOpen && (
+                 <div className="absolute top-10 right-0 rtl:left-0 bg-white shadow-xl rounded-lg border border-gray-100 py-2 z-50 w-44 animate-fade-in-up">
+                    {languages.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => changeLanguage(lang.code)}
+                        className={`w-full text-left rtl:text-right px-4 py-2 text-sm hover:bg-gray-50 flex items-center gap-3 ${language === lang.code ? 'text-brand-green font-bold bg-green-50' : 'text-gray-700'}`}
+                      >
+                        <img 
+                          src={`https://flagcdn.com/w40/${lang.flag}.png`}
+                          alt={lang.label}
+                          className="w-5 h-3.5 object-cover rounded-[1px]"
+                        />
+                        <span>{lang.label}</span>
+                      </button>
+                    ))}
+                 </div>
+               )}
+            </div>
+
             <button
               onClick={() => setIsOpen(!isOpen)}
               className={`${mobileMenuButtonClass} hover:text-brand-green p-2 transition-colors`}
@@ -188,10 +284,6 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      {/* 
-        Fixed height calculation to prevent content clipping. 
-        calc(100vh - 80px) accounts for the navbar height roughly.
-      */}
       {isOpen && (
         <div className="lg:hidden bg-[#eaf2ff] border-t border-gray-200 absolute left-0 right-0 shadow-2xl animate-fade-in-up">
           <div className="px-2 pt-2 pb-6 space-y-1 sm:px-3 max-h-[85vh] overflow-y-auto">
@@ -217,10 +309,6 @@ const Navbar = () => {
                     )}
                 </div>
                 
-                {/* 
-                   Increased max-height to 1200px to accommodate long lists like Products.
-                   Added smooth transition for better UX.
-                */}
                 {item.dropdown && (
                   <div 
                     className={`pl-4 bg-white/40 overflow-hidden transition-all duration-500 ease-in-out ${
@@ -248,6 +336,7 @@ const Navbar = () => {
 };
 
 const Footer = () => {
+  const { t } = useLanguage();
   const [email, setEmail] = useState('');
 
   const handleSubscribe = (e: React.FormEvent) => {
@@ -273,7 +362,7 @@ const Footer = () => {
                 />
              </Link>
              <p className="text-gray-600 text-sm leading-relaxed text-justify font-light">
-               We believe that fashion is not just about clothing, it's an ever evolving statement, an expression of Identity. Culture context of time and place, perception, aspiration, creativity and innovation.
+               {t('footer_brand_desc')}
              </p>
              <div className="flex gap-4 pt-2">
                 <a href="https://www.facebook.com/profile.php?id=61587356734292" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-brand-navy hover:bg-[#1877F2] hover:text-white transition-all shadow-sm border border-gray-100 group">
@@ -288,18 +377,18 @@ const Footer = () => {
           {/* 2. Quick Links */}
           <div className="lg:pl-8">
             <h3 className="font-bold text-lg mb-6 text-brand-navy uppercase tracking-wide relative inline-block">
-              Quick Links
+              {t('quickLinks')}
               <span className="absolute -bottom-2 left-0 w-12 h-1 bg-brand-green rounded-full"></span>
             </h3>
             <ul className="space-y-3 text-sm text-gray-600 font-medium">
                {[
-                 { label: 'Home', path: '/' },
-                 { label: 'About Us', path: '/about' },
-                 { label: 'Services', path: '/about#services' },
-                 { label: 'Ethical Sourcing', path: '/ethical-sourcing' },
-                 { label: 'Manufacturing', path: '/manufacturing' },
-                 { label: 'Products', path: '/products' },
-                 { label: 'Sustainability', path: '/sustainability' }
+                 { label: t('home'), path: '/' },
+                 { label: t('about'), path: '/about' },
+                 { label: t('services'), path: '/about#services' },
+                 { label: t('ethical'), path: '/ethical-sourcing' },
+                 { label: t('manufacturing'), path: '/manufacturing' },
+                 { label: t('products'), path: '/products' },
+                 { label: t('sustainability'), path: '/sustainability' }
                ].map((link) => (
                  <li key={link.label}>
                    <Link to={link.path} className="hover:text-brand-green hover:pl-2 transition-all duration-300 block">
@@ -313,21 +402,21 @@ const Footer = () => {
           {/* 3. Contact Info */}
           <div>
             <h3 className="font-bold text-lg mb-6 text-brand-navy uppercase tracking-wide relative inline-block">
-              Contact Us
+              {t('contactUs')}
               <span className="absolute -bottom-2 left-0 w-12 h-1 bg-brand-green rounded-full"></span>
             </h3>
             <div className="space-y-6 text-sm text-gray-600">
                <div>
-                 <p className="font-bold text-brand-navy mb-2 text-base">Head Quarter</p>
+                 <p className="font-bold text-brand-navy mb-2 text-base">{t('headQuarter')}</p>
                  <a 
                    href="https://maps.app.goo.gl/cpazdQ4ryKrFuKks8" 
                    target="_blank" 
                    rel="noopener noreferrer"
                    className="font-light leading-relaxed hover:text-brand-green transition-colors block mb-4"
                  >
-                   <p>36, Gareeb-E-Newaz Avenue,</p>
-                   <p>Level-3 (C2), Sector-13,</p>
-                   <p>Uttara, Dhaka-1230, Bangladesh.</p>
+                   <p>{t('address_line_1')}</p>
+                   <p>{t('address_line_2')}</p>
+                   <p>{t('address_line_3')}</p>
                  </a>
 
                  {/* Map Iframe */}
@@ -352,7 +441,7 @@ const Footer = () => {
                  </a>
                </div>
                <div>
-                 <p className="font-bold text-brand-navy mb-2 text-base">Get in Touch</p>
+                 <p className="font-bold text-brand-navy mb-2 text-base">{t('getInTouch')}</p>
                  <a href="mailto:ceo@apparelbd.com" className="text-brand-blue hover:text-brand-green transition-colors font-medium">ceo@apparelbd.com</a>
                </div>
             </div>
@@ -361,23 +450,23 @@ const Footer = () => {
           {/* 4. Newsletter */}
           <div>
             <h3 className="font-bold text-lg mb-6 text-brand-navy uppercase tracking-wide relative inline-block">
-              Newsletter
+              {t('newsletter')}
               <span className="absolute -bottom-2 left-0 w-12 h-1 bg-brand-green rounded-full"></span>
             </h3>
             <p className="text-sm text-gray-600 mb-6 font-light leading-relaxed">
-              Subscribe to our newsletter for the latest updates and sourcing trends.
+              {t('newsletter_desc')}
             </p>
             <form className="space-y-3" onSubmit={handleSubscribe}>
               <input 
                 type="email" 
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="Your email address" 
+                placeholder={t('newsletter_placeholder')} 
                 required
                 className="w-full px-4 py-3 text-sm bg-white border border-gray-200 rounded-sm focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all"
               />
               <button className="w-full px-4 py-3 text-sm font-bold text-white bg-brand-navy hover:bg-brand-green rounded-sm transition-colors uppercase tracking-wider shadow-md">
-                Subscribe Now
+                {t('subscribe')}
               </button>
             </form>
           </div>
@@ -386,8 +475,8 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="border-t border-gray-300/50 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 font-medium">
-           <p className="mb-2 md:mb-0">Copyright © {new Date().getFullYear()} ApparelBD | All Rights Reserved.</p>
-           <p className="opacity-75">Designed & Developed by Arts of Tech</p>
+           <p className="mb-2 md:mb-0">Copyright © {new Date().getFullYear()} ApparelBD | {t('copyright')}</p>
+           <p className="opacity-75">{t('designed_by')}</p>
         </div>
       </div>
     </footer>

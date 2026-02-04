@@ -1,8 +1,8 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { Target, Eye, Users, Lightbulb, ShieldCheck, Heart, Leaf, Globe, CheckCircle, TrendingUp, Handshake, DollarSign, Award, Truck, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { ASSETS } from '../config/assets';
+import { useLanguage } from '../contexts/LanguageContext';
 
 // Styles for the Flip Card effect
 const flipCardStyles = `
@@ -90,9 +90,10 @@ interface ServiceFlipCardProps {
   heading?: string;
   points: string[];
   link: string;
+  exploreMoreText: string;
 }
 
-const ServiceFlipCard: React.FC<ServiceFlipCardProps> = ({ title, subtitle, frontImage, backImage, heading, points, link }) => (
+const ServiceFlipCard: React.FC<ServiceFlipCardProps> = ({ title, subtitle, frontImage, backImage, heading, points, link, exploreMoreText }) => (
   <div className="flip-card h-[550px] w-full group cursor-pointer">
     <div className="flip-card-inner rounded-sm shadow-xl">
       
@@ -125,7 +126,7 @@ const ServiceFlipCard: React.FC<ServiceFlipCardProps> = ({ title, subtitle, fron
                 </ul>
                 <div className="mt-2 mb-4">
                     <Link to={link} className="group/btn inline-flex items-center gap-2 bg-[#88c057] border-2 border-[#88c057] text-white px-6 py-2 text-xs md:text-sm font-medium uppercase tracking-widest hover:bg-transparent hover:text-[#88c057] transition-all duration-300 rounded-sm shadow-lg">
-                        Explore More <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
+                        {exploreMoreText} <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
                     </Link>
                 </div>
             </div>
@@ -137,141 +138,152 @@ const ServiceFlipCard: React.FC<ServiceFlipCardProps> = ({ title, subtitle, fron
 );
 
 const About = () => {
+  const { t } = useLanguage();
+
   // Service Data Definition - Using local assets from ASSETS.images.about.services
   const services: ServiceFlipCardProps[] = [
     {
-      title: "Market Intel Design Support",
+      title: t('svc_mi_title'),
       frontImage: ASSETS.images.about.services.marketIntel.front,
       backImage: ASSETS.images.about.services.marketIntel.back, 
       link: "/market-intel",
-      heading: "Crafting the Future of Fashion - Redefining Style in Motion",
+      heading: t('svc_mi_heading'),
+      exploreMoreText: t('explore_more'),
       points: [
-        "Global Trend Forecasting & Analysis.",
-        "Seasonal Color & Silhouette Insights.",
-        "Consumer Behavior Analysis.",
-        "Competitive Benchmarking.",
-        "Design Studio support in London & Dhaka.",
-        "Co-creation from concept to product."
+        t('svc_mi_p1'),
+        t('svc_mi_p2'),
+        t('svc_mi_p3'),
+        t('svc_mi_p4'),
+        t('svc_mi_p5'),
+        t('svc_mi_p6'),
       ]
     },
     {
-      title: "Research& Development (R&D)",
-      subtitle: "Innovation , Product Development",
+      title: t('svc_rd_title'),
+      subtitle: t('svc_rd_sub'),
       frontImage: ASSETS.images.about.services.rd.front,
       backImage: ASSETS.images.about.services.rd.back,
       link: "/market-intel",
-      heading: "To Stay Ahead in the ever evolving Fashion Industry",
+      heading: t('svc_rd_heading'),
+      exploreMoreText: t('explore_more'),
       points: [
-        "Empowering fashion forward thinking.",
-        "Cutting Edge R&D service.",
-        "Fabric Innovation and new fabric design.",
-        "Product newness on both fabric and design.",
-        "Embellishment new technique.",
-        "Wash, Garment Dye & Laundry newness.",
-        "Sample Development & Quick support.",
-        "Fitting and Garment technical support."
+        t('svc_rd_p1'),
+        t('svc_rd_p2'),
+        t('svc_rd_p3'),
+        t('svc_rd_p4'),
+        t('svc_rd_p5'),
+        t('svc_rd_p6'),
+        t('svc_rd_p7'),
+        t('svc_rd_p8'),
       ]
     },
     {
-      title: "Ethical Sourcing",
-      subtitle: "Garment, Fabric, Yarn, Trims and Accessories",
+      title: t('svc_eth_title'),
+      subtitle: t('svc_eth_sub'),
       frontImage: ASSETS.images.about.services.ethical.front,
       backImage: ASSETS.images.about.services.ethical.back,
       link: "/ethical-sourcing",
-      heading: "Ensuring Ethical and Responsive Sourcing",
+      heading: t('svc_eth_heading'),
+      exploreMoreText: t('explore_more'),
       points: [
-        "Prioritize Transparency, Fair & Ethical Labour Practice.",
-        "Encourage for Organic, Eco-friendly & Recycled material.",
-        "Collaboration with wide ranges manufacturing partners.",
-        "Fostering Sustainability, CSR, Green initiatives."
+        t('svc_eth_p1'),
+        t('svc_eth_p2'),
+        t('svc_eth_p3'),
+        t('svc_eth_p4'),
       ]
     },
     {
-      title: "Manufacturing Excellence",
-      subtitle: "Fabric Manufacturing, Production Control, Quality Assurance",
+      title: t('svc_mfg_title'),
+      subtitle: t('svc_mfg_sub'),
       frontImage: ASSETS.images.about.services.manufacturing.front,
       backImage: ASSETS.images.about.services.manufacturing.back,
       link: "/manufacturing",
-      heading: "Overseeing Every Stage of Manufacturing process and control.",
+      heading: t('svc_mfg_heading'),
+      exploreMoreText: t('explore_more'),
       points: [
-        "Overseeing all Stage of Manufacturing process.",
-        "Guiding in operation, Manufacturing process.",
-        "Collaboration for assuring Quality Standard.",
-        "Rigorous Laboratory Testing & onsite inspection.",
-        "Top-Notch Quality in Manufacturing Process.",
-        "Craftsmanship, Quality & aesthetic attributes.",
-        "Augmented support in Streamlined supply Chain."
+        t('svc_mfg_p1'),
+        t('svc_mfg_p2'),
+        t('svc_mfg_p3'),
+        t('svc_mfg_p4'),
+        t('svc_mfg_p5'),
+        t('svc_mfg_p6'),
+        t('svc_mfg_p7'),
       ]
     },
     {
-      title: "Sustainability",
-      subtitle: "Corporate Social Responsibility",
+      title: t('svc_sus_title'),
+      subtitle: t('svc_sus_sub'),
       frontImage: ASSETS.images.about.services.sustainability.front,
       backImage: ASSETS.images.about.services.sustainability.back,
       link: "/sustainability",
-      heading: "Sustainability is core of our growth plan",
+      heading: t('svc_sus_heading'),
+      exploreMoreText: t('explore_more'),
       points: [
-        "Committed to Source product ethically.",
-        "Fostering Environmental Responsibility & Accountability.",
-        "Prioritizing Eco-friendly, Sustainable & Recycled materials.",
-        "Partnering for arranging different CSR programs.",
-        "Collaboration for Compliance, Fair Labor, and Safety."
+        t('svc_sus_p1'),
+        t('svc_sus_p2'),
+        t('svc_sus_p3'),
+        t('svc_sus_p4'),
+        t('svc_sus_p5'),
       ]
     },
     {
-      title: "Disney and Popular License Character Products",
+      title: t('svc_disney_title'),
       frontImage: ASSETS.images.about.services.disney.front,
       backImage: ASSETS.images.about.services.disney.back,
       link: "/products#disney",
-      heading: "Walt Disney and popular Iconic Character Products to your customer Wardrobe !",
+      heading: t('svc_disney_heading'),
+      exploreMoreText: t('explore_more'),
       points: [
-        "Collaboration with Disney & Character products manufacturer.",
-        "Bringing the Magic of Timeless iconic Character Products."
+        t('svc_disney_p1'),
+        t('svc_disney_p2'),
       ]
     },
     {
-      title: "Diversified Wide Ranging Product Categories",
-      subtitle: "Knit, Denim, Woven, Sweater, etc.",
+      title: t('svc_div_title'),
+      subtitle: t('svc_div_sub'),
       frontImage: ASSETS.images.about.services.diversified.front,
       backImage: ASSETS.images.about.services.diversified.back,
       link: "/products",
-      heading: "Committed for diverse and extensive latest trend and timeless classic arrays of product categories",
+      heading: t('svc_div_heading'),
+      exploreMoreText: t('explore_more'),
       points: [
-        "Partnering to meet your Sourcing Requirement.",
-        "Providing a wide-ranging Clothing Categories.",
-        "Casual to Formal Attire, Athleisure to Accessories.",
-        "Offering a wide selection to suit Every Need.",
-        "Diverse assortment of Tastes and References."
+        t('svc_div_p1'),
+        t('svc_div_p2'),
+        t('svc_div_p3'),
+        t('svc_div_p4'),
+        t('svc_div_p5'),
       ]
     },
     {
-      title: "Competitive Price",
-      subtitle: "Competitive Lead time, Flexibility in Quantity",
+      title: t('svc_price_title'),
+      subtitle: t('svc_price_sub'),
       frontImage: ASSETS.images.about.services.competitive.front,
       backImage: ASSETS.images.about.services.competitive.back,
       link: "/manufacturing",
-      heading: "Dedicate to Competitive Price offering maintaining Top Notch Quality",
+      heading: t('svc_price_heading'),
+      exploreMoreText: t('explore_more'),
       points: [
-        "Committed to offering premium clothing.",
-        "Affordable price keeping you ahead in the market.",
-        "Competitive Lead Times and Prices with Top-Notch Quality.",
-        "Partnerships & Supply Chain efficiency ensure competitive lead times.",
-        "We manage flexible minimum quantities."
+        t('svc_price_p1'),
+        t('svc_price_p2'),
+        t('svc_price_p3'),
+        t('svc_price_p4'),
+        t('svc_price_p5'),
       ]
     },
     {
-      title: "Jute Crafts",
+      title: t('svc_jute_title'),
       frontImage: ASSETS.images.about.services.jute.front,
       backImage: ASSETS.images.about.services.jute.back,
       link: "/products#jute",
-      heading: "Jute Creations, Where Art Meets Sustainability Eco-Chic Craftsmanship for a Better Tomorrow",
+      heading: t('svc_jute_heading'),
+      exploreMoreText: t('explore_more'),
       points: [
-        "Promoting jute crafts as sustainable and biodegradable.",
-        "Offering personalized customized jute items.",
-        "Sustainable Style, Timeless Craft.",
-        "Eco-Friendly Elegance in Every Weave.",
-        "Handmade Beauty, Naturally.",
-        "Crafted for the Earth, Designed for You."
+        t('svc_jute_p1'),
+        t('svc_jute_p2'),
+        t('svc_jute_p3'),
+        t('svc_jute_p4'),
+        t('svc_jute_p5'),
+        t('svc_jute_p6'),
       ]
     }
   ];
@@ -295,8 +307,8 @@ const About = () => {
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="absolute bottom-0 left-0 w-full p-8 md:p-16 lg:px-32 lg:py-24">
           <div className="max-w-[95%] mx-auto w-full animate-fade-in-up">
-            <h1 className="text-5xl md:text-7xl font-serif font-bold text-white mb-2 tracking-wide uppercase">ABOUT US</h1>
-            <p className="text-xl md:text-2xl text-white/90 font-medium tracking-wide font-sans">Who we are</p>
+            <h1 className="text-5xl md:text-7xl font-serif font-bold text-white mb-2 tracking-wide uppercase">{t('about_hero_title')}</h1>
+            <p className="text-xl md:text-2xl text-white/90 font-medium tracking-wide font-sans">{t('about_hero_sub')}</p>
           </div>
         </div>
       </div>
@@ -306,17 +318,17 @@ const About = () => {
         <div className="max-w-[95%] mx-auto px-4 sm:px-6 lg:px-8">
           <FadeInSection className="mb-12">
             <h2 className="text-2xl md:text-4xl font-serif font-bold text-brand-navy mb-4">
-              Welcome to ApparelBD, Where Fashion Meets Integrity!!
+              {t('about_welcome')}
             </h2>
             <h3 className="text-xl md:text-2xl font-bold text-black mb-8">
-              Reliable Strategic, Sustainable and Ethical Global Sourcing Partner!!
+              {t('about_intro_title')}
             </h3>
             <div className="space-y-6 text-gray-700 text-lg md:text-xl leading-relaxed text-justify font-light">
               <p>
-                We believe that Fashion is not just about Clothing, it's an ever evolving statement, an expression of Identity, Culture context of time and place, perception, aspiration, creativity and innovation, value and belief of individual and community. Founded in 2024, we blend creativity, sustainability, and manufacturing excellence to deliver innovative global sourcing solutions.
+                {t('about_intro_p1')}
               </p>
               <p>
-                We drive fashion evolution through market intelligence, trend analysis, innovative design, and versatile product categories. Our commitment spans ethical sourcing, sustainability, social responsibility, and international compliance. With trusted manufacturing partners, quality assurance, licensed character production, and end-to-end logistics, we deliver superior service and exceptional customer value.
+                {t('about_intro_p2')}
               </p>
             </div>
           </FadeInSection>
@@ -333,7 +345,7 @@ const About = () => {
           {/* Green Banner */}
           <FadeInSection className="bg-[#88c057] py-8 px-4 text-center">
             <p className="text-white font-serif font-bold italic text-xl md:text-3xl leading-relaxed">
-              "Elevating Sourcing, Strengthening Partnership- Together We Achieve More!!"
+              {t('about_banner_green')}
             </p>
           </FadeInSection>
         </div>
@@ -348,13 +360,13 @@ const About = () => {
                <img src={ASSETS.images.about.expertise1} alt="Office Interior" className="w-full h-full object-cover" />
             </div>
             <div>
-              <h2 className="text-3xl font-serif font-bold text-brand-navy mb-8 uppercase">OUR EXPERTISE-</h2>
+              <h2 className="text-3xl font-serif font-bold text-brand-navy mb-8 uppercase">{t('about_expertise')}</h2>
               <ul className="space-y-4">
                 {[
-                  'Market Intelligence, Design Support.',
-                  'R&D & Product Innovation.',
-                  'Ethical & Responsible Sourcing,',
-                  'Sustainability & CSR'
+                  t('about_exp_1'),
+                  t('about_exp_2'),
+                  t('about_exp_3'),
+                  t('about_exp_4'),
                 ].map((item, i) => (
                   <li key={i} className="flex items-start">
                     <span className="mr-3 text-black text-2xl">•</span>
@@ -373,10 +385,10 @@ const About = () => {
             <div className="md:order-2">
                <ul className="space-y-4">
                 {[
-                  'Quality Assurance & Manufacturing Excellence',
-                  'Diversified Product Management',
-                  'Licensed Character Product Sourcing',
-                  'Leadership & Industry Expertise'
+                  t('about_exp_5'),
+                  t('about_exp_6'),
+                  t('about_exp_7'),
+                  t('about_exp_8'),
                 ].map((item, i) => (
                   <li key={i} className="flex items-start">
                     <span className="mr-3 text-black text-2xl">•</span>
@@ -394,28 +406,28 @@ const About = () => {
         <div className="max-w-[95%] mx-auto px-4 sm:px-6 lg:px-8">
           <FadeInSection className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-serif font-bold text-brand-navy mb-8 uppercase">DESIGN STUDIO:</h2>
+              <h2 className="text-3xl font-serif font-bold text-brand-navy mb-8 uppercase">{t('about_ds_title')}</h2>
               
               <div className="mb-8">
-                <h3 className="text-xl font-bold text-black mb-2">Design Studio in London, UK</h3>
+                <h3 className="text-xl font-bold text-black mb-2">{t('about_ds_london')}</h3>
                 <p className="text-gray-700 text-lg leading-relaxed font-light">
-                  ApparelBD London Studio creates elegant, trend-driven collections guided by in-house expert British designers.
+                  {t('about_ds_london_desc')}
                 </p>
               </div>
 
               <div className="mb-8">
-                <h3 className="text-xl font-bold text-black mb-2">Design Studio in Dhaka, Bangladesh</h3>
+                <h3 className="text-xl font-bold text-black mb-2">{t('about_ds_dhaka')}</h3>
                 <p className="text-gray-700 text-lg leading-relaxed font-light">
-                  Our Dhaka studio fuses local craftsmanship with global trends, delivering innovative, high-quality designs.
+                  {t('about_ds_dhaka_desc')}
                 </p>
               </div>
 
               <div className="mb-8">
-                <h3 className="text-xl font-bold text-black mb-2">We Focus</h3>
-                <p className="font-bold text-gray-800 text-base mb-1">Design & Collaboration:</p>
-                <p className="text-gray-700 text-lg mb-2 font-light">Sustainable, trend-driven designs powered by expertise Designers based in London and Dhaka Studio.</p>
-                <p className="font-bold text-gray-800 text-base mb-1">Shaping the Future:</p>
-                <p className="text-gray-700 text-lg font-light">Pushing fashion boundaries for change and sustainability.</p>
+                <h3 className="text-xl font-bold text-black mb-2">{t('about_ds_focus')}</h3>
+                <p className="font-bold text-gray-800 text-base mb-1">{t('about_ds_focus_1_label')}</p>
+                <p className="text-gray-700 text-lg mb-2 font-light">{t('about_ds_focus_1_text')}</p>
+                <p className="font-bold text-gray-800 text-base mb-1">{t('about_ds_focus_2_label')}</p>
+                <p className="text-gray-700 text-lg font-light">{t('about_ds_focus_2_text')}</p>
               </div>
             </div>
 
@@ -429,7 +441,7 @@ const About = () => {
       <div className="bg-[#88c057] py-8 px-4 text-center">
         <FadeInSection>
             <p className="text-white font-serif font-bold italic text-xl md:text-3xl leading-relaxed">
-            "Elevating Sourcing, Strengthening Partnership- Together We Achieve More!!"
+            {t('about_banner_green')}
             </p>
         </FadeInSection>
       </div>
@@ -438,27 +450,27 @@ const About = () => {
       <section className="py-20 bg-gray-100">
         <div className="max-w-[95%] mx-auto px-4 sm:px-6 lg:px-8">
            <FadeInSection>
-               <h2 className="text-4xl font-serif font-bold text-brand-navy mb-2 uppercase">OUR PEOPLE:</h2>
-               <p className="text-gray-800 font-bold italic mb-6 text-lg">Our People, Our Strength: Expertise that Powers Us..!!</p>
+               <h2 className="text-4xl font-serif font-bold text-brand-navy mb-2 uppercase">{t('about_people')}</h2>
+               <p className="text-gray-800 font-bold italic mb-6 text-lg">{t('about_people_sub')}</p>
                
                <div className="mb-12 text-justify">
                  <p className="text-gray-700 text-lg md:text-xl leading-relaxed font-light mb-4">
-                    At ApparelBD, purposeful fashion is driven by passionate people. Our greatest strength is our diverse, globally connected team—innovators who power every stage of the fashion lifecycle. From trend-forward design and ethical sourcing to precision product development, rigorous quality assurance, and seamless logistics, our experts lead with creativity, integrity, and a commitment to sustainability.
+                   {t('about_people_desc')}
                  </p>
                  <p className="text-gray-700 text-lg md:text-xl leading-relaxed font-light">
-                    Collaboration is our foundation. Together, we deliver solutions that blend artistry, ethics, and excellence—ensuring every piece we create carries purpose.
+                   {t('about_people_desc_2')}
                  </p>
                </div>
            </FadeInSection>
 
            <FadeInSection className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                 <h3 className="text-2xl font-bold text-brand-navy mb-4">Global Presence, Local Insight</h3>
+                 <h3 className="text-2xl font-bold text-brand-navy mb-4">{t('about_global_pres_title')}</h3>
                  <p className="text-gray-700 text-lg leading-relaxed mb-4 text-justify font-light">
-                    Headquartered in Dhaka, with design studios in Dhaka and London, and sourcing offices in the UK, Germany, Canada, and New Zealand, we fuse global trends with regional expertise to create fashion that resonates locally and meets international standards.
+                   {t('about_global_pres_desc')}
                  </p>
                  <p className="text-gray-700 text-lg leading-relaxed text-justify font-light">
-                    Global fashion trends are translated into innovative, high-quality products with keen attention to detail. Supported by strong manufacturing and sourcing networks, fashion essentials and tailored solutions are delivered to meet evolving consumer needs.
+                   {t('about_global_pres_desc_2')}
                  </p>
               </div>
               <div className="h-[400px] rounded-sm overflow-hidden shadow-2xl">
@@ -474,14 +486,14 @@ const About = () => {
               <div>
                   <ul className="space-y-6">
                       {[
-                          { title: 'Expert Designers from UK and Bangladesh Studios', desc: 'Blending global aesthetics with local creativity.' },
-                          { title: 'Sourcing and Marketing Specialists', desc: 'Dedicated to ethical and sustainable procurement.' },
-                          { title: 'Product Development Experts', desc: 'Technical precision, trend-led vision.' },
-                          { title: 'Merchandising Professionals', desc: 'Ensure flawless production & delivery.' },
-                          { title: 'Garment & Fabric Technologists', desc: 'Bringing Precision, performance & innovation.' },
-                          { title: 'Quality Assurance Leaders', desc: 'Upholding the highest standards in every detail.' },
-                          { title: 'Compliance & Sustainability Professionals', desc: 'Driving ethical, future-ready fashion.' },
-                          { title: 'Shipping and Logistics Specialist', desc: 'Precision logistics, Flawless delivery.' }
+                          { title: t('role_designers'), desc: t('role_designers_desc') },
+                          { title: t('role_sourcing'), desc: t('role_sourcing_desc') },
+                          { title: t('role_product'), desc: t('role_product_desc') },
+                          { title: t('role_merch'), desc: t('role_merch_desc') },
+                          { title: t('role_garment'), desc: t('role_garment_desc') },
+                          { title: t('role_qa'), desc: t('role_qa_desc') },
+                          { title: t('role_compliance'), desc: t('role_compliance_desc') },
+                          { title: t('role_logistics'), desc: t('role_logistics_desc') }
                       ].map((role, i) => (
                           <li key={i}>
                               <p className="font-bold text-brand-navy text-lg">-{role.title}</p>
@@ -510,9 +522,9 @@ const About = () => {
                         <TrendingUp className="text-white w-8 h-8" />
                     </div>
                     <div>
-                        <h3 className="text-2xl font-bold text-brand-navy mb-2">Mission:</h3>
+                        <h3 className="text-2xl font-bold text-brand-navy mb-2">{t('about_mission')}</h3>
                         <p className="text-gray-700 leading-relaxed text-base md:text-lg font-light">
-                            Delivering innovative, ethical fashion sourcing with exceptional design, quality, and manufacturing—prioritizing trend riven design creation, sustainability, traceability, and lasting partnerships for mutual success and positive impact.
+                           {t('about_mission_desc')}
                         </p>
                     </div>
                 </FadeInSection>
@@ -525,9 +537,9 @@ const About = () => {
                         <Eye className="text-white w-8 h-8" />
                     </div>
                     <div>
-                        <h3 className="text-2xl font-bold text-brand-navy mb-2">Vision:</h3>
+                        <h3 className="text-2xl font-bold text-brand-navy mb-2">{t('about_vision')}</h3>
                         <p className="text-gray-700 leading-relaxed text-base md:text-lg font-light">
-                            ApparelBD aims to be a global leader in apparel sourcing, setting new standards in design innovation, customer support, and ethical sourcing, while promoting creativity, sustainability, and traceability to deliver lasting value.
+                           {t('about_vision_desc')}
                         </p>
                     </div>
                 </FadeInSection>
@@ -540,8 +552,8 @@ const About = () => {
       <section className="py-20 bg-white" id="services">
         <div className="max-w-[95%] mx-auto px-4 sm:px-6 lg:px-8">
            <FadeInSection className="text-center mb-16">
-               <h2 className="text-4xl md:text-5xl font-serif font-bold text-brand-navy mb-2">Services</h2>
-               <p className="text-gray-500 italic text-xl">What We do...</p>
+               <h2 className="text-4xl md:text-5xl font-serif font-bold text-brand-navy mb-2">{t('services')}</h2>
+               <p className="text-gray-500 italic text-xl">{t('about_services_sub')}</p>
            </FadeInSection>
 
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -558,54 +570,54 @@ const About = () => {
       <section id="values" className="py-20 bg-brand-navy scroll-mt-20">
         <div className="max-w-[95%] mx-auto px-4 sm:px-6 lg:px-8">
            <FadeInSection>
-               <h2 className="text-4xl font-serif font-bold text-white text-center mb-16">Values and Sourcing Philosophy</h2>
+               <h2 className="text-4xl font-serif font-bold text-white text-center mb-16">{t('about_values_title')}</h2>
            </FadeInSection>
            
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                <FadeInSection className="h-full"><ValueCard 
                   icon={<Users className="w-12 h-12 text-blue-500" />}
-                  title="Customer Centricity"
-                  description="Our customers are at the heart of everything we do. We listen to their needs and aim for satisfaction through proactive engagement and superior service."
+                  title={t('val_customer_title')}
+                  description={t('val_customer_desc')}
                /></FadeInSection>
                <FadeInSection className="h-full"><ValueCard 
                   icon={<ShieldCheck className="w-12 h-12 text-blue-500" />}
-                  title="Integrity and Ethics"
-                  description="We are committed to trust, integrity, and ethics in all interactions, maintaining high standards of honesty and promoting transparency."
+                  title={t('val_integrity_title')}
+                  description={t('val_integrity_desc')}
                /></FadeInSection>
                <FadeInSection className="h-full"><ValueCard 
                   icon={<Handshake className="w-12 h-12 text-yellow-500" />}
-                  title="Transparency, Accountability and Trust"
-                  description="We prioritize transparency, accountability, and trust to foster open communication and lasting partnerships based on mutual respect."
+                  title={t('val_transparency_title')}
+                  description={t('val_transparency_desc')}
                /></FadeInSection>
                <FadeInSection className="h-full"><ValueCard 
                   icon={<DollarSign className="w-12 h-12 text-red-500" />}
-                  title="Competitive Price and Flexibility"
-                  description="We deliver premium clothing at competitive prices without compromising quality, ensuring exceptional craftsmanship and durability through rigorous quality assurance."
+                  title={t('val_price_title')}
+                  description={t('val_price_desc')}
                /></FadeInSection>
                <FadeInSection className="h-full"><ValueCard 
                   icon={<Award className="w-12 h-12 text-blue-400" />}
-                  title="Quality"
-                  description="We believe that people make the difference. Our team is central to our success, showcasing exceptional abilities. We respect each individual, value their contributions."
+                  title={t('val_quality_title')}
+                  description={t('val_quality_desc')}
                /></FadeInSection>
                <FadeInSection className="h-full"><ValueCard 
                   icon={<ShieldCheck className="w-12 h-12 text-orange-500" />}
-                  title="Safety, Security and Working Environment"
-                  description="Safety and security are priorities, supported by strict protocols. We promote teamwork and prioritize ethical sourcing, worker well-being, and sustainability."
+                  title={t('val_safety_title')}
+                  description={t('val_safety_desc')}
                /></FadeInSection>
                <FadeInSection className="h-full"><ValueCard 
                   icon={<TrendingUp className="w-12 h-12 text-green-600" />}
-                  title="Striving for continuous improvement and excellence"
-                  description="We embrace a culture of dedication to continuous excellence and improvement, committed to surpassing expectations in all operations."
+                  title={t('val_improvement_title')}
+                  description={t('val_improvement_desc')}
                /></FadeInSection>
                <FadeInSection className="h-full"><ValueCard 
                   icon={<Lightbulb className="w-12 h-12 text-yellow-400" />}
-                  title="Innovation, Creativity and Market Intelligence"
-                  description="We focus on innovation in design and fabric, using market research to forecast trends and meet customer demands, setting new benchmarks in the fashion industry."
+                  title={t('val_innovation_title')}
+                  description={t('val_innovation_desc')}
                /></FadeInSection>
                <FadeInSection className="h-full"><ValueCard 
                   icon={<Leaf className="w-12 h-12 text-green-500" />}
-                  title="Social Responsibility"
-                  description="We prioritize social responsibility and sustainability through ethical labor practices, fair wages, community development, and sustainable sourcing."
+                  title={t('val_social_title')}
+                  description={t('val_social_desc')}
                /></FadeInSection>
            </div>
         </div>
@@ -619,10 +631,10 @@ const About = () => {
           <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-4">
                <FadeInSection>
                    <h2 className="text-white font-bold text-xl md:text-3xl max-w-4xl leading-relaxed mb-6">
-                      We are so keen and eagerly anticipating to partnering and collaborating with you to provide superior sourcing solutions and enhance our capabilities!!
+                      {t('about_collab_title')}
                    </h2>
                    <p className="text-white font-serif font-bold italic text-xl md:text-2xl">
-                      We are awaited to be partner with you, so Let's collaborate...!!!
+                      {t('about_collab_sub')}
                    </p>
                </FadeInSection>
           </div>

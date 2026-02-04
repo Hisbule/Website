@@ -1,8 +1,8 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import HeroVideo from '../components/HeroVideo';
 import { ASSETS } from '../config/assets';
 import { X, ZoomIn, ChevronRight, ChevronLeft } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 // ==========================================
 // Lightbox Modal Component
@@ -171,6 +171,7 @@ const ProductGallery: React.FC<ProductSectionProps> = ({ id, title, images, onIm
 // Main Products Page
 // ==========================================
 const Products = () => {
+  const { t } = useLanguage();
   // Modal State
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState('');
@@ -182,18 +183,18 @@ const Products = () => {
 
   // Use productPage assets
   const products = [
-    { id: 'knit', title: 'Knit', images: ASSETS.images.productPage.knit },
-    { id: 'woven', title: 'Woven', images: ASSETS.images.productPage.woven },
-    { id: 'nightwear', title: 'Nightwear and Loungewear', images: ASSETS.images.productPage.nightwear },
-    { id: 'denim', title: 'Denim', images: ASSETS.images.productPage.denim },
-    { id: 'outerwear', title: 'Outer Wear', images: ASSETS.images.productPage.outerwear },
-    { id: 'lingerie', title: 'Lingerie and Swimwear', images: ASSETS.images.productPage.lingerie },
-    { id: 'activewear', title: 'Activewear, Workwear, Sportswear', images: ASSETS.images.productPage.activewear },
-    { id: 'hometextile', title: 'Home Textile', images: ASSETS.images.productPage.hometextile },
-    { id: 'uniform', title: 'Uniform and Healthcare wear', images: ASSETS.images.productPage.uniform },
-    { id: 'sweater', title: 'Sweater', images: ASSETS.images.productPage.sweater },
-    { id: 'disney', title: 'Disney and License Character Products', images: ASSETS.images.productPage.license },
-    { id: 'jersey', title: 'Sports Jersey', images: ASSETS.images.productPage.jersey },
+    { id: 'knit', title: t('knit'), images: ASSETS.images.productPage.knit },
+    { id: 'woven', title: t('woven'), images: ASSETS.images.productPage.woven },
+    { id: 'nightwear', title: t('nightwear'), images: ASSETS.images.productPage.nightwear },
+    { id: 'denim', title: t('denim'), images: ASSETS.images.productPage.denim },
+    { id: 'outerwear', title: t('outerwear'), images: ASSETS.images.productPage.outerwear },
+    { id: 'lingerie', title: t('lingerie'), images: ASSETS.images.productPage.lingerie },
+    { id: 'activewear', title: t('activewear'), images: ASSETS.images.productPage.activewear },
+    { id: 'hometextile', title: t('hometextile'), images: ASSETS.images.productPage.hometextile },
+    { id: 'uniform', title: t('uniform'), images: ASSETS.images.productPage.uniform },
+    { id: 'sweater', title: t('sweater'), images: ASSETS.images.productPage.sweater },
+    { id: 'disney', title: t('disney'), images: ASSETS.images.productPage.license },
+    { id: 'jersey', title: t('jersey'), images: ASSETS.images.productPage.jersey },
   ];
 
   return (
@@ -207,17 +208,17 @@ const Products = () => {
 
       {/* Hero Video */}
       <HeroVideo 
-        title="Our Product Lines" 
-        subtitle="Diversified, High-Quality, and Wide-Ranging Product Categories"
+        title={t('prod_hero_title')} 
+        subtitle={t('prod_hero_subtitle')}
         videoUrl={ASSETS.videos.products}
       />
       
       <div className="bg-white min-h-screen">
         <div className="max-w-[95%] mx-auto px-4 py-16 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1e3a8a] mb-6 font-serif">Product Categories</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1e3a8a] mb-6 font-serif">{t('prod_cat_title')}</h2>
             <p className="text-gray-700 max-w-4xl mx-auto leading-relaxed text-lg md:text-xl font-light">
-                Discover our extensive range of high-quality apparel. Each category represents our commitment to excellence, innovation, and diverse fashion needs.
-                <br/><span className="text-sm text-gray-500 italic mt-2 block">(Drag the galleries left or right to explore)</span>
+                {t('prod_intro')}
+                <br/><span className="text-sm text-gray-500 italic mt-2 block">{t('prod_drag_hint')}</span>
             </p>
         </div>
 
@@ -233,9 +234,9 @@ const Products = () => {
 
         {/* Call to Action at bottom */}
          <section className="py-20 bg-gray-50 text-center">
-             <h2 className="text-2xl md:text-3xl font-bold text-brand-navy mb-6">Need a custom sourcing solution?</h2>
+             <h2 className="text-2xl md:text-3xl font-bold text-brand-navy mb-6">{t('prod_custom_sol')}</h2>
              <a href="mailto:ceo@apparelbd.com" className="inline-block bg-brand-green text-white px-10 py-4 text-sm font-bold uppercase tracking-widest hover:bg-brand-navy transition-all shadow-lg rounded-sm">
-                 Contact Us
+                 {t('contactUs')}
              </a>
          </section>
       </div>
