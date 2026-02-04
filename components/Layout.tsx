@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, ChevronDown, Facebook, Linkedin } from 'lucide-react';
@@ -80,6 +81,7 @@ const navItems: NavItem[] = [
       { label: 'Jersey', path: '/products#jersey' },
     ]
   },
+  { label: 'Contact', path: '/#footer' }, // Added for better mobile navigation flow
 ];
 
 const Navbar = () => {
@@ -95,11 +97,16 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
+
   const handleNavClick = (path: string) => {
     setIsOpen(false);
     if (path.includes('#')) {
       const [page, hash] = path.split('#');
-      if (location.pathname !== page) {
+      if (page && location.pathname !== page) {
         navigate(path);
       } else {
         const element = document.getElementById(hash);
@@ -148,7 +155,7 @@ const Navbar = () => {
                 {/* Dropdown */}
                 {item.dropdown && (
                   <div className="absolute left-0 mt-0 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left bg-white shadow-xl rounded-sm border-t-4 border-brand-green">
-                    <div className="py-1">
+                    <div className="py-1 max-h-[80vh] overflow-y-auto">
                       {item.dropdown.map((subItem) => (
                         <button
                           key={subItem.label}
@@ -181,15 +188,19 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
+      {/* 
+        Fixed height calculation to prevent content clipping. 
+        calc(100vh - 80px) accounts for the navbar height roughly.
+      */}
       {isOpen && (
-        <div className="lg:hidden bg-[#eaf2ff] border-t border-gray-200">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 h-screen overflow-y-auto pb-20">
+        <div className="lg:hidden bg-[#eaf2ff] border-t border-gray-200 absolute left-0 right-0 shadow-2xl animate-fade-in-up">
+          <div className="px-2 pt-2 pb-6 space-y-1 sm:px-3 max-h-[85vh] overflow-y-auto">
             {navItems.map((item) => (
-              <div key={item.label}>
-                <div className="flex items-center justify-between w-full hover:bg-white/50 rounded-md">
+              <div key={item.label} className="border-b border-gray-100 last:border-0">
+                <div className="flex items-center justify-between w-full hover:bg-white/50 rounded-md transition-colors">
                     <button
                       onClick={() => handleNavClick(item.path)}
-                      className="text-left px-3 py-2 text-base font-medium text-brand-navy hover:text-brand-green flex-grow"
+                      className="text-left px-4 py-3 text-base font-bold text-brand-navy hover:text-brand-green flex-grow"
                     >
                       {item.label}
                     </button>
@@ -206,17 +217,21 @@ const Navbar = () => {
                     )}
                 </div>
                 
+                {/* 
+                   Increased max-height to 1200px to accommodate long lists like Products.
+                   Added smooth transition for better UX.
+                */}
                 {item.dropdown && (
                   <div 
-                    className={`pl-4 space-y-1 bg-black/5 rounded-md overflow-hidden transition-all duration-300 ease-in-out ${
-                      mobileExpanded[item.label] ? 'max-h-[500px] opacity-100 py-2' : 'max-h-0 opacity-0 py-0'
+                    className={`pl-4 bg-white/40 overflow-hidden transition-all duration-500 ease-in-out ${
+                      mobileExpanded[item.label] ? 'max-h-[1200px] opacity-100 py-2' : 'max-h-0 opacity-0 py-0'
                     }`}
                   >
                     {item.dropdown.map((subItem) => (
                       <button
                         key={subItem.label}
                         onClick={() => handleNavClick(subItem.path)}
-                        className="block w-full text-left px-3 py-2 text-sm font-medium text-gray-600 hover:text-brand-green hover:bg-white/50 rounded-md"
+                        className="block w-full text-left px-4 py-3 text-sm font-medium text-gray-600 hover:text-brand-green hover:bg-white/80 rounded-md border-l-2 border-transparent hover:border-brand-green transition-all"
                       >
                         {subItem.label}
                       </button>
@@ -244,7 +259,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#eaf2ff] text-brand-navy pt-16 pb-8 border-t border-white">
+    <footer id="footer" className="bg-[#eaf2ff] text-brand-navy pt-16 pb-8 border-t border-white">
       <div className="max-w-[95%] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           
