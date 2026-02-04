@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { ASSETS } from '../config/assets';
 import { TrendingUp, Clock, Users, Handshake, PenTool, Leaf, Scissors, Layers, CheckCircle } from 'lucide-react';
@@ -510,7 +511,7 @@ const MarketIntel = () => {
       <section 
         className="relative h-[500px] w-full bg-cover bg-center bg-fixed" 
         style={{ 
-          backgroundImage: "url('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=2070&auto=format&fit=crop')",
+          backgroundImage: `url('${ASSETS.images.marketIntelPage.finalBanner}')`,
           backgroundAttachment: 'fixed'
         }}
       >

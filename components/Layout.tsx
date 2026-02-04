@@ -34,6 +34,8 @@ const navItems: NavItem[] = [
       { label: 'Activewear', path: '/products#activewear' },
       { label: 'Home Textile', path: '/products#hometextile' },
       { label: 'Sweater', path: '/products#sweater' },
+      { label: 'Uniform', path: '/products#uniform' },
+      { label: 'Disney', path: '/products#disney' },
     ]
   },
 ];
@@ -302,7 +304,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-gray-300/50 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 font-medium">
            <p className="mb-2 md:mb-0">Copyright © {new Date().getFullYear()} ApparelBD | All Rights Reserved.</p>
-           <p className="opacity-75">Designed & Developed by ApparelBD Team</p>
+           <p className="opacity-75">Designed & Developed by Arts of Tech</p>
         </div>
       </div>
     </footer>

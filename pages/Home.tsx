@@ -1003,7 +1003,7 @@ const Home = () => {
                <h3 className="text-2xl md:text-3xl font-bold text-white mb-10 drop-shadow-lg">
                   To Enquire with Us
                </h3>
-               <a href="mailto:ceo@apparelbd.com" className="inline-block border border-[#88c057] text-white px-8 py-3 text-sm font-bold uppercase tracking-widest hover:bg-[#88c057] transition-all bg-[#88c057]/20 backdrop-blur-sm rounded-sm">
+               <a href="mailto:info@apparelbd.com" className="inline-block border border-[#88c057] text-white px-8 py-3 text-sm font-bold uppercase tracking-widest hover:bg-[#88c057] transition-all bg-[#88c057]/20 backdrop-blur-sm rounded-sm">
                   CLICK HERE
                </a>
              </FadeInSection>
