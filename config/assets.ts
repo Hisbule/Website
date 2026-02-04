@@ -11,11 +11,11 @@ export const ASSETS = {
   videos: {
     home: "assets/videos/home.mp4",
     about: "assets/videos/about.mp4",
-    products: "assets/videos/products.mp4",
-    marketIntel: "assets/videos/market-intel.mp4",
+    products: "assets/images/hero/Product.avif",
+    marketIntel: "assets/images/hero/Market_intel.avif",
     sustainability: "assets/images/sustainability/Sustainability_hero.avif",
-    ethical: "assets/videos/ethical.mp4",
-    manufacturing: "assets/videos/manufacturing.mp4"
+    ethical: "assets/images/hero/Ethical.avif",
+    manufacturing: "assets/images/hero/Manufacturing.avif"
   },
 
   // Local Images

@@ -282,7 +282,7 @@ const About = () => {
       {/* 1. Hero Section */}
       <div className="relative h-[60vh] md:h-[80vh] w-full overflow-hidden bg-brand-navy">
         <video
-          className="absolute top-0 left-0 w-full h-full object-cover"
+          className="absolute top-0 left-0 w-full h-full object-cover animate-slow-zoom-out"
           autoPlay
           muted
           loop
