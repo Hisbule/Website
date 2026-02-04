@@ -262,11 +262,16 @@ const Footer = () => {
             <div className="space-y-6 text-sm text-gray-600">
                <div>
                  <p className="font-bold text-brand-navy mb-2 text-base">Head Quarter</p>
-                 <div className="font-light leading-relaxed">
+                 <a 
+                   href="https://maps.app.goo.gl/cpazdQ4ryKrFuKks8" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   className="font-light leading-relaxed hover:text-brand-green transition-colors block"
+                 >
                    <p>36, Gareeb-E-Newaz Avenue,</p>
                    <p>Level-3 (C2), Sector-13,</p>
                    <p>Uttara, Dhaka-1230, Bangladesh.</p>
-                 </div>
+                 </a>
                </div>
                <div>
                  <p className="font-bold text-brand-navy mb-2 text-base">Get in Touch</p>
