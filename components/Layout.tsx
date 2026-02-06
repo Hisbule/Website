@@ -15,9 +15,9 @@ const FloatingWhatsApp = () => {
   const message = t('whatsapp_msg');
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
-  
+  // Updated position: bottom-24 to move it up
   return (
-    <div className="fixed bottom-10 right-8 z-[100] flex flex-col items-end gap-2 group">
+    <div className="fixed bottom-24 right-8 z-[100] flex flex-col items-end gap-2 group">
       {/* Tooltip Label */}
       <div className="bg-white text-brand-navy px-4 py-2 rounded-lg shadow-xl mb-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 text-sm font-bold pointer-events-none">
         {t('whatsapp_tooltip')}
@@ -410,7 +410,7 @@ const Footer = () => {
                <div>
                  <p className="font-bold text-brand-navy mb-2 text-base">{t('headQuarter')}</p>
                  <a 
-                   href="https://maps.app.goo.gl/cpazdQ4ryKrFuKks8" 
+                   href="https://maps.app.goo.gl/NT3a89q2xwDYHYmHA" 
                    target="_blank" 
                    rel="noopener noreferrer"
                    className="font-light leading-relaxed hover:text-brand-green transition-colors block mb-4"
@@ -422,7 +422,7 @@ const Footer = () => {
 
                  {/* Map Iframe */}
                  <a 
-                   href="https://maps.app.goo.gl/cpazdQ4ryKrFuKks8" 
+                   href="https://maps.app.goo.gl/NT3a89q2xwDYHYmHA" 
                    target="_blank" 
                    rel="noopener noreferrer"
                    className="block w-full h-40 rounded-lg overflow-hidden shadow-md border border-gray-200 mt-2 hover:shadow-xl transition-shadow duration-300 relative group"
@@ -434,7 +434,7 @@ const Footer = () => {
                         scrolling="no" 
                         marginHeight={0} 
                         marginWidth={0} 
-                        src="https://maps.google.com/maps?q=36%20Gareeb-E-Newaz%20Avenue%2C%20Sector-13%2C%20Uttara%2C%20Dhaka-1230&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        src="https://maps.app.goo.gl/NT3a89q2xwDYHYmHA"
                         title="ApparelBD Location"
                         className="filter grayscale group-hover:grayscale-0 transition-all duration-500 pointer-events-none"
                     ></iframe>
