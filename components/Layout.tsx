@@ -1,7 +1,6 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X, ChevronDown, Facebook, Linkedin, Globe } from 'lucide-react';
+import { Menu, X, ChevronDown, Facebook, Linkedin, MapPin, ExternalLink } from 'lucide-react';
 import { NavItem } from '../types';
 import { ASSETS } from '../config/assets';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -16,15 +15,12 @@ const FloatingWhatsApp = () => {
   const message = t('whatsapp_msg');
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
-  // Updated position: bottom-24 to move it up
   return (
     <div className="fixed bottom-24 right-8 z-[100] flex flex-col items-end gap-2 group">
-      {/* Tooltip Label */}
       <div className="bg-white text-brand-navy px-4 py-2 rounded-lg shadow-xl mb-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 text-sm font-bold pointer-events-none">
         {t('whatsapp_tooltip')}
       </div>
 
-      {/* Button */}
       <a
         href={whatsappUrl}
         target="_blank"
@@ -32,10 +28,7 @@ const FloatingWhatsApp = () => {
         className="relative flex items-center justify-center w-12 h-12 bg-[#25D366] rounded-full shadow-2xl hover:bg-[#20b858] transition-all duration-300 hover:scale-110 active:scale-95"
         aria-label="Chat on WhatsApp"
       >
-        {/* Pulse Animation Ring */}
         <span className="absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-20 animate-ping"></span>
-        
-        {/* WhatsApp Icon (SVG) */}
         <svg 
             viewBox="0 0 24 24" 
             className="w-6 h-6 text-white fill-current relative z-10"
@@ -342,6 +335,27 @@ const Footer = () => {
   const { t } = useLanguage();
   const [email, setEmail] = useState('');
 
+  // Styles for the map zoom effect
+  const mapStyles = `
+    @keyframes mapZoomIn {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.1); }
+    }
+    @keyframes slideUpFade {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .hover-zoom-map:hover iframe {
+      animation: mapZoomIn 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    }
+    .hover-zoom-map:hover .map-overlay {
+      background: rgba(0,0,0,0.2);
+    }
+    .hover-zoom-map:hover .map-label {
+      animation: slideUpFade 0.6s ease-out forwards;
+    }
+  `;
+
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
@@ -350,31 +364,38 @@ const Footer = () => {
     }
   };
 
+  // CORRECT EMBED URL FROM YOUR PROVIDED IFRAME
+  const embedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.4910537105507!2d90.38855127593021!3d23.87219988408844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c5177be80355%3A0x464752586132c8a5!2sApparelBD!5e0!3m2!1sen!2sbd!4v1770898509643!5m2!1sen!2sbd";
+  
+  // Link to open in a new tab when clicked
+  const mapLink = "https://maps.app.goo.gl/jCn87Zr9bxh5Wq1L7";
+
   return (
     <footer id="footer" className="bg-[#eaf2ff] text-brand-navy pt-16 pb-8 border-t border-white">
+      <style>{mapStyles}</style>
       <div className="max-w-[95%] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           
           {/* 1. Brand Section */}
           <div className="flex flex-col space-y-6">
-             <Link to="/" className="block w-fit">
-                <img 
+              <Link to="/" className="block w-fit">
+                 <img 
                     src={ASSETS.logo} 
                     alt="ApparelBD Logo" 
                     className="h-16 w-auto object-contain" 
                 />
-             </Link>
-             <p className="text-gray-600 text-sm leading-relaxed text-justify font-light">
-               {t('footer_brand_desc')}
-             </p>
-             <div className="flex gap-4 pt-2">
-                <a href="https://www.facebook.com/profile.php?id=61587356734292" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-brand-navy hover:bg-[#1877F2] hover:text-white transition-all shadow-sm border border-gray-100 group">
-                  <Facebook className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                </a>
-                <a href="#" className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-brand-navy hover:bg-[#0A66C2] hover:text-white transition-all shadow-sm border border-gray-100 group">
-                  <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                </a>
-             </div>
+              </Link>
+              <p className="text-gray-600 text-sm leading-relaxed text-justify font-light">
+                {t('footer_brand_desc')}
+              </p>
+              <div className="flex gap-4 pt-2">
+                 <a href="https://www.facebook.com/profile.php?id=61587356734292" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-brand-navy hover:bg-[#1877F2] hover:text-white transition-all shadow-sm border border-gray-100 group">
+                   <Facebook className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                 </a>
+                 <a href="#" className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-brand-navy hover:bg-[#0A66C2] hover:text-white transition-all shadow-sm border border-gray-100 group">
+                   <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                 </a>
+              </div>
           </div>
 
           {/* 2. Quick Links */}
@@ -402,7 +423,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* 3. Contact Info */}
+          {/* 3. Contact Info & ANIMATED MAP */}
           <div>
             <h3 className="font-bold text-lg mb-6 text-brand-navy uppercase tracking-wide relative inline-block">
               {t('contactUs')}
@@ -412,7 +433,7 @@ const Footer = () => {
                <div>
                  <p className="font-bold text-brand-navy mb-2 text-base">{t('headQuarter')}</p>
                  <a 
-                   href="https://maps.app.goo.gl/NT3a89q2xwDYHYmHA" 
+                   href={mapLink} 
                    target="_blank" 
                    rel="noopener noreferrer"
                    className="font-light leading-relaxed hover:text-brand-green transition-colors block mb-4"
@@ -422,26 +443,46 @@ const Footer = () => {
                    <p>{t('address_line_3')}</p>
                  </a>
 
-                 {/* Map Iframe */}
-                 <a 
-                   href="https://maps.app.goo.gl/NT3a89q2xwDYHYmHA" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   className="block w-full h-40 rounded-lg overflow-hidden shadow-md border border-gray-200 mt-2 hover:shadow-xl transition-shadow duration-300 relative group"
-                 >
-                    <iframe 
-                        width="100%" 
-                        height="100%" 
-                        frameBorder="0" 
-                        scrolling="no" 
-                        marginHeight={0} 
-                        marginWidth={0} 
-                        src="https://maps.app.goo.gl/NT3a89q2xwDYHYmHA"
-                        title="ApparelBD Location"
-                        className="filter grayscale group-hover:grayscale-0 transition-all duration-500 pointer-events-none"
-                    ></iframe>
-                    <div className="absolute inset-0 bg-transparent group-hover:bg-black/5 transition-colors pointer-events-none"></div>
-                 </a>
+                 {/* ANIMATED MAP CONTAINER */}
+                 <div className="w-full h-48 rounded-xl overflow-hidden shadow-lg border-2 border-white relative group cursor-pointer hover-zoom-map">
+                    <a 
+                      href={mapLink} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="block w-full h-full"
+                    >
+                        {/* The Iframe Container - Handles Zoom */}
+                        <div className="w-full h-full overflow-hidden relative">
+                            <iframe 
+                                width="100%" 
+                                height="100%" 
+                                frameBorder="0" 
+                                scrolling="no" 
+                                marginHeight={0} 
+                                marginWidth={0} 
+                                src={embedUrl}
+                                title="ApparelBD Location"
+                                className="w-full h-full object-cover transition-transform duration-700 ease-out"
+                            ></iframe>
+                        </div>
+
+                        {/* Overlay: Darkens slightly on hover */}
+                        <div className="map-overlay absolute inset-0 bg-transparent transition-colors duration-500 pointer-events-none"></div>
+                        
+                        {/* Label: Slides up and fades in on hover */}
+                        <div className="map-label absolute bottom-4 left-4 z-10 opacity-0 transform translate-y-4">
+                            <div className="bg-white/95 backdrop-blur-sm px-4 py-2 rounded-md shadow-2xl flex items-center gap-2 border border-gray-100">
+                                <MapPin className="w-4 h-4 text-brand-green animate-bounce" />
+                                <div>
+                                    <span className="font-bold text-brand-navy text-xs tracking-wide block">ApparelBD HQ</span>
+                                    <span className="text-[10px] text-gray-500 uppercase tracking-wider">View on Map</span>
+                                </div>
+                                <ExternalLink className="w-3 h-3 text-gray-400 ml-1" />
+                            </div>
+                        </div>
+                    </a>
+                 </div>
+
                </div>
                <div>
                  <p className="font-bold text-brand-navy mb-2 text-base">{t('getInTouch')}</p>
