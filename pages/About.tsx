@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { Target, Eye, Users, Lightbulb, ShieldCheck, Heart, Leaf, Globe, CheckCircle, TrendingUp, Handshake, DollarSign, Award, Truck, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -462,6 +463,32 @@ const About = () => {
                  </p>
                </div>
            </FadeInSection>
+
+           {/* CEO Message Section - Inserted before Global Presence */}
+           <div id="ceo-message" className="scroll-mt-24">
+             <FadeInSection className="mb-20 bg-white p-8 rounded-sm shadow-xl border-l-4 border-brand-green">
+                <div className="grid md:grid-cols-12 gap-8 items-center">
+                    <div className="md:col-span-4 rounded-sm overflow-hidden shadow-lg">
+                        <img 
+                          src={ASSETS.images.about.ceo} 
+                          alt="Shofiqul Islam, CEO" 
+                          className="w-full h-auto"
+                        />
+                    </div>
+                    <div className="md:col-span-8">
+                        <h3 className="text-3xl font-serif font-bold text-brand-navy mb-6">{t('ceo_message_title')}</h3>
+                        <div className="space-y-4 text-gray-700 text-lg leading-relaxed font-light text-justify">
+                            <p className="font-bold">{t('ceo_message_body_1')}</p>
+                            <p>{t('ceo_message_body_2')}</p>
+                            <p>{t('ceo_message_body_3')}</p>
+                            <p>{t('ceo_message_body_4')}</p>
+                            <p>{t('ceo_message_body_5')}</p>
+                            <p className="font-bold text-brand-navy italic mt-4">{t('ceo_message_body_6')}</p>
+                        </div>
+                    </div>
+                </div>
+             </FadeInSection>
+           </div>
 
            <FadeInSection className="grid md:grid-cols-2 gap-12 items-center">
               <div>

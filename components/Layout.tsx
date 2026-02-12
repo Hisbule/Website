@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, ChevronDown, Facebook, Linkedin, Globe } from 'lucide-react';
@@ -82,6 +83,7 @@ const Navbar = () => {
       path: '/about',
       dropdown: [
         { label: t('overview'), path: '/about#overview' },
+        { label: t('ceoMessage'), path: '/about#ceo-message' },
         { label: t('mission'), path: '/about#mission' },
         { label: t('vision'), path: '/about#vision' },
         { label: t('services'), path: '/about#services' },

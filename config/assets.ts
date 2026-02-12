@@ -180,6 +180,7 @@ export const ASSETS = {
       missionBg: "assets/images/about/About_8.avif",
       map: "assets/images/about/About_9.avif",
       collaboration: "assets/images/about/About_10.avif",
+      ceo: "assets/images/about/ceo.avif",
       
       services: {
         marketIntel: {
