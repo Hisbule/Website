@@ -118,13 +118,13 @@ export const translations = {
     about_exp_8: "Leadership & Industry Expertise",
     
     // About - CEO Message
-    ceo_message_title: "Message from the Founder & CEO",
+    ceo_message_title: "Message from the CEO",
     ceo_message_body_1: "Dear Visitors,",
-    ceo_message_body_2: "I am Shofiqul Islam, Founder, Proprietor, and CEO of ApparelBd. With over 31 years of experience in the garment and textile industry, I have dedicated my life to building strong bridges between global buyers and Bangladesh’s apparel sector.",
+    ceo_message_body_2: "I am Shofiqul Islam,  CEO of ApparelBD. With over 20 years of experience in the garment and textile industry, I have dedicated my life to building strong bridges between global buyers and Bangladesh’s apparel sector.",
     ceo_message_body_3: "In 2020, I founded ApparelBd with the vision of delivering quality, reliability, and sustainable apparel solutions. Today, our company proudly marks 6 successful years of serving clients worldwide as a trusted buying house, sourcing partner, supplier, and exporter.",
     ceo_message_body_4: "From the very beginning, my mission has been to ensure excellence, integrity, and responsibility in every step of our operations. We are committed not only to providing top-quality garments but also to maintaining ethical production, safe working conditions, and on-time delivery.",
     ceo_message_body_5: "I sincerely thank our valued clients for their continued trust and my hardworking team for their dedication. Together, we represent the strength, creativity, and reliability of Bangladesh’s apparel industry on the global stage.",
-    ceo_message_body_6: "I warmly invite you to be part of this journey with us. At ApparelBd, we are not just suppliers—we are partners in your success.",
+    ceo_message_body_6: "I warmly invite you to be part of this journey with us. At ApparelBD, we are not just suppliers—we are partners in your success.",
 
     
     // About - Design Studio
@@ -682,14 +682,14 @@ ar: {
     about_exp_7: "توريد منتجات الشخصيات المرخصة",
     about_exp_8: "القيادة والخبرة الصناعية",
 
-   // About - CEO Message
-    ceo_message_title: "رسالة من المؤسس والرئيس التنفيذي",
+ // About - CEO Message
+    ceo_message_title: "رسالة من الرئيس التنفيذي",
     ceo_message_body_1: "أعزائي الزوار،",
-    ceo_message_body_2: "أنا شفيق الإسلام، المؤسس والمالك والرئيس التنفيذي لشركة ApparelBd. مع أكثر من 31 عامًا من الخبرة في صناعة الملابس والنسيج، كرست حياتي لبناء جسور قوية بين المشترين العالميين وقطاع الملابس في بنغلاديش.",
+    ceo_message_body_2: "أنا شفيق الإسلام، الرئيس التنفيذي لشركة ApparelBD. مع أكثر من 20 عامًا من الخبرة في صناعة الملابس والنسيج، كرست حياتي لبناء جسور قوية بين المشترين العالميين وقطاع الملابس في بنغلاديش.",
     ceo_message_body_3: "في عام 2020، أسست ApparelBd برؤية تقديم الجودة والموثوقية وحلول الملابس المستدامة. واليوم، تحتفل شركتنا بفخر بمرور 6 سنوات ناجحة في خدمة العملاء حول العالم كدار شراء موثوق به، وشريك توريد، ومورد، ومصدر.",
     ceo_message_body_4: "منذ البداية، كانت مهمتي ضمان التميز والنزاهة والمسؤولية في كل خطوة من عملياتنا. نحن ملتزمون ليس فقط بتوفير ملابس عالية الجودة ولكن أيضًا بالحفاظ على الإنتاج الأخلاقي، وظروف العمل الآمنة، والتسليم في الوقت المحدد.",
     ceo_message_body_5: "أشكر بصدق عملائنا الكرام على ثقتهم المستمرة وفريقي المجتهد على تفانيهم. معًا، نمثل قوة وإبداع وموثوقية صناعة الملابس في بنغلاديش على الساحة العالمية.",
-    ceo_message_body_6: "أدعوكم بحرارة لتكونوا جزءًا من هذه الرحلة معنا. في ApparelBd، نحن لسنا مجرد موردين - نحن شركاء في نجاحكم.",
+    ceo_message_body_6: "أدعوكم بحرارة لتكونوا جزءًا من هذه الرحلة معنا. في ApparelBD، نحن لسنا مجرد موردين - نحن شركاء في نجاحكم.",
 
     // About - Design Studio
     about_ds_title: "استوديو التصميم:",
@@ -1243,15 +1243,15 @@ zh: {
     about_exp_7: "授权角色产品采购",
     about_exp_8: "领导力与行业专业知识",
 
-    // About - CEO Message
-    ceo_message_title: "创始人兼首席执行官致辞",
+// About - CEO Message
+    ceo_message_title: "首席执行官致辞",
     ceo_message_body_1: "尊敬的访客，",
-    ceo_message_body_2: "我是 Shofiqul Islam，ApparelBd 的创始人、所有者兼首席执行官。凭借在服装和纺织行业超过 31 年的经验，我致力于在全球买家与孟加拉国服装行业之间建立牢固的桥梁。",
+    ceo_message_body_2: "我是 Shofiqul Islam，ApparelBD 的首席执行官。凭借在服装和纺织行业超过 20 年的经验，我致力于在全球买家与孟加拉国服装行业之间建立牢固的桥梁。",
     ceo_message_body_3: "2020 年，我怀着提供质量、可靠性和可持续服装解决方案的愿景创立了 ApparelBd。今天，我们要自豪地庆祝公司作为值得信赖的采购公司、采购合作伙伴、供应商和出口商服务全球客户的 6 个成功年头。",
     ceo_message_body_4: "从一开始，我的使命就是确保我们运营的每一步都卓越、诚信和负责。我们不仅致力于提供顶级品质的服装，还致力于维持道德生产、安全的工作条件和准时交付。",
     ceo_message_body_5: "我衷心感谢我们尊贵的客户一直以来的信任，也感谢我辛勤工作的团队的奉献。我们将共同代表孟加拉国服装行业在全球舞台上的实力、创造力和可靠性。",
-    ceo_message_body_6: "我热忱邀请您加入我们的旅程。在 ApparelBd，我们不仅仅是供应商——我们是您成功的合作伙伴。",
-    
+    ceo_message_body_6: "我热忱邀请您加入我们的旅程。在 ApparelBD，我们不仅仅是供应商——我们是您成功的合作伙伴。",
+
     // About - Design Studio
     about_ds_title: "设计工作室：",
     about_ds_london: "英国伦敦设计工作室",
@@ -1804,15 +1804,15 @@ zh: {
     about_exp_7: "Inkoop van Gelicentieerde Karakterproducten",
     about_exp_8: "Leiderschap & Industrie-expertise",
 
-    // About - CEO Message
-    ceo_message_title: "Bericht van de Oprichter & CEO",
+// About - CEO Message
+    ceo_message_title: "Bericht van de CEO",
     ceo_message_body_1: "Beste Bezoekers,",
-    ceo_message_body_2: "Ik ben Shofiqul Islam, Oprichter, Eigenaar en CEO van ApparelBd. Met meer dan 31 jaar ervaring in de kleding- en textielindustrie heb ik mijn leven gewijd aan het bouwen van sterke bruggen tussen wereldwijde kopers en de kledingsector van Bangladesh.",
+    ceo_message_body_2: "Ik ben Shofiqul Islam, CEO van ApparelBD. Met meer dan 20 jaar ervaring in de kleding- en textielindustrie heb ik mijn leven gewijd aan het bouwen van sterke bruggen tussen wereldwijde kopers en de kledingsector van Bangladesh.",
     ceo_message_body_3: "In 2020 richtte ik ApparelBd op met de visie om kwaliteit, betrouwbaarheid en duurzame kledingoplossingen te leveren. Vandaag viert ons bedrijf trots 6 succesvolle jaren waarin we klanten wereldwijd bedienen als een vertrouwd inkoophuis, sourcingpartner, leverancier en exporteur.",
     ceo_message_body_4: "Vanaf het allereerste begin is mijn missie geweest om uitmuntendheid, integriteit en verantwoordelijkheid te waarborgen in elke stap van onze activiteiten. We zijn niet alleen toegewijd aan het leveren van kleding van topkwaliteit, maar ook aan het handhaven van ethische productie, veilige werkomstandigheden en tijdige levering.",
     ceo_message_body_5: "Ik dank onze gewaardeerde klanten oprecht voor hun voortdurende vertrouwen en mijn hardwerkende team voor hun toewijding. Samen vertegenwoordigen we de kracht, creativiteit en betrouwbaarheid van de kledingindustrie van Bangladesh op het wereldtoneel.",
-    ceo_message_body_6: "Ik nodig u van harte uit om deel uit te maken van deze reis met ons. Bij ApparelBd zijn we niet alleen leveranciers — we zijn partners in uw succes.",
-    
+    ceo_message_body_6: "Ik nodig u van harte uit om deel uit te maken van deze reis met ons. Bij ApparelBD zijn we niet alleen leveranciers — we zijn partners in uw succes.",
+
     // About - Design Studio
     about_ds_title: "ONTWERPSTUDIO:",
     about_ds_london: "Ontwerpstudio in Londen, VK",
@@ -2364,14 +2364,14 @@ fr: {
     about_exp_7: "Approvisionnement de Produits sous Licence",
     about_exp_8: "Leadership & Expertise Industrielle",
 
-    // About - CEO Message
-    ceo_message_title: "Message du Fondateur & PDG",
+// About - CEO Message
+    ceo_message_title: "Message du PDG",
     ceo_message_body_1: "Chers Visiteurs,",
-    ceo_message_body_2: "Je suis Shofiqul Islam, Fondateur, Propriétaire et PDG d'ApparelBd. Avec plus de 31 ans d'expérience dans l'industrie du vêtement et du textile, j'ai consacré ma vie à bâtir des ponts solides entre les acheteurs mondiaux et le secteur de l'habillement du Bangladesh.",
+    ceo_message_body_2: "Je suis Shofiqul Islam, PDG d'ApparelBD. Avec plus de 20 ans d'expérience dans l'industrie du vêtement et du textile, j'ai consacré ma vie à bâtir des ponts solides entre les acheteurs mondiaux et le secteur de l'habillement du Bangladesh.",
     ceo_message_body_3: "En 2020, j'ai fondé ApparelBd avec la vision d'offrir qualité, fiabilité et solutions vestimentaires durables. Aujourd'hui, notre entreprise célèbre fièrement 6 années de succès au service de clients du monde entier en tant que maison d'achat, partenaire d'approvisionnement, fournisseur et exportateur de confiance.",
     ceo_message_body_4: "Dès le début, ma mission a été d'assurer l'excellence, l'intégrité et la responsabilité à chaque étape de nos opérations. Nous nous engageons non seulement à fournir des vêtements de qualité supérieure, mais aussi à maintenir une production éthique, des conditions de travail sûres et une livraison à temps.",
     ceo_message_body_5: "Je remercie sincèrement nos précieux clients pour leur confiance continue et mon équipe dévouée pour son travail acharné. Ensemble, nous représentons la force, la créativité et la fiabilité de l'industrie du vêtement du Bangladesh sur la scène mondiale.",
-    ceo_message_body_6: "Je vous invite chaleureusement à faire partie de ce voyage avec nous. Chez ApparelBd, nous ne sommes pas seulement des fournisseurs — nous sommes partenaires de votre succès.",
+    ceo_message_body_6: "Je vous invite chaleureusement à faire partie de ce voyage avec nous. Chez ApparelBD, nous ne sommes pas seulement des fournisseurs — nous sommes partenaires de votre succès.",
     
     // About - Design Studio
     about_ds_title: "STUDIO DE DESIGN :",
@@ -2924,14 +2924,14 @@ de: {
     about_exp_7: "Beschaffung von lizenzierten Charakterprodukten",
     about_exp_8: "Führung & Branchenexpertise",
 
-    // About - CEO Message
-    ceo_message_title: "Nachricht vom Gründer & CEO",
+// About - CEO Message
+    ceo_message_title: "Nachricht des CEO",
     ceo_message_body_1: "Liebe Besucher,",
-    ceo_message_body_2: "Ich bin Shofiqul Islam, Gründer, Inhaber und CEO von ApparelBd. Mit über 31 Jahren Erfahrung in der Bekleidungs- und Textilindustrie habe ich mein Leben dem Aufbau starker Brücken zwischen globalen Käufern und dem Bekleidungssektor von Bangladesch gewidmet.",
+    ceo_message_body_2: "Ich bin Shofiqul Islam, CEO von ApparelBD. Mit über 20 Jahren Erfahrung in der Bekleidungs- und Textilindustrie habe ich mein Leben dem Aufbau starker Brücken zwischen globalen Käufern und dem Bekleidungssektor von Bangladesch gewidmet.",
     ceo_message_body_3: "Im Jahr 2020 gründete ich ApparelBd mit der Vision, Qualität, Zuverlässigkeit und nachhaltige Bekleidungslösungen zu liefern. Heute feiert unser Unternehmen stolz 6 erfolgreiche Jahre im Dienst von Kunden weltweit als vertrauenswürdiges Einkaufshaus, Beschaffungspartner, Lieferant und Exporteur.",
     ceo_message_body_4: "Von Anfang an war es meine Mission, Exzellenz, Integrität und Verantwortung in jedem Schritt unserer Tätigkeit sicherzustellen. Wir sind nicht nur bestrebt, Kleidung von höchster Qualität zu liefern, sondern auch ethische Produktion, sichere Arbeitsbedingungen und pünktliche Lieferung zu gewährleisten.",
     ceo_message_body_5: "Ich danke unseren geschätzten Kunden aufrichtig für ihr anhaltendes Vertrauen und meinem hart arbeitenden Team für ihren Einsatz. Gemeinsam repräsentieren wir die Stärke, Kreativität und Zuverlässigkeit der Bekleidungsindustrie Bangladeschs auf der globalen Bühne.",
-    ceo_message_body_6: "Ich lade Sie herzlich ein, Teil dieser Reise mit uns zu sein. Bei ApparelBd sind wir nicht nur Lieferanten – wir sind Partner Ihres Erfolgs.",
+    ceo_message_body_6: "Ich lade Sie herzlich ein, Teil dieser Reise mit uns zu sein. Bei ApparelBD sind wir nicht nur Lieferanten – wir sind Partner Ihres Erfolgs.",
     
     // About - Design Studio
     about_ds_title: "DESIGNSTUDIO:",
@@ -3484,14 +3484,14 @@ es: {
     about_exp_7: "Abastecimiento de Productos de Personajes con Licencia",
     about_exp_8: "Liderazgo y Experiencia en la Industria",
 
-    // About - CEO Message
-    ceo_message_title: "Mensaje del Fundador y CEO",
+// About - CEO Message
+    ceo_message_title: "Mensaje del CEO",
     ceo_message_body_1: "Estimados Visitantes,",
-    ceo_message_body_2: "Soy Shofiqul Islam, Fundador, Propietario y CEO de ApparelBd. Con más de 31 años de experiencia en la industria de la confección y textil, he dedicado mi vida a construir puentes sólidos entre compradores globales y el sector de la confección de Bangladés.",
+    ceo_message_body_2: "Soy Shofiqul Islam, CEO de ApparelBD. Con más de 20 años de experiencia en la industria de la confección y textil, he dedicado mi vida a construir puentes sólidos entre compradores globales y el sector de la confección de Bangladés.",
     ceo_message_body_3: "En 2020, fundé ApparelBd con la visión de ofrecer calidad, confiabilidad y soluciones de ropa sostenibles. Hoy, nuestra empresa celebra con orgullo 6 años exitosos sirviendo a clientes en todo el mundo como una casa de compras, socio de abastecimiento, proveedor y exportador de confianza.",
     ceo_message_body_4: "Desde el principio, mi misión ha sido garantizar la excelencia, la integridad y la responsabilidad en cada paso de nuestras operaciones. Estamos comprometidos no solo a proporcionar prendas de la más alta calidad, sino también a mantener una producción ética, condiciones de trabajo seguras y entregas a tiempo.",
     ceo_message_body_5: "Agradezco sinceramente a nuestros valiosos clientes por su continua confianza y a mi equipo trabajador por su dedicación. Juntos, representamos la fuerza, la creatividad y la confiabilidad de la industria de la confección de Bangladés en el escenario global.",
-    ceo_message_body_6: "Los invito calurosamente a ser parte de este viaje con nosotros. En ApparelBd, no somos solo proveedores: somos socios en su éxito.",
+    ceo_message_body_6: "Los invito calurosamente a ser parte de este viaje con nosotros. En ApparelBD, no somos solo proveedores: somos socios en su éxito.",
     
     // About - Design Studio
     about_ds_title: "ESTUDIO DE DISEÑO:",
@@ -4044,14 +4044,14 @@ es: {
     about_exp_7: "Approvvigionamento di Prodotti con Personaggi su Licenza",
     about_exp_8: "Leadership & Competenza nel Settore",
 
-    // About - CEO Message
-    ceo_message_title: "Messaggio dal Fondatore & CEO",
+// About - CEO Message
+    ceo_message_title: "Messaggio del CEO",
     ceo_message_body_1: "Cari Visitatori,",
-    ceo_message_body_2: "Sono Shofiqul Islam, Fondatore, Proprietario e CEO di ApparelBd. Con oltre 31 anni di esperienza nell'industria dell'abbigliamento e tessile, ho dedicato la mia vita a costruire ponti solidi tra acquirenti globali e il settore dell'abbigliamento del Bangladesh.",
+    ceo_message_body_2: "Sono Shofiqul Islam, CEO di ApparelBD. Con oltre 20 anni di esperienza nell'industria dell'abbigliamento e tessile, ho dedicato la mia vita a costruire ponti solidi tra acquirenti globali e il settore dell'abbigliamento del Bangladesh.",
     ceo_message_body_3: "Nel 2020, ho fondato ApparelBd con la visione di offrire qualità, affidabilità e soluzioni di abbigliamento sostenibili. Oggi, la nostra azienda celebra con orgoglio 6 anni di successo al servizio dei clienti in tutto il mondo come casa di acquisto, partner di approvvigionamento, fornitore ed esportatore di fiducia.",
     ceo_message_body_4: "Fin dall'inizio, la mia missione è stata quella di garantire eccellenza, integrità e responsabilità in ogni fase delle nostre operazioni. Ci impegniamo non solo a fornire capi di alta qualità, ma anche a mantenere una produzione etica, condizioni di lavoro sicure e consegne puntuali.",
     ceo_message_body_5: "Ringrazio sinceramente i nostri stimati clienti per la loro continua fiducia e il mio team laborioso per la loro dedizione. Insieme, rappresentiamo la forza, la creatività e l'affidabilità dell'industria dell'abbigliamento del Bangladesh sulla scena globale.",
-    ceo_message_body_6: "Vi invito calorosamente a far parte di questo viaggio con noi. In ApparelBd, non siamo solo fornitori: siamo partner del vostro successo.",
+    ceo_message_body_6: "Vi invito calorosamente a far parte di questo viaggio con noi. In ApparelBD, non siamo solo fornitori: siamo partner del vostro successo.",
     
     // About - Design Studio
     about_ds_title: "STUDIO DI DESIGN:",
